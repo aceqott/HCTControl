@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="backup_items">
+        <item>Copiar</item>
+        <item>Restaurar</item>
+    </string-array>
+    <string-array name="toggle_buttons_background_entries">
+        <item>Stock</item>
+        <item>Icons</item>
+        <item>Convex</item>
+        <item>Concave</item>
+        <item>Glass</item>
+        <item>Convex square</item>
+        <item>Concave square</item>
+        <item>Glass square</item>
+        <item>Darksyde</item>
+        <item>Circle metal</item>
+    </string-array>
+    <string-array name="toggle_buttons_background_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <array name="toggle_drawables">
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_00</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_10</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_01</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_02</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_03</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_04</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_05</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_06</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_darksyde</item>
+    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_circle_metal</item>
+    </array>
+    <string-array name="dialer_background_style_entries">
+        <item>Anastasia Style</item>
+        <item>Glassplate Style</item>
+        <item>Gold Style</item>
+        <item>Grill Style</item>
+        <item>Mesh Style</item>
+        <item>Motherboard Style</item>
+        <item>Rainbow Style</item>
+        <item>Round Style</item>
+        <item>Silver Style</item>
+        <item>Stone Style</item>
+    </string-array>
+    <string-array name="dialer_background_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <array name="dialer_drawables">
+        <item>@drawable/dialer_anastasia_style</item>
+        <item>@drawable/dialer_glassplate_style</item>
+        <item>@drawable/dialer_gold_style</item>
+        <item>@drawable/dialer_grill_style</item>
+        <item>@drawable/dialer_mesh_style</item>
+        <item>@drawable/dialer_motherboard_style</item>
+        <item>@drawable/dialer_rainbow_style</item>
+        <item>@drawable/dialer_round_style</item>
+        <item>@drawable/dialer_silver_style</item>
+        <item>@drawable/dialer_stone_style</item>
+    </array>
+    <string-array name="incall_background_entries">
+        <item>Stock</item>
+        <item>Personalizado 1</item>
+        <item>Personalizado 2</item>
+        <item>Personalizado 3</item>
+        <item>Personalizado 4</item>
+        <item>Personalizado 5</item>
+        <item>Personalizado 6</item>
+        <item>Personalizado 7</item>
+        <item>Personalizado 8</item>
+        <item>Personalizado 9</item>
+    </string-array>
+    <string-array name="incall_background_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <array name="incall_drawables">
+        <item>@drawable/call_bg_1</item>
+        <item>@drawable/call_bg_2</item>
+        <item>@drawable/call_bg_3</item>
+        <item>@drawable/call_bg_4</item>
+        <item>@drawable/call_bg_5</item>
+        <item>@drawable/call_bg_6</item>
+        <item>@drawable/call_bg_7</item>
+        <item>@drawable/call_bg_8</item>
+        <item>@drawable/call_bg_9</item>
+        <item>@drawable/call_bg_10</item>
+    </array>
+
+    <!-- LogCat -->
+    <string-array name="pref_buffer_choices">
+        <item>@string/pref_buffer_choice_main</item>
+        <item>@string/pref_buffer_choice_events</item>
+        <item>@string/pref_buffer_choice_radio</item>
+    </string-array>
+
+    <string-array name="pref_buffer_choice_values">
+        <item>@string/pref_buffer_choice_main_value</item>
+        <item>@string/pref_buffer_choice_events_value</item>
+        <item>@string/pref_buffer_choice_radio_value</item>
+    </string-array>
+
+    <string-array name="pref_theme_choices_values">
+        <item>@string/pref_theme_choice_dark_value</item>
+        <item>@string/pref_theme_choice_light_value</item>
+        <item>@string/pref_theme_choice_android_value</item>
+        <item>@string/pref_theme_choice_verizon_value</item>
+        <item>@string/pref_theme_choice_att_value</item>
+        <item>@string/pref_theme_choice_sprint_value</item>
+        <item>@string/pref_theme_choice_tmobile_value</item>
+    </string-array>
+
+    <string-array name="pref_theme_choices_names">
+        <item>@string/pref_theme_choice_dark_name</item>
+        <item>@string/pref_theme_choice_light_name</item>
+        <item>@string/pref_theme_choice_android_name</item>
+        <item>@string/pref_theme_choice_verizon_name</item>
+        <item>@string/pref_theme_choice_att_name</item>
+        <item>@string/pref_theme_choice_sprint_name</item>
+        <item>@string/pref_theme_choice_tmobile_name</item>
+    </string-array>
+
+    <string-array name="filter_choices">
+        <item>@string/filter_choice_tag</item>
+        <item>@string/filter_choice_pid</item>
+    </string-array>
+
+    <string-array name="log_levels">
+        <item>@string/log_level_verbose</item>
+        <item>@string/log_level_debug</item>
+        <item>@string/log_level_info</item>
+        <item>@string/log_level_warn</item>
+        <item>@string/log_level_error</item>
+        <item>@string/log_level_wtf</item>
+    </string-array>
+
+    <string-array name="log_levels_values">
+        <item>@string/log_level_value_verbose</item>
+        <item>@string/log_level_value_debug</item>
+        <item>@string/log_level_value_info</item>
+        <item>@string/log_level_value_warn</item>
+        <item>@string/log_level_value_error</item>
+        <item>@string/log_level_value_wtf</item>
+    </string-array>
+
+    <string-array name="text_size_values">
+        <item>@string/text_size_xsmall_value</item>
+        <item>@string/text_size_small_value</item>
+        <item>@string/text_size_medium_value</item>
+        <item>@string/text_size_large_value</item>
+        <item>@string/text_size_xlarge_value</item>
+    </string-array>
+
+    <string-array name="text_sizes">
+        <item>@string/text_size_xsmall_name</item>
+        <item>@string/text_size_small_name</item>
+        <item>@string/text_size_medium_name</item>
+        <item>@string/text_size_large_name</item>
+        <item>@string/text_size_xlarge_name</item>
+    </string-array>
+
+
+    <integer-array name="dark_theme_colors">
+        <item>@color/tag_color_01</item>
+        <item>@color/tag_color_02</item>
+        <item>@color/tag_color_03</item>
+        <item>@color/tag_color_04</item>
+        <item>@color/tag_color_05</item>
+        <item>@color/tag_color_06</item>
+        <item>@color/tag_color_07</item>
+        <item>@color/tag_color_08</item>
+        <item>@color/tag_color_09</item>
+        <item>@color/tag_color_10</item>
+        <item>@color/tag_color_11</item>
+        <item>@color/tag_color_12</item>
+        <item>@color/tag_color_13</item>
+        <item>@color/tag_color_14</item>
+        <item>@color/tag_color_15</item>
+        <item>@color/tag_color_16</item>
+        <item>@color/tag_color_17</item>
+    </integer-array>
+
+    <integer-array name="light_theme_colors">
+        <item>@color/light_tag_color_01</item>
+        <item>@color/light_tag_color_02</item>
+        <item>@color/light_tag_color_03</item>
+        <item>@color/light_tag_color_04</item>
+        <item>@color/light_tag_color_05</item>
+        <item>@color/light_tag_color_06</item>
+        <item>@color/light_tag_color_07</item>
+        <item>@color/light_tag_color_08</item>
+        <item>@color/light_tag_color_09</item>
+        <item>@color/light_tag_color_10</item>
+        <item>@color/light_tag_color_11</item>
+        <item>@color/light_tag_color_12</item>
+        <item>@color/light_tag_color_13</item>
+        <item>@color/light_tag_color_14</item>
+        <item>@color/light_tag_color_15</item>
+        <item>@color/light_tag_color_16</item>
+        <item>@color/light_tag_color_17</item>
+    </integer-array>
+
+    <integer-array name="android_theme_colors">
+        <item>@color/android_theme_tag_color_01</item>
+        <item>@color/android_theme_tag_color_02</item>
+        <item>@color/android_theme_tag_color_03</item>
+        <item>@color/android_theme_tag_color_04</item>
+        <item>@color/android_theme_tag_color_05</item>
+        <item>@color/android_theme_tag_color_06</item>
+        <item>@color/android_theme_tag_color_07</item>
+        <item>@color/android_theme_tag_color_08</item>
+        <item>@color/android_theme_tag_color_09</item>
+        <item>@color/android_theme_tag_color_10</item>
+        <item>@color/android_theme_tag_color_11</item>
+        <item>@color/android_theme_tag_color_12</item>
+        <item>@color/android_theme_tag_color_13</item>
+        <item>@color/android_theme_tag_color_14</item>
+        <item>@color/android_theme_tag_color_15</item>
+        <item>@color/android_theme_tag_color_16</item>
+        <item>@color/android_theme_tag_color_17</item>
+    </integer-array>
+</resources>

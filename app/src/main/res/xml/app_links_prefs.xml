@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="SAMSUNG">
+        <PreferenceScreen
+            android:icon="@drawable/ic_samsung2"
+            android:title="Samsung +"
+            android:summary="Accede a ajustes ocultos de samsung"
+            android:widgetLayout="@layout/round_more_icon">
+            <PreferenceScreen
+                android:icon="@drawable/ic_settings2"
+                android:title="Samsung +"
+                android:summary="Ajustes ocultos de samsung"
+                android:widgetLayout="@layout/round_more_icon">
+                <PreferenceScreen
+                    android:icon="@drawable/ic_multiwindow"
+                    android:title="MultiWindow"
+                    android:key="com.android.settings.MultiWindowSettings"
+                    android:summary="Ajustes para la multiventana" />
+                <PreferenceScreen
+                    android:icon="@drawable/ic_smart"
+                    android:title="Smart Scroll"
+                    android:key="com.android.settings.Settings$SmartScrollAdvancedSettingsActivity"
+                    android:summary="Ajustes para Controles SmartScroll" />
+                <PreferenceScreen
+                    android:icon="@drawable/ic_toolbox"
+                    android:title="Toolbox"
+                    android:key="com.android.settings.Settings$ToolboxListActivity"
+                    android:summary="Ajustes para la Caja de herramientas" />
+                <PreferenceScreen
+                    android:icon="@drawable/ic_download2"
+                    android:title="Download Booster"
+                    android:key="com.android.settings.Settings$SmartBondingSettingsActivity"
+                    android:summary="Ajustes para Optimizar la velocidad de descarga" />
+                <PreferenceScreen
+                    android:icon="@drawable/ic_panel"
+                    android:title="Panel lateral"
+                    android:key="com.android.settings.Settings$OneHandSideSoftKeyFragmentActivity"
+                    android:summary="Ajustes para Panel de teclas laterales" />
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:icon="@drawable/ic_ahorro"
+                android:title="Modos de ahorro"
+                android:summary="Diferentes modos de ahorro"
+                android:widgetLayout="@layout/round_more_icon">
+                <PreferenceScreen
+                    android:icon="@drawable/ic_upsm"
+                    android:title="Modo Ultra Ahorro"
+                    android:key="com.android.settings.Settings$UltraPowerSavingModeActivity"
+                    android:summary="Activar modo de ahorro" />
+            </PreferenceScreen>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="OTA">
+        <PreferenceScreen
+            android:icon="@drawable/ic_ota"
+            android:key="com.otaupdater.OTAUpdaterActivity"
+            android:summary="Accede a nuestra zona de descargas (ROM, Kernels, ...)"
+            android:title="HCT OTA" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme">
+    <TextView android:textSize="20dp" android:textStyle="bold"
+        android:textColor="#fff" android:layout_width="match_parent"
+        android:id="@+id/textView1"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp" android:text="Sonido Inicio"
+        android:background="?attr/colorAccent"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp" />
+    <RadioGroup android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:id="@+id/radiogroup"
+        android:layout_marginLeft="10dp">
+        <RadioButton android:id="@+id/sonido_inicio_stock"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Sonido inicio Stock" android:checked="true"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <RadioButton android:layout_width="match_parent"
+            android:id="@+id/sonido_inicio_hct" android:layout_height="wrap_content"
+            android:text="Sonido inicio HCT"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <RadioButton android:layout_width="match_parent"
+            android:id="@+id/sonido_inicio_off" android:layout_height="wrap_content"
+            android:text="Desactivar sonido"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </RadioGroup>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorAccent"
+        android:layout_marginTop="10dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button android:text="CANCELAR" android:layout_width="120dp"
+            android:layout_height="wrap_content" android:id="@+id/cancelar"
+            android:textColor="@color/selector"
+            android:background="@android:color/transparent"
+            android:layout_gravity="left"
+            android:textSize="18dp" />
+        <Button android:text="OK" android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/ok"
+            android:textColor="@color/selector"
+            android:background="@android:color/transparent"
+            android:layout_gravity="right"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

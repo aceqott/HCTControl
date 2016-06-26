@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".toolboxsettings.ToolboxSettings">
+
+    <item
+        android:id="@+id/sort"
+        android:title="@string/sort"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/save"
+        android:title="@string/save"
+        app:showAsAction="always"/>
+</menu>

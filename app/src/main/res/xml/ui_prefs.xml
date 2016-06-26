@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:icon="@drawable/ic_bar"
+        android:title="Battery Bar"
+        android:summary="Personalizar y posicionar la barra de nivel de batería"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Battery Bar">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/battery_bar_entries"
+                android:title="Ubicación"
+                android:key="battery_bar"
+                android:summary="%s"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="0"
+                android:entryValues="@array/battery_bar_values" />
+            <SwitchPreference
+                android:title="Animación de carga"
+                android:key="battery_bar_animate"
+                android:defaultValue="false"
+                android:summaryOn="Animación de carga activada"
+                android:summaryOff="Animación de carga desactivada" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/battery_bar_style_entries"
+                android:title="Estilo"
+                android:key="battery_bar_style"
+                android:summary="%s"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="0"
+                android:entryValues="@array/battery_bar_style_values" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/battery_bar_thickness_entries"
+                android:title="Grosor"
+                android:key="battery_bar_thickness"
+                android:summary="%s"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="1"
+                android:entryValues="@array/battery_bar_thickness_values" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color"
+                android:key="battery_bar_color"
+                android:summary="Elegir color de battery bar"
+                android:defaultValue="#ffffff"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_3minit2"
+        android:summary="Personaliza estilo de Bateria"
+        android:title="3Minit Battery Settings">
+        <intent
+            android:icon="@drawable/ic_3minit2"
+            android:targetClass="com.three.minit.minitbatterysettings.MainActivity"
+            android:targetPackage="com.three.minit.minitbatterysettings.free" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_home2"
+        android:title="Botón Bloqueo y Home"
+        android:summary="Posicionar botón Bloqueo y Home en la Statusbar"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Boton Bloqueo y Home">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:icon="@drawable/hct_bloqueo"
+                android:entries="@array/anlorlock_entries"
+                android:title="Posición Bloqueo"
+                android:key="anlor_lock"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="3"
+                android:entryValues="@array/anlorlock_values" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:icon="@drawable/hct_home"
+                android:entries="@array/anlorhome_entries"
+                android:title="Posición Home"
+                android:key="anlor_home"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="0"
+                android:entryValues="@array/anlorhome_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_alarm2"
+        android:title="Notificaciones Statusbar"
+        android:summary="Oculta las Notificaciones de la Statusbar"
+        android:widgetLayout="@layout/round_more_icon">
+            <CheckBoxPreference
+                android:icon="@drawable/ic_alarm_white_24dp"
+                android:title="Ocultar icono de Alarma"
+                android:key="statusbar_hide_alarm"
+                android:defaultValue="true"
+                android:summaryOn="Icono Alarma es visible."
+                android:summaryOff="Icono Alarma está oculto." />
+            <CheckBoxPreference
+                android:icon="@drawable/ic_bluetooth_white_24dp"
+                android:title="Ocultar icono de Bluetooth"
+                android:key="statusbar_hide_bluetooth"
+                android:defaultValue="true"
+                android:summaryOn="Icono Bluetooth es visible."
+                android:summaryOff="Icono Bluetooth está oculto." />
+            <PreferenceScreen
+                android:icon="@drawable/ic_reboot2"
+                android:title="Reinicio normal"
+                android:key="script#reboot"
+                android:summary="NECESARIO REINICIAR PARA OCULTAR LOS ICONOS" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_clock2"
+        android:title="Reloj"
+        android:key="com.hct.clock.main.Main"
+        android:summary="Personalizar el estilo del reloj de la StatusBar"
+        android:widgetLayout="@layout/round_more_icon" />
+    <PreferenceScreen
+        android:icon="@drawable/ic_gradient"
+        android:title="StatusBar Gradient"
+        android:key="com.potato.gradientapp.MainActivity"
+        android:summary="Personaliza color de la Statusbar"
+        android:widgetLayout="@layout/round_more_icon" />
+    <PreferenceScreen
+        android:icon="@drawable/ic_speed"
+        android:title="Tráfico de red"
+        android:summary="Controla el tráfico de datos en la Statusbar"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Trafico de red">
+            <SwitchPreference
+                android:title="Tráfico de red en Statusbar"
+                android:key="tweaks_speed_view"
+                android:summaryOn="Visible"
+                android:summaryOff="Oculto"
+                android:defaultValue="false"/>
+        </PreferenceCategory>
+        <PreferenceCategory  android:layout="@layout/preferences_category" android:title="Color trafico de red">
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color de la velocidad de Descarga"
+                android:key="tweaks_speed_color_download"
+                android:summary="Elegir el color de la velocidad de bajada"
+                android:defaultValue="#ffffff"
+                alphaSlider="true"
+                hexValue="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color de la velocidad de Subida"
+                android:key="tweaks_speed_color_upload"
+                android:summary="Elegir el color de la velocidad de subida"
+                android:defaultValue="#ffffff"
+                alphaSlider="true"
+                hexValue="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

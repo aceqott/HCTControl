@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".toolboxsettings.SortActivity">
+    <item
+        android:id="@+id/save"
+        android:title="@string/save"
+        android:showAsAction="always"/>
+</menu>

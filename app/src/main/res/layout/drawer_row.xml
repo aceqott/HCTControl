@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="48dp"
+    android:layout_width="match_parent"
+    >
+    <com.hctrom.romcontrol.NavDrawerIcon
+        android:layout_width="21.5dip"
+        android:layout_height="21.5dip"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/nav_item_icon"
+        android:layout_marginStart="8.0dip"
+        android:tint = "?attr/nav_item_color_selector"
+        android:tintMode="src_atop"/>
+
+    <ImageView android:layout_gravity="center_vertical"
+        android:layout_width="37.0dip"
+        android:layout_height="37.0dip"
+        android:id="@+id/imageRotate"
+        android:src="@drawable/rotating_loading"
+        android:tint="?attr/item_color_selector"
+        android:layout_marginStart="-30.0dip"
+        android:tintMode="src_atop" />
+
+    <TextView android:id="@+id/item_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:drawablePadding="16dp"
+        android:textSize="22sp"
+        android:gravity="center_vertical"
+        android:backgroundTint="?attr/nav_item_color_selector"
+        android:text="Nav Item"
+        fontPath="fonts/JANA.ttf"
+        android:layout_marginStart="10.0dip"/>
+</LinearLayout>
+

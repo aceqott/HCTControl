@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center_vertical|center_horizontal"
+	android:focusable="true" android:padding="1dp">
+	<LinearLayout android:orientation="vertical"
+		android:gravity="center_vertical|center_horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:id="@+id/clickable_linear_layout" android:padding="2dp"
+		android:clickable="true" android:focusable="true"
+		android:drawSelectorOnTop="false" android:background="@drawable/catlog_app_selector">
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_vertical|center_horizontal"
+			android:background="@drawable/dialog_bg_hct" android:paddingLeft="2dp"
+			android:paddingRight="2dp" android:paddingTop="5dp" android:paddingBottom="5dp" >
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<ImageView android:layout_width="80dp"
+					android:id="@+id/catlog_icon_hctcontrol"
+					android:layout_height="80dp" android:src="@mipmap/ic_launcher"
+					android:layout_marginLeft="10dp" />
+				<TextView android:layout_width="80dp"
+					android:layout_height="wrap_content" android:id="@+id/widget_subtext_hct"
+					android:textSize="12sp"
+					android:textColor="@android:color/white"
+					android:gravity="center_vertical|center_horizontal" android:text="@string/app_name"
+					android:singleLine="true" android:ellipsize="marquee"
+					android:layout_below="@+id/catlog_icon_hctcontrol"
+					android:layout_alignParentEnd="false"
+					android:layout_marginLeft="10dp" />
+
+				<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+					android:background="@drawable/battery_batt_bg"
+					android:id="@+id/battery"
+					android:layout_width="30dp"
+					android:layout_height="60dp"
+					android:orientation="vertical"
+					android:layout_centerInParent="true"
+					android:gravity="center_horizontal">
+					<TextView
+						android:id="@+id/text_battery"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="Batería"
+						android:textSize="8dp"
+						android:gravity="center"
+						android:textStyle="bold"></TextView>
+					<ImageView
+						android:background="@drawable/battery_top_line"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_marginBottom="1dp"></ImageView>
+					<ImageView
+						android:id="@+id/bar10"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar9"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar8"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar7"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar6"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar5"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar4"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar3"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar2"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+					<ImageView
+						android:id="@+id/bar1"
+						android:layout_width="wrap_content"
+						android:layout_height="5dp"
+						android:layout_gravity="center"
+						android:visibility="invisible"></ImageView>
+				</LinearLayout>
+
+				<ImageView android:layout_width="wrap_content"
+					android:id="@+id/charger"
+					android:layout_height="wrap_content" android:src="@drawable/charger"
+					android:layout_alignParentEnd="false"
+					android:layout_alignParentBottom="false"
+					android:layout_alignLeft="@+id/battery"
+					android:layout_alignRight="@+id/battery"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="3dp"
+					android:paddingTop="10dp"
+					android:layout_marginRight="2dp" />
+
+				<TextView
+					android:id="@+id/text_level"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="level%"
+					android:textSize="14dp"
+					android:textStyle="bold"
+					android:layout_toRightOf="@+id/battery"
+					android:layout_alignTop="@+id/battery"
+					android:layout_alignBottom="@+id/battery"
+					android:layout_centerInParent="true"
+					android:layout_marginLeft="5dp"
+					android:gravity="bottom" />
+				<TextView
+					android:id="@+id/text_temp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="temp°"
+					android:textSize="12dp"
+					android:textStyle="bold"
+					android:layout_toRightOf="@+id/battery"
+					android:layout_alignTop="@+id/battery"
+					android:layout_alignBottom="@+id/battery"
+					android:layout_marginLeft="5dp"
+					android:layout_centerInParent="true"
+					android:layout_marginTop="5dp" />
+
+				<ImageView android:layout_width="wrap_content"
+					android:id="@+id/catlog_icon_widget"
+					android:layout_height="wrap_content" android:src="@drawable/catlog_status_icon"
+					android:layout_alignParentEnd="true"
+					android:layout_marginTop="5dp"
+					android:layout_marginRight="10dp" />
+
+				<LinearLayout android:gravity="right|bottom"
+					android:layout_height="@android:dimen/app_icon_size"
+					android:layout_width="@android:dimen/app_icon_size"
+					android:layout_alignParentEnd="true"
+					android:layout_marginTop="5dp"
+					android:layout_marginRight="10dp">
+
+					<ImageView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:src="@drawable/catlog_record_badge_smaller"
+						android:id="@+id/record_badge_image_view" android:visibility="invisible" />
+
+				</LinearLayout>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/widget_subtext"
+					android:textSize="12sp"
+					android:textColor="@android:color/white"
+					android:gravity="center_vertical" android:text="@string/widget_start_recording"
+					android:singleLine="true" android:ellipsize="marquee"
+					android:layout_below="@+id/catlog_icon_widget"
+					android:layout_alignParentEnd="true"
+					android:layout_marginRight="5dp" />
+			</RelativeLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="preferenceScreen">
+    <PreferenceScreen
+        android:icon="@drawable/ic_notif"
+        android:summary="Personalizar las Notificaciones en la pantalla de bloqueo"
+        android:title="Notificaciones Lockscreen"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Numero de notificaciones">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/lockscreen_notif_entries"
+                android:title="Número de notificaciones visibles"
+                android:key="lockscreen_notifications"
+                android:defaultValue="2"
+                android:entryValues="@array/lockscreen_notif_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

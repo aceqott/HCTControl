@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="?attr/android:windowBackground" >
+	<include layout="@layout/toolbar_default"
+		android:id="@+id/toolbar"/>
+	<ScrollView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/scrollView2"
+		android:layout_below="@+id/toolbar">
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			android:paddingTop="15dp"
+			android:background="?attr/android:windowBackground" >
+
+			<de.hdodenhof.circleimageview.CircleImageView
+				android:id="@+id/imgView"
+				android:layout_width="150dp"
+				android:layout_height="150dp"
+				android:src="@drawable/imagen_perfil"
+				app:border_width="1dp"
+				app:border_color="#ffa4a4a4"
+				android:layout_alignParentEnd="false"
+				android:layout_centerHorizontal="true" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="● Selecciona una imagen guardada para mostrar como perfil/avatar."
+				android:id="@+id/textView"
+				android:textSize="13dp"
+				android:layout_below="@+id/imgView"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="20dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp" />
+			<Button
+				android:text="Buscar Imagen"
+				android:id="@+id/btnPic"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="?attr/colorAccent"
+				android:layout_toEndOf="@id/imgView"
+				android:layout_marginTop="15dp"
+				android:layout_below="@+id/checkBox"
+				android:textColor="#ffffffff"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:layout_alignParentStart="true"
+				android:layout_marginLeft="10dp" />
+			<CheckBox
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Mostrar imagen personalizada en el menú principal."
+				android:id="@+id/checkBox"
+				android:layout_marginTop="10dp"
+				android:layout_below="@+id/textView"
+				android:textSize="11dp"
+				android:layout_centerHorizontal="true"
+				android:layout_marginLeft="30dp"
+				android:layout_marginRight="30dp" />
+			<Button
+				android:text="Eliminar Imagen"
+				android:id="@+id/btnDelete"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="?attr/colorAccent"
+				android:textColor="#ffffffff"
+				android:layout_below="@+id/checkBox"
+				android:layout_marginTop="15dp"
+				android:paddingRight="15dp"
+				android:paddingLeft="15dp"
+				android:layout_alignParentEnd="true"
+				android:layout_marginRight="10dp" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="●  Escribe un nombre para mostrarlo en la cabecera del menú (nick, apodo, nombre, ...)."
+				android:id="@+id/textoUser"
+				android:textSize="13dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:layout_below="@+id/btnDelete"
+				android:layout_marginTop="20dp" />
+			<Button
+				android:text="Aplicar"
+				android:id="@+id/btnAplicar"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="?attr/colorAccent"
+				android:textColor="#ffffffff"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:layout_alignParentEnd="false"
+				android:layout_below="@+id/textoEnblanco"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="15dp" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="●  Al pulsar en &quot;Aplicar&quot;, la aplicación se reiniciará automáticamente para aplicar los cambios."
+				android:id="@+id/textoAplicar"
+				android:textSize="12dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginRight="40dp"
+				android:layout_below="@+id/btnAplicar"
+				android:layout_marginTop="20dp"
+				android:layout_marginBottom="30dp" />
+			<EditText
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/editText"
+				android:layout_below="@+id/textoUser"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="20dp" />
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="●  Para no mostrar un nombre, dejar en blanco."
+				android:id="@+id/textoEnblanco"
+				android:textSize="8dp"
+				android:layout_below="@+id/editText"
+				android:layout_marginTop="5dp"
+				android:layout_centerHorizontal="true" />
+		</RelativeLayout>
+	</ScrollView>
+</RelativeLayout>

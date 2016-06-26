@@ -1,0 +1,1001 @@
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">HCT Control</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="nav_drawer_items">
+        <item>Barra de estado</item>
+        <item>Panel de notificaciones</item>
+        <item>Pantalla de bloqueo</item>
+        <item>Sonidos y Notificaciones</item>
+        <item>Teléfono y Llamadas</item>
+        <item>Utilidades</item>
+        <item>Apps Extras</item>
+        <item>Theme</item>
+        <item>Copiar/Restaurar</item>
+        <item>Changelog</item>
+        <item>Acerca de</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Right clock</item>
+        <item>Center Clock</item>
+        <item>Left Clock</item>
+    </string-array>
+    <string-array name="clock_position_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="some_entries">
+        <item>Right clock</item>
+        <item>Center Clock</item>
+        <item>Left Clock</item>
+    </string-array>
+    <string-array name="some_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="battery_bar_entries">
+        <item>Ocultar</item>
+        <item>Statusbar</item>
+    </string-array>
+    <string-array name="battery_bar_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_bar_style_entries">
+        <item>Normal</item>
+        <item>Centrado</item>
+    </string-array>
+    <string-array name="battery_bar_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_entries">
+        <item>1 dp</item>
+        <item>2 dp</item>
+        <item>3 dp</item>
+        <item>4 dp</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="anlorlock_entries">
+        <item>Derecha</item>
+        <item>Centro transparente</item>
+        <item>Izquierda</item>
+        <item>Ocultar</item>
+    </string-array>
+    <string-array name="anlorlock_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="anlorhome_entries">
+        <item>Ocultar</item>
+        <item>Derecha</item>
+        <item>Izquierda</item>
+    </string-array>
+    <string-array name="anlorhome_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="traffic_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="traffic_entries">
+        <item>Desactivado</item>
+        <item>Saliente</item>
+        <item>Entrante</item>
+        <item>Saliente y entrante</item>
+    </string-array>
+    <string-array name="traffic_update_entries">
+        <item>500 ms</item>
+        <item>1000 ms</item>
+        <item>1500 ms</item>
+        <item>2000 ms</item>
+    </string-array>
+    <string-array name="traffic_update_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+    </string-array>
+    <string-array name="traffic_unit_entries">
+        <item>Bits por segundo</item>
+        <item>Bytes por segundo</item>
+    </string-array>
+    <string-array name="traffic_unit_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="notification_panel_background_images_entries">
+        <item>Stock</item>
+        <item>Personalizado 1</item>
+        <item>Personalizado 2</item>
+        <item>Personalizado 3</item>
+        <item>Personalizado 4</item>
+    </string-array>
+    <string-array name="notification_panel_background_images_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="kuaijieanniushuliang_entries">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="kuaijieanniushuliang_values">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="toggle_scroll_entries">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="toggle_scroll_values">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="sysbar_recent">
+        <item>Oculto</item>
+        <item>Botón Recientes</item>
+        <item>Botón Bloqueo</item>
+        <item>Botón Home</item>
+    </string-array>
+    <string-array name="sysbar_recent_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="volbtn_timeout_entries">
+        <item>100ms</item>
+        <item>150ms</item>
+        <item>200ms</item>
+        <item>250ms</item>
+        <item>300ms</item>
+        <item>350ms</item>
+        <item>400ms</item>
+        <item>450ms</item>
+        <item>500ms</item>
+    </string-array>
+    <string-array name="volbtn_timeout_values">
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+        <item>300</item>
+        <item>350</item>
+        <item>400</item>
+        <item>450</item>
+        <item>500</item>
+    </string-array>
+    <string-array name="volbtn_action_entries">
+        <item>Siguiente</item>
+        <item>Pausa</item>
+        <item>Play</item>
+        <item>Play/Pausa</item>
+        <item>Anterior</item>
+        <item>Stop</item>
+    </string-array>
+    <string-array name="volbtn_action_values">
+        <item>87</item>
+        <item>127</item>
+        <item>126</item>
+        <item>85</item>
+        <item>88</item>
+        <item>86</item>
+    </string-array>
+    <string-array name="lockscreen_clock_position_entries">
+        <item>Arriba izquierda</item>
+        <item>Arriba centro</item>
+        <item>Arriba derecha</item>
+        <item>Abajo izquierda</item>
+        <item>Abajo centro</item>
+        <item>Abajo derecha</item>
+    </string-array>
+    <string-array name="lockscreen_clock_position_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="lockscreen_font_style_entries">
+        <item>Android Clock</item>
+        <item>Android Clock Highlight</item>
+        <item>Android Clock Solid</item>
+        <item>Archibald</item>
+        <item>Caviar Dreams</item>
+        <item>Choco Cooky</item>
+        <item>Cutive Mono</item>
+        <item>Cool Jazz</item>
+        <item>Rosemary</item>
+        <item>Ultima</item>
+    </string-array>
+    <string-array name="lockscreen_font_style_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="call_delay_entries">
+        <item>Sin retraso</item>
+        <item>1000ms</item>
+        <item>2500ms</item>
+        <item>Por defecto (5000ms)</item>
+    </string-array>
+    <string-array name="call_delay_values">
+        <item>0</item>
+        <item>1000</item>
+        <item>2500</item>
+        <item>5000</item>
+    </string-array>
+
+    <string-array name="listview_animation_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_wave_left</item>
+        <item>@string/listview_wave_right</item>
+        <item>@string/listview_scale</item>
+        <item>@string/listview_alpha</item>
+        <item>@string/listview_stack_top</item>
+        <item>@string/listview_stack_bottom</item>
+        <item>@string/listview_unfold</item>
+        <item>@string/listview_fold</item>
+        <item>@string/listview_translate_left</item>
+        <item>@string/listview_translate_right</item>
+        <item>@string/listview_rotate</item>
+    </string-array>
+    <string-array name="listview_animation_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="listview_interpolator_entries">
+        <item>@string/listview_off</item>
+        <item>@string/listview_accelerate_interpolator</item>
+        <item>@string/listview_decelerate_interpolator</item>
+        <item>@string/listview_accelerate_decelerate_interpolator</item>
+        <item>@string/listview_anticipate_interpolator</item>
+        <item>@string/listview_overshoot_interpolator</item>
+        <item>@string/listview_anticipate_overshoot_interpolator</item>
+        <item>@string/listview_bounce_interpolator</item>
+    </string-array>
+    <string-array name="listview_interpolator_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string name="listview_off">Desactivado</string>
+    <string name="listview_wave_left">Ola (Izquierda)</string>
+    <string name="listview_wave_right">Ola (Derecha)</string>
+    <string name="listview_alpha">Alfa</string>
+    <string name="listview_scale">Escala</string>
+    <string name="listview_stack_top">Pila (Arriba)</string>
+    <string name="listview_stack_bottom">Pila (Abajo)</string>
+    <string name="listview_unfold">Desplegar</string>
+    <string name="listview_fold">Plegar</string>
+    <string name="listview_translate_left">Trasladar (Izquierda)</string>
+    <string name="listview_translate_right">Trasladar (Derecha)</string>
+    <string name="listview_rotate">Rotar</string>
+    <string name="listview_accelerate_interpolator">Acelerar interpolador</string>
+    <string name="listview_decelerate_interpolator">Desacelerar interpolador</string>
+    <string name="listview_accelerate_decelerate_interpolator">Acelerar y desacelerar interpolador</string>
+    <string name="listview_anticipate_interpolator">Anticipar interpolador</string>
+    <string name="listview_overshoot_interpolator">Impulso interpolador</string>
+    <string name="listview_anticipate_overshoot_interpolator">Anticipar impulso interpolador</string>
+    <string name="listview_bounce_interpolator">Bote interpolador</string>
+    <string-array name="home_doubletap">
+        <item>Desactivado</item>
+        <item>Linterna</item>
+        <item>Kill App</item>
+        <item>Apps Recientes</item>
+        <item>Captura de pantalla</item>
+        <item>Grabar pantalla</item>
+        <item>Google Now</item>
+        <item>Comando de voz (Stock)</item>
+        <item>Bloquear pantalla</item>
+    </string-array>
+    <string-array name="home_doubletap_values">
+        <item>8</item>
+        <item>5</item>
+        <item>3</item>
+        <item>1</item>
+        <item>2</item>
+        <item>6</item>
+        <item>7</item>
+        <item>0</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="home_tripletap">
+        <item>Desactivado</item>
+        <item>Linterna</item>
+        <item>Kill App</item>
+        <item>Apps Recientes</item>
+        <item>Captura de pantalla</item>
+        <item>Grabar pantalla</item>
+        <item>Google Now</item>
+        <item>Comando de voz</item>
+        <item>Bloquear pantalla</item>
+    </string-array>
+    <string-array name="home_tripletap_values">
+        <item>0</item>
+        <item>6</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>7</item>
+        <item>8</item>
+        <item>4</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="home_longpress">
+        <item>Desactivado</item>
+        <item>Linterna</item>
+        <item>Kill App</item>
+        <item>Apps Recientes (Stock)</item>
+        <item>Captura de pantalla</item>
+        <item>Grabar pantalla</item>
+        <item>Google Now</item>
+        <item>Comando de voz</item>
+        <item>Bloquear pantalla</item>
+    </string-array>
+    <string-array name="home_longpress_values">
+        <item>8</item>
+        <item>5</item>
+        <item>2</item>
+        <item>0</item>
+        <item>1</item>
+        <item>6</item>
+        <item>7</item>
+        <item>3</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="left_shortpress">
+        <item>Linterna</item>
+        <item>Kill App</item>
+        <item>Menú (Stock)</item>
+        <item>Apps Recientes</item>
+        <item>Captura de pantalla</item>
+        <item>Grabar pantalla</item>
+        <item>Google Now</item>
+        <item>Comando de voz</item>
+        <item>Bloquear pantalla</item>
+    </string-array>
+    <string-array name="left_shortpress_values">
+        <item>6</item>
+        <item>3</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>7</item>
+        <item>8</item>
+        <item>4</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="left_longpress">
+        <item>Linterna</item>
+        <item>Kill App</item>
+        <item>Menú</item>
+        <item>Apps Recientes (Stock)</item>
+        <item>Captura de pantalla</item>
+        <item>Grabar pantalla</item>
+        <item>Google Now</item>
+        <item>Comando de voz</item>
+        <item>Bloquear pantalla</item>
+    </string-array>
+    <string-array name="left_longpress_values">
+        <item>6</item>
+        <item>3</item>
+        <item>1</item>
+        <item>0</item>
+        <item>2</item>
+        <item>7</item>
+        <item>8</item>
+        <item>4</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="right_longpress">
+        <item>Desactivado</item>
+        <item>Linterna</item>
+        <item>Kill App (Stock)</item>
+        <item>Apps Recientes</item>
+        <item>Captura de pantalla</item>
+        <item>Grabar pantalla</item>
+        <item>Google Now</item>
+        <item>Comando de voz</item>
+        <item>Bloquear pantalla</item>
+    </string-array>
+    <string-array name="right_longpress_values">
+        <item>8</item>
+        <item>5</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>6</item>
+        <item>7</item>
+        <item>3</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="power_doubletap">
+        <item>Desactivado</item>
+        <item>Linterna</item>
+        <item>Kill App</item>
+        <item>Apps Recientes</item>
+        <item>Captura de pantalla</item>
+        <item>Grabar pantalla</item>
+        <item>Google Now</item>
+        <item>Comando de voz</item>
+        <item>Bloquear pantalla</item>
+    </string-array>
+    <string-array name="power_doubletap_values">
+        <item>0</item>
+        <item>6</item>
+        <item>4</item>
+        <item>2</item>
+        <item>3</item>
+        <item>7</item>
+        <item>8</item>
+        <item>1</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="clock_style_entries">
+        <item>Digital</item>
+        <item>Analógico</item>
+    </string-array>
+    <string-array name="clock_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="lockscreen_notif_entries">
+        <item>2 (Stock)</item>
+        <item>3 máx.</item>
+        <item>4 máx.</item>
+        <item>5 máx.</item>
+    </string-array>
+    <string-array name="lockscreen_notif_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Presione el color a aplicar</string>
+    <string-array name="theme_items">
+        <item>Theme HCT Dark</item>
+        <item>Theme Marshmallow Dark</item>
+        <item>Theme Marshmallow Light</item>
+        <item>Theme TouchWiz Light</item>
+    </string-array>
+    <string name="missing_su">El dispositivo no está rooteado o la aplicación negó los permisos de root.\n\nPor favor, confirma su estado root y vuelva a intentarlo más tarde.</string>
+    <string name="exit">Salir</string>
+    <string name="gaining_root">Adquiriendo acceso root. Por favor, espere...</string>
+    <string name="missing_su_title">No se pudo obtener acceso root</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="theme_chooser_dialog_title">Elegir tema</string>
+    <string name="app_reboot_required_title">App requiere Reinicio</string>
+    <string name="app_reboot_required_message">%1$s requiere hacer un reinicio para que los cambios surtan efecto.\n\nReiniciar ahora?</string>
+
+    <!-- DPI CHANGER -->
+    <string name="dialog_title">Selecciona Dpi</string>
+    <string name="show_current_dpi">Cambiar DPI\nSelecciona una opción:</string>
+    <string-array name="dpi_dialog_items">
+        <item>480 dpi</item>
+        <item>460 dpi</item>
+        <item>440 dpi</item>
+        <item>420 dpi</item>
+        <item>400 dpi</item>
+        <item>380 dpi</item>
+        <item>DPI Personalizado</item>
+    </string-array>
+    <string-array name="dpi_dialog_values">
+        <item>480</item>
+        <item>460</item>
+        <item>440</item>
+        <item>420</item>
+        <item>400</item>
+        <item>380</item>
+        <item>DPI Personalizado</item>
+    </string-array>
+    <string name="executed" translatable="false">###Executed###</string>
+    <string name="custom_dpi_input">Por favor, introduzca un valor comprendido entre 300 y 650</string>
+    <string name="text_hint">Introduce el valor de dpi aquí</string>
+    <string name="back_to_preset">Valores predefinidos</string>
+    <string name="illegal_value_title">Valor no permitido!</string>
+    <string name="text_illegal_value">Este dispositivo no es compatible con %1$s DPI.\n\nIntroduzca un valor comprendido entre 300 y 650 DPI.\n\nGracias!</string>
+    <string name="back_button_custom">Volver a DPI Personalizado</string>
+    <string name="credits_hct">En primer lugar, dar las gracias a @Wuby986 y @daxgirl, por este fantástico proyecto que han construido.\n\n Muchísimas gracias a @tdunham, @remuntada78, @talkingmonkeys, @txr33, @ikrom, @asc1977, @kmokhtar79, @tamirda, @Er. Aditya por sus guías.\n\n Gracias especiales a @Palleiro por su ayuda incansable.\n Gracias como no a todo el @HCTeam: @666roi666 @franjua @dav88 @kakarotto24 @Doomper @alrodri @naftydj @Turulai @Broquen @Garrapatero @Aceqott @Gask7 @Mikele @Escaliboor @Kijodoari @koko @palleiro @sumejorpista @benjitawx @Jiterron</string>
+
+    <!-- Changelog -->
+    <string name="changelog_full_title">Registro de cambios</string>
+    <string name="changelog_ok_button">Aceptar</string>
+    <string name="changelog_show_full">Más…</string>
+    <string name="changelog_title">Novedades HCTRom: </string>
+    <string name="changelog_version_format">Versión <ns1:g id="version_name">%s</ns1:g></string>
+
+    <!-- Backup Settings -->
+    <string name="backup_dialog_title">Copiar/Restaurar Ajustes HCT</string>
+    <string name="confirm_backup">Desea realizar una copia de los Ajustes de HCTControl?</string>
+    <string name="ok">OK</string>
+    <string name="restore_next_boot">Restaurar en siguiente inicio?</string>
+    <string name="later">Después</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm_restore">Desea restaurar una copia guardada de los Ajustes de HCTControl?</string>
+
+    <string name="licencia"><b>Copyright 2016 HCTeam&#x2122;, Inc.</b>\n\n
+
+        Esta aplicación ha sido modificada por el HCTeam&#x2122; bajo la licencia APACHE y ANDROID OPEN SOURCE PROJECT (AOSP) única y exclusivamente para las Roms de HCT.
+        Es totalmente gratuita, por lo que su venta queda totalmente prohibida sin el consentimiento de su creador.\n\n</string>
+    <string name="licencia2">
+
+        Puedes obtener una copia de la licencia en \n\n
+
+        <b>http://www.apache.org/licenses/LICENSE-2.0</b>\n\n
+        o
+    </string>
+
+    <!-- Host File Manager -->
+    <string name="hfm_disable_ads_title">Hosts Ads (publicidad)</string>
+    <string name="hfm_disable_ads_summary_on">Publicidad desactivada</string>
+    <string name="hfm_disable_ads_summary_off">Publicidad activada</string>
+    <string name="hfm_pref_screen_title">Ad blocker</string>
+    <string name="hfm_update_hosts">Actualizar archivo hosts</string>
+    <string name="hfm_update_hosts_summary">Descargar y aplicar hosts actualizado</string>
+    <string name="hfm_dialog_wait">Trabajando, por favor espere ...</string>
+    <string name="hfm_dialog_failed">Fallo actualizando archivo host. Por favor, inténtalo de nuevo.</string>
+    <string name="hfm_dialog_success">/4 fuentes hosts aplicadas con éxito!\n\nEn caso necesario, puede eliminar algún dominio en concreto de la lista de bloqueados.\n\nPara ello pulse en \"<b>ELIMINAR UN DOMINIO</b>\".\nDe lo contrario, pulse \"<b>FINALIZAR</b>\".\n\n</string>
+    <string name="hfm_dialog_conn_error">Error: No hay conexión a internet. Por favor, compruebe la conexión e intentelo de nuevo.</string>
+    <string name="hfm_text_domain">Introduzca un <b>Dominio</b> o parte de un Dominio, respetando espacios y se eliminará de la lista de bloqueados.\nEsto puede valer para casos en los que el bloqueador de anuncios no deja abrir una página que la base de datos considera \"<b>Spam</b>\".</string>
+    <string name="hfm_text2_domain">&#8226; <b>Ejemplo: -</b> si no tienes acceso al domino <b>ihatepops.com</b>, escriba dicho nombre o parte de él....</string>
+
+    <string name="version_name">dev</string>
+    <string name="aviso_backup">\n\nUna vez tengas todas las opciones de <b>HCT Control</b> configuradas al gusto, <u>recomendamos realizar una copia de los datos de configuración</u> para poder restaurarlos en cualquier momento.\n\n
+            Para realizar el <b>Backup</b>, tan solo hay que pulsar en el <u>menú lateral</u> la opción <b>\"Copiar/Restaurar\"</b> y luego en <b>\"Copiar\"</b>.</string>
+
+    <!-- Edit Build.prop -->
+    <string name="add_prop">Añadir Propiedad</string>
+    <string name="save">Guardar</string>
+    <string name="discart">Discartar</string>
+    <string name="edit_key">Propiedad Key</string>
+    <string name="edit_name">Propiedad Name</string>
+    <string name="edit_prop_title">Editar/Añadir Propiedad</string>
+    <string name="unsaved_changes_title">Cambios NO guardados</string>
+    <string name="unsaved_changes_message">Te gustaría establecer esta propiedad?</string>
+    <string name="add">Añadir</string>
+    <string name="about">Acerca de</string>
+    <string name="backup">Backup</string>
+    <string name="restore">Restaurar</string>
+
+    <!-- FasterGPS Activities -->
+    <string name="activity_advanced_settings">Opciones Avanzadas</string>
+    <string name="activity_help">Ayuda</string>
+    <!-- FasterGPS Help -->
+    <string name="help_about_version">Versión:</string>
+    <!-- FasterGPS Buttons -->
+    <string name="button_close">Cerrar</string>
+    <string name="button_exit">Salir</string>
+    <string name="button_yes">Si</string>
+    <string name="button_no">No</string>
+    <!-- FasterGPS Dialogs -->
+    <string name="no_root_title">Necesita ser usuario Root</string>
+    <string name="revert_dialog_title">¿Regresar?</string>
+    <string name="revert_dialog">¿Quiere regresar a su antiguo archivo gps.conf?</string>
+    <string name="applying_successful">Se ha guardado gps.conf satisfactoriamente.</string>
+    <!-- FasterGPS Preferences -->
+    <string name="pref_introduction">¿Qué hacer?</string>
+  <string name="pref_introduction_summary">Por favor seleccione un servidor NTP cercano a su posición actual.
+Cuanto más cerca esté, más rápido obtendrá su fijación GPS.
+FasterGPS inmediatamente escribirá sus ajustes.</string>
+    <string name="pref_ntp_current">Servidor actual:</string>
+    <string name="pref_revert">Regresar a su antiguo archivo gps.conf</string>
+  <string name="pref_revert_summary">Cuando FasterGPS comienza por primera vez, hace una copia de seguridad del fichero gps.conf.
+Usando el comando \'revert\' puede restaurar dicho fichero.</string>
+    <string name="pref_further_options">Otras opciones</string>
+    <string name="pref_ntp">Servidor NTP</string>
+    <string name="pref_ntp_continent">Continente</string>
+    <string name="pref_ntp_continent_summary">Seleccione su continente.</string>
+    <string-array name="pref_ntp_continent_entries">
+        <item>- Ninguno seleccionado -</item>
+        <item>- Servidor personalizado -</item>
+        <item>Europa</item>
+        <item>Oceanía</item>
+        <item>Asia</item>
+        <item>Norteamérica</item>
+        <item>Suramérica</item>
+        <item>África</item>
+    </string-array>
+    <string name="pref_ntp_region">Región</string>
+    <string name="pref_ntp_region_summary">Seleccione una región cercana a usted.</string>
+    <string-array name="pref_ntp_region_entries_europe">
+        <item>- Ninguno seleccionado -</item>
+        <item>Austria</item>
+        <item>Suiza</item>
+        <item>Alemania</item>
+        <item>Dinamarca</item>
+        <item> España</item>
+        <item>Francia</item>
+        <item>Italia</item>
+        <item>Luxemburgo</item>
+        <item>Países Bajos</item>
+        <item>Noruega </item>
+        <item>Polonia</item>
+        <item>Suecia</item>
+        <item>Eslovenia</item>
+        <item>Reino Unido</item>
+        <item>Finlandia</item>
+        <item> Irlanda</item>
+        <item>Rusia</item>
+        <item>Bélgica</item>
+        <item>Portugal</item>
+        <item>Grecia</item>
+        <item>Hungría</item>
+        <item>Bulgaria</item>
+        <item>Rumanía</item>
+        <item>República Checa</item>
+        <item>Yugoslavia</item>
+        <item>Estonia</item>
+        <item> Bielorrusia</item>
+        <item>Eslovaquia</item>
+        <item>Ucrania</item>
+        <item>Lituania</item>
+        <item>Macedonia</item>
+        <item>Moldavia </item>
+        <item>Letonia</item>
+        <item>Croacia</item>
+        <item>República de Serbia</item>
+        <item>Bosnia y Herzegovina</item>
+        <item>Armenia</item>
+    </string-array>
+    <string-array name="pref_ntp_region_entries_asia">
+        <item>- Ninguno seleccionado -</item>
+        <item>Filipinas</item>
+        <item>Malasia</item>
+        <item>Turquía</item>
+        <item>Singapur</item>
+        <item> India</item>
+        <item>Hong Kong</item>
+        <item>Emiratos Árabes Unidos</item>
+        <item>Japón</item>
+        <item>Bangladesh</item>
+        <item>Israel</item>
+        <item>Corea</item>
+        <item>Tailandia</item>
+        <item>Irán</item>
+        <item>Taiwán</item>
+        <item>China</item>
+        <item>Indonesia</item>
+        <item>Vietnam</item>
+        <item>Pakistán</item>
+        <item>Omán</item>
+        <item>Uzbekistán</item>
+        <item>Sri Lanka</item>
+        <item>Kirguistán</item>
+        <item>Camboya</item>
+        <item>Qatar</item>
+        <item>Arabia Saudita</item>
+        <item>Iraq</item>
+        <item>Kazajstán</item>
+    </string-array>
+    <string-array name="pref_ntp_region_entries_oceania">
+        <item>- Ninguno seleccionado  -</item>
+        <item>Australia</item>
+        <item>Nueva Zealanda</item>
+        <item>Nueva Caledonia</item>
+    </string-array>
+    <string-array name="pref_ntp_region_entries_north_america">
+        <item>- Nada seleccionado -</item>
+        <item>Canadá</item>
+        <item>Estados Unidos</item>
+        <item>México</item>
+        <item>Guatemala</item>
+        <item> Panamá</item>
+        <item>Bahamas</item>
+        <item>Costa Rica</item>
+        <item>El Salvador</item>
+    </string-array>
+    <string-array name="pref_ntp_region_entries_south_america">
+        <item>- Nothing selected -</item>
+        <item>Brazil</item>
+        <item>Chile</item>
+        <item>Argentina</item>
+        <item>Venezuela</item>
+    </string-array>
+    <string-array name="pref_ntp_region_entries_africa">
+        <item>- Nothing selected -</item>
+        <item>Tanzania</item>
+        <item>South Africa</item>
+        <item>Angola</item>
+        <item>Madagascar</item>
+        <item>Uganda</item>
+    </string-array>
+    <string name="pref_ntp_custom">Personalizado</string>
+    <string name="pref_ntp_custom_summary">Si el servidor personalizado es seleccionado, puedes definir un servidor NTP personalizado.</string>
+    <string name="pref_advanced_settings">Ir a opciones avanzadas</string>
+    <string name="pref_help">Ayuda</string>
+    <string name="pref_about">Acerca de</string>
+    <string name="pref_donations">Donaciones</string>
+    <string name="pref_current_value">Valor:</string>
+    <string name="pref_category_general">General</string>
+    <string name="pref_category_xtra">Servidor XTRA</string>
+    <string name="pref_category_supl">AGPS SUPL</string>
+    <string name="pref_category_c2k">AGPS SUPL</string>
+    <string name="pref_category_carrier">AGPS Carrier</string>
+    <string name="pref_category_other">Otros</string>
+    <string name="DEBUG_LEVEL">Debug Levels: 0=ninguno, 1=Errores, 2=Advertencias, 3=Info, 4=Depuración, 5=Detallado</string>
+    <string name="INTERMEDIATE_POS">Informar de las posiciones intermedias: 1=Activar, 0=Desactivar</string>
+  <string name="ACCURACY_THRES">Umbral de exactitud para posiciones intermedias, posiciones menos exactas son ignoradas:
+0 para dar de paso a todas las posiciones.</string>
+    <string name="REPORT_POSITION_USE_SUPL_REFLOC">Informar de las localizaciones supl ref como posición: 1=activar, 0=desactivar</string>
+    <string name="ENABLE_WIPER">Wiper (posicionamento wifi): 1=activar, 0=desactivar</string>
+    <string name="SUPL_HOST"></string>
+    <string name="SUPL_PORT"></string>
+    <string name="SUPL_NO_SECURE_PORT"></string>
+    <string name="SUPL_SECURE_PORT"></string>
+    <string name="C2K_HOST"></string>
+    <string name="C2K_PORT"></string>
+    <string name="CURRENT_CARRIER">valores posibles: comunes</string>
+    <string name="DEFAULT_AGPS_ENABLE">valores posibles: TRUE/FALSE</string>
+    <string name="DEFAULT_SSL_ENABLE">valor posible: TRUE/FALSE</string>
+    <string name="DEFAULT_USER_PLANE">TRUE para \"Plano de usuario\", FALSE para \"Plano de control</string>
+    <string name="no_root_description">Either the su binary could not be found or you did not allow root permission for
+        FasterGPS.\n\nThis can happen when your device is not rooted.\nYou can find information about how to root your
+        device on www.cyanogenmod.com or other Android websites.
+    </string>
+
+    <!-- CatLog -->
+    <string name="log_level_debug">Debug</string>
+    <string name="log_level_error">Error</string>
+    <string name="log_level_info">Info</string>
+    <string name="log_level_value_debug">D</string>
+    <string name="log_level_value_error">E</string>
+    <string name="log_level_value_info">I</string>
+    <string name="log_level_value_verbose">V</string>
+    <string name="log_level_value_warn">W</string>
+    <string name="log_level_value_wtf">F</string>
+    <string name="log_level_verbose">Verbose</string>
+    <string name="log_level_warn">Warn</string>
+    <string name="log_level_wtf">What a Terrible Failure</string>
+
+    <string name="pref_buffer">buffer</string>
+    <string name="pref_buffer_choice_events_value">events</string>
+    <string name="pref_buffer_choice_main_value">main</string>
+    <string name="pref_buffer_choice_radio_value">radio</string>
+    <string name="pref_default_log_level">default_level</string>
+    <string name="pref_display_limit">display_limit</string>
+    <string name="pref_display_limit_default">10000</string>
+    <string name="pref_expanded_by_default">expand_default</string>
+    <string name="pref_hide_partial_select_help">pref_hide_partial_select_help</string>
+    <string name="pref_include_device_info">device_info</string>
+    <string name="pref_log_line_period">log_line_period</string>
+    <string name="pref_log_line_period_default">200</string>
+    <string name="pref_ran_jellybean_su_update">jellybean_su</string>
+    <string name="pref_show_timestamp">show_timestamp</string>
+    <string name="pref_text_size">text_size</string>
+    <string name="pref_theme">theme</string>
+    <string name="pref_theme_choice_android_value">Android</string>
+    <string name="pref_theme_choice_att_value">Ma Bell</string>
+    <string name="pref_theme_choice_dark_value">Dark</string>
+    <string name="pref_theme_choice_light_value">Light</string>
+    <string name="pref_theme_choice_sprint_value">Big Yellow</string>
+    <string name="pref_theme_choice_tmobile_value">T-Mo</string>
+    <string name="pref_theme_choice_verizon_value">Big Red</string>
+
+    <string name="text_size_large_value">L</string>
+    <string name="text_size_medium_value">M</string>
+    <string name="text_size_small_value">S</string>
+    <string name="text_size_xlarge_value">XL</string>
+    <string name="text_size_xsmall_value">XS</string>
+
+
+    <!-- translateable strings-->
+
+
+    <string name="about_catlog">Acerca de CatLog</string>
+
+    <string name="add_filter">Agregar Filtro</string>
+    <string name="add_filter_ellipsis">Agregar Filtro…</string>
+
+    <string name="are_you_sure">%d archivo(s) será eliminado.</string>
+
+    <string name="as_attachment">Como archivo adjunto</string>
+    <string name="as_text">Como texto</string>
+
+    <string name="checkbox_never_show_partial_select_help">No mostrar de nuevo</string>
+
+    <string name="copied_to_clipboard">Copiar al portapapeles.</string>
+
+    <string name="copy_to_clipboard">Copiar al portapapeles</string>
+
+    <string name="default_in_parens">(Por defecto)</string>
+    <string name="delete_all">Eliminar todo</string>
+    <string name="delete_saved_log">Eliminado Logs guardados</string>
+    <string name="delimiter">, </string>
+    <string name="dialog_compiling_log">Compilación de log…</string>
+    <string name="dialog_for_donate">Para habilitar <b>esquema de\ncolores</b>, descargar\n<a href="market://details?id=com.hctrom.romcontrol.logcat.donate">CatLog Donate</a></string>
+    <string name="dialog_for_widget">Para mostrar<b>widget</b>,\nen el escritorio → Pulsación\nLarga → Seleccionar Widgets</string>
+    <string name="dialog_initializing_recorder">Iniciando grabación…</string>
+    <string name="dialog_loading_updates">Actualizando…</string>
+    <string name="dialog_partial_select_explanation">1. Seleccione la <b>primera</b> línea.\n2. A continuación, seleccione la <b>última</b> línea.</string>
+    <string name="dialog_please_wait">Por favor, espere</string>
+    <string name="enter_filename">Introduzca el nombre del archivo para guardar:</string>
+    <string name="enter_good_filename">Por favor, introduzca un nombre de archivo válido.</string>
+    <string name="files_deleted">%d archivo(s) eliminado.</string>
+    <string name="filter_choice">Buscar by</string>
+    <string name="filter_choice_pid">Process id</string>
+    <string name="filter_choice_tag">Etiqueta</string>
+    <string name="filter_text_colon">Texto del filtro:</string>
+    <string name="first_run_pref_summary">Mostrar mensaje de introducción al abrir.</string>
+    <string name="first_run_pref_title">Mensaje de introducción</string>
+    <string name="first_run_title">Bienvenido a CatLog!</string>
+    <string name="log_cleared">Logs eliminados. Pulsación prolongada para volver a cargar.</string>
+    <string name="log_level">Log Level</string>
+    <string name="log_level_colon">Log level:</string>
+    <string name="log_recording_started">Grabación de Log iniciada.</string>
+    <string name="log_saved">Log guardado en sdcard/HCTControl/CatLog.</string>
+    <string name="main_edit_text_hint">Buscar logs</string>
+    <string name="manage_saved_logs">Administrar Logs guardados</string>
+    <string name="menu_title_partial_select">Selección parcial</string>
+    <string name="no_saved_logs">No se encuentra Logs guardados</string>
+    <string name="notification_subtext">Seleccione para detener la grabación.</string>
+    <string name="notification_ticker">Grabación de Log iniciada</string>
+    <string name="notification_title">Grabación del Log en progreso</string>
+    <string name="open">Abrir</string>
+    <string name="open_log">Abrir Log</string>
+    <string name="play_x1_log">Iniciar %s Log</string>
+    <string formatted="false" name="play_x2_log">Iniciar %s, %s</string>
+    <string name="play_x3_log">Iniciar todos los Log</string>
+    <string name="pref_buffer_choice_events">Eventos</string>
+    <string name="pref_buffer_choice_main">Principal</string>
+    <string name="pref_buffer_choice_radio">Radio</string>
+    <string name="pref_buffer_none_checked_error">Por favor, compruebe al menos un buffer.</string>
+    <string name="pref_buffer_title">Log Buffer(s)</string>
+    <string name="pref_cat_advanced">Avanzado</string>
+    <string name="pref_cat_appearance">Apariencia</string>
+    <string name="pref_cat_configuration">Configuración</string>
+    <string name="pref_default_log_level_summary">Se aplicará al inicio, al abrir archivos, y cuando esté grabando (%s)</string>
+    <string name="pref_default_log_level_title">Log Level por defecto</string>
+    <string formatted="false" name="pref_display_limit_summary">Mostrar sólo los últimos %d logs, para evitar errores. (Por defecto: %s)</string>
+    <string name="pref_display_limit_title">Limitar visualización Log</string>
+    <string name="pref_expanded_by_default_summary">Mostrar el texto completo del registro de forma predeterminada.</string>
+    <string name="pref_expanded_by_default_title">Expandir de forma predeterminada</string>
+    <string name="pref_log_line_period_error">Por favor, introduzca un número entero entre 1 y 1000.</string>
+    <string formatted="false" name="pref_log_line_period_summary">Cuando está grabando, escribe en la tarjeta SD cada %d línea(s) (Por defecto: %s).</string>
+    <string name="pref_log_line_period_title">Periodo de escritura</string>
+    <string name="pref_show_timestamp_summary">Mostrar el id de los procesos y Fecha y hora cuando se expande.</string>
+    <string name="pref_show_timestamp_title">Mostrar Pid &amp; Fecha y hora</string>
+    <string name="pref_text_size_title">Tamaño del texto</string>
+    <string name="pref_theme_choice_android_name">Android</string>
+    <string name="pref_theme_choice_att_name">Ma Bell</string>
+    <string name="pref_theme_choice_dark_name">Dark</string>
+    <string name="pref_theme_choice_light_name">Light</string>
+    <string name="pref_theme_choice_sprint_name">Big Yellow</string>
+    <string name="pref_theme_choice_tmobile_name">T-Mo</string>
+    <string name="pref_theme_choice_verizon_name">Big Red</string>
+    <string name="pref_theme_summary_free">Requiere donación.</string>
+    <string name="pref_theme_title">Esquema de colores</string>
+    <string name="record_log">Grabar Log</string>
+    <string name="recording_in_progress">Ya existe grabación en curso.</string>
+    <string name="save_as">Guardar cómo…</string>
+    <string name="save_log">Guardar Log</string>
+    <string name="sd_card_not_found">La tarjeta SD no se encuentra.</string>
+    <string name="select_logs_to_delete">Seleccione el Log que desea eliminar.</string>
+    <string name="send_as_attachment">Enviar como archivo adjunto</string>
+    <string name="send_as_text">Enviar como texto</string>
+    <string name="send_log">Enviar</string>
+    <string name="send_log_title">Enviar Log</string>
+    <string name="settings">Ajustes</string>
+    <string name="simultaneous"> (Simultáneo)</string>
+    <string name="start_recording_log">Grabar</string>
+    <string name="stop_recording_log">Parar grabación</string>
+    <string name="subject_log_report">Reportar Log</string>
+    <string name="text_filter_ellipsis">Filtro…</string>
+    <string name="text_filter_text">Texto del filtro</string>
+    <string name="text_include_device_info">Incluir información del dispositivo</string>
+    <string name="text_size_large_name">Grande (14pt)</string>
+    <string name="text_size_medium_name">Normal (12pt)</string>
+    <string name="text_size_small_name">Pequeño (10pt)</string>
+    <string name="text_size_xlarge_name">Muy grande (16pt)</string>
+    <string name="text_size_xsmall_name">Muy pequeño (8pt)</string>
+    <string name="title_filter">Filtro</string>
+    <string name="title_filters">Filtros</string>
+    <string formatted="false" name="toast_invalid_display_limit">Por favor, introduzca un número válido entre %d y %d.</string>
+    <string name="toast_invalid_level">Level name no válido: %s</string>
+    <string name="toast_invalid_selection">Selección no válida.  Por favor, inténtelo de nuevo.</string>
+    <string name="toast_log_truncated">Log demasiado grande; mostrando últimas %d líneas.</string>
+    <string name="toast_no_root">No se pudo obtener acceso root.  Sólo podrá ver Logs propios de CatLog\'s.</string>
+    <string name="toast_pref_changed_restart_required">Ajustes actualizado. Reinicie CatLog para ver los cambios.</string>
+    <string name="toast_request_root">CatLog requiere root (superuser) para tener acceso a leer Logs.</string>
+    <string name="toast_started_select_partial">Modo de selección parcial activado</string>
+    <string name="unable_to_save_log">No se puede guardar el registro. ¿Ha introducido un nombre de archivo válido?</string>
+    <string name="version">Versión %s</string>
+    <string name="widget_recording_in_progress">Grabando…</string>
+    <string name="widget_start_recording">Grabar Log</string>
+    <!-- Toolbox -->
+    <string-array name="default_titles">
+        <item>S Finder</item>
+        <item>Quick Connect</item>
+        <item>Torch Light</item>
+        <item>Screen Write</item>
+        <item>Magnifier</item>
+    </string-array>
+    <string-array name="default_summaries">
+        <item>Abrir S Finder</item>
+        <item>Abrir Quick Connect</item>
+        <item>Torch on/off</item>
+        <item>Realizar captura de pantalla y editar</item>
+        <item>Ampliar objetos en la pantalla</item>
+    </string-array>
+    <string name="title_activity_sort">Ordenar Apps</string>
+    <string name="max_reached_toast">Se ha alcanzado el número máximo de apps en Toolbox (12).</string>
+    <string name="sort">Ordenar</string>
+</resources>

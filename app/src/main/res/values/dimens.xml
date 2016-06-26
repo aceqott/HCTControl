@@ -1,0 +1,39 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">320dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="dialog_listView_top_padding">12dp</dimen>
+    <dimen name="dialog_listView_bottom_padding">16dp</dimen>
+    <dimen name="button_size">30dp</dimen>
+    <dimen name="bitmap_size">31dp</dimen>
+
+    <!-- CatLog -->
+    <dimen name="text_size_xsmall">8px</dimen>
+    <dimen name="text_size_small">10px</dimen>
+    <dimen name="text_size_medium">12px</dimen>
+    <dimen name="text_size_large">14px</dimen>
+    <dimen name="text_size_xlarge">16px</dimen>
+
+    <dimen name="log_level_width">15dp</dimen>
+    <dimen name="tag_width">70dp</dimen>
+    <dimen name="pid_width">85dp</dimen>
+
+    <dimen name="main_button_height">47dp</dimen>
+    <dimen name="main_button_width">52dp</dimen>
+
+    <!-- License -->
+    <dimen name="horizontal_padding">16dp</dimen>
+    <dimen name="vertical_padding">8dp</dimen>
+
+
+    <dimen name="font_size_s">12sp</dimen>
+    <dimen name="font_size_m">14sp</dimen>
+    <dimen name="font_size_l">16sp</dimen>
+    <dimen name="font_size_xl">20sp</dimen>
+    <dimen name="font_size_xxl">34sp</dimen>
+</resources>

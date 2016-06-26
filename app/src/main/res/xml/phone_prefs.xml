@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen
+        android:icon="@drawable/ic_orden"
+        android:title="Ajustes Rápidos"
+        android:key="com.android.settings.NotificationPanelSettings"
+        android:summary="Personalizar los botones de Ajustes rápidos y menú de Aplicaciones recomendadas"
+        android:widgetLayout="@layout/round_more_icon"/>
+    <PreferenceScreen
+        android:icon="@drawable/ic_fondot"
+        android:title="Ajustes Toggles"
+        android:summary="Color, Nºtoggles, Texto, etc.."
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory  android:layout="@layout/preferences_category" android:title="Quicksettings">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/kuaijieanniushuliang_entries"
+                android:title="Nº Botones Quick Settings"
+                android:key="personalization_notificational_panel_single_quick_setting_button_number"
+                android:summary="Elegir número de bótones de los Ajustes rápidos"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="5"
+                android:entryValues="@array/kuaijieanniushuliang_values" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/toggle_scroll_entries"
+                android:title="Nº Toggles Scroll"
+                android:key="notification_panel_active_number_of_apps"
+                android:summary="Selecciona el número de toggles que desea tener en la cortina principal"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="10"
+                android:entryValues="@array/toggle_scroll_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_cpu"
+        android:title="CPU Usage View"
+        android:summary="Carga de la CPU que se muestra en la Cabecera del Panel de notificación"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="CPU Usage View">
+            <SwitchPreference
+                android:title="CPU Usage View"
+                android:key="cpu_view"
+                android:defaultValue="true"
+                android:summaryOn="Carga de la CPU se muestra"
+                android:summaryOff="Carga de la CPU está oculta" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color"
+                android:key="cpu_color"
+                android:summary="Elegir el color del texto de CPU Usage View"
+                android:defaultValue="#ffffff"
+                android:dependency="cpu_view"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_cleaner"
+        android:title="Memory Cleaner"
+        android:summary="Limpiar memoria RAM y personalizar el color del icono que se muestra en la Barra de Brillo"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Memory Cleaner">
+            <SwitchPreference
+                android:title="Memory Cleaner"
+                android:key="pekaka_memCleanView"
+                android:defaultValue="false"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color"
+                android:key="db_inkeffect_pekaka_memkiller_picker"
+                android:dependency="pekaka_memCleanView"
+                android:summary="Elegir el color del icono"
+                android:defaultValue="#ff000000"
+                alphaSlider="true"
+                hexValue="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_setting"
+        android:title="Panel de Notificación"
+        android:summary="Cabecera, Toggles, Brillo, SFinder, etc.."
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo de Cabecera">
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Fondo de Cabecera"
+                android:key="header_bg_color"
+                android:summary="Elegir el color del fondo de la cabecera."
+                android:defaultValue="#00A5C5"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo de Toggles">
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Fondo de Toggles"
+                android:key="toggle_bg_color"
+                android:summary="Elegir el color del fondo de toggles."
+                android:defaultValue="#00A5C5"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Barra Brillo">
+            <SwitchPreference
+                android:title="Barra de Brillo"
+                android:key="notification_panel_brightness_adjustment"
+                android:defaultValue="true"
+                android:summaryOn="Barra de brillo es visible"
+                android:summaryOff="Barra de brillo está oculta" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Fondo barra Brillo"
+                android:key="brightness_background_color"
+                android:summary="Elegir el color del fondo de la barra de brillo."
+                android:defaultValue="#00A5C5"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Panel SFinder y QuickConnect">
+            <SwitchPreference
+                android:title="SFinder y QuickConnect"
+                android:key="quick_connect_toggle"
+                android:defaultValue="false"
+                android:summaryOn="Panel está oculto en la cortina"
+                android:summaryOff="Panel está visible en la cortina" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Fondo panel SFinder y Quickconnect"
+                android:dependency="notification_panel_brightness_adjustment"
+                android:key="sfinder_bg_color"
+                android:summary="Elegir el color del fondo panel SFinder y Quickconnect."
+                android:defaultValue="#1B6E91"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>

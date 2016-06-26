@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_menu"
+        android:title="@string/add"
+        android:icon="@drawable/ic_action_add"
+        android:showAsAction="ifRoom|withText"
+        />
+    <item
+        android:id="@+id/backup_menu"
+        android:title="@string/backup"
+        android:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_reboot"
+        android:orderInCategory="200"
+        android:title="Reiniciar"
+        android:icon="@drawable/ic_reboot"
+        android:showAsAction="ifRoom" >
+
+    </item>
+    <item
+        android:id="@+id/restore_menu"
+        android:title="@string/restore"
+        android:showAsAction="never"
+        />
+</menu>

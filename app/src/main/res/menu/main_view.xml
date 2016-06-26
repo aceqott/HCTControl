@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainViewActivity">
+    <group android:checkableBehavior="all" android:id="@+id/menu" >
+        <item
+            android:id="@+id/option1"
+            android:orderInCategory="100"
+            android:title="Activar Menú flotante"
+            android:checked="true">
+        </item>
+        <item
+            android:id="@+id/option2"
+            android:orderInCategory="100"
+            android:title="Mostrar Menú flotante"
+            android:checked="true">
+        </item>
+    </group>
+    <item
+        android:id="@+id/action_reboot"
+        android:orderInCategory="200"
+        android:title="Reiniciar"
+        android:icon="@drawable/ic_reboot"
+        app:showAsAction="ifRoom" >
+
+    </item>
+</menu>

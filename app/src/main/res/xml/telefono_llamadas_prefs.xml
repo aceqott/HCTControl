@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Grabacion de Llamadas">
+        <SwitchPreference
+            android:title="Grabación autom. Llam. Entrante"
+            android:key="killprocess_call_record_in"
+            android:defaultValue="false"
+            android:summaryOn="Activado"
+            android:summaryOff="Desctivado" />
+        <SwitchPreference
+            android:title="Grabación autom. Llam. Saliente"
+            android:key="killprocess_call_record_out"
+            android:defaultValue="false"
+            android:summaryOn="Activado"
+            android:summaryOff="Desctivado" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Tono ascendente Llamada">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:title="Tono ascendente"
+            android:key="db_inc_volume_disable"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" />
+    </PreferenceCategory>
+</PreferenceScreen>

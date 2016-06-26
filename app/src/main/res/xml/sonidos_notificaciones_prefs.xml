@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Dialogos">
+        <!--
+        <SwitchPreference
+            android:icon="@drawable/ic_airplane_white_24dp"
+            android:title="Popup toggle Modo Avión"
+            android:key="airplane_mode_notif"
+            android:defaultValue="false"
+            android:summaryOn="Confirmación de Popup desactivado"
+            android:summaryOff="Confirmación de Popup activado" />
+            -->
+        <SwitchPreference
+            android:title="Popup toggle Volúmen seguro"
+            android:key="volume_warning_toggle"
+            android:defaultValue="false"
+            android:summaryOn="Confirmación de Popup activado."
+            android:summaryOff="Confirmación de Popup desactivado." />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Sonidos de Sistema">
+        <SwitchPreference
+            android:summary="Activado"
+            android:title="Sonido batería baja"
+            android:key="switch_bateria_baja"
+            android:defaultValue="true"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" >
+        </SwitchPreference>
+        <SwitchPreference
+            android:summary="Activado"
+            android:title="Sonido teclas Volumen"
+            android:key="switch_teclas_volumen"
+            android:defaultValue="true"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado">
+        </SwitchPreference>
+        <SwitchPreference
+            android:summary="Activado"
+            android:title="Sonido al conectar cargador"
+            android:key="switch_sonido_carga"
+            android:defaultValue="true"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado">
+        </SwitchPreference>
+        <SwitchPreference
+            android:summary="Activado"
+            android:title="Sonido al capturar pantalla"
+            android:key="switch_sonido_captura"
+            android:defaultValue="true"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado">
+        </SwitchPreference>
+        <PreferenceScreen
+            android:key="nivel_sonido"
+            android:title="Niveles de sonido del sistema"
+            android:summary="Selecciona el nivel de sonido por defecto. ¡Atención!, incrementar el sonido, puede dañar el altavoz del dispositivo."
+            android:widgetLayout="@layout/round_more_icon"/>
+        <PreferenceScreen
+            android:key="sonido_inicio"
+            android:title="Sonido animación de inicio"
+            android:summary="Activa, cambia o desactiva el sonido de inicio."
+            android:widgetLayout="@layout/round_more_icon" />
+    </PreferenceCategory>
+</PreferenceScreen>

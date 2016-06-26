@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Personalizar Botones físicos">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="Desactivar retroalimentación táctil"
+            android:key="disable_haptic"
+            android:summaryOn="Desactivado"
+            android:summaryOff="Activado" />
+        <PreferenceScreen
+            android:icon="@drawable/ic_homec"
+            android:title="Botón Home"
+            android:summary="Elegir comportamiento del botón Home (Centro)"
+            android:widgetLayout="@layout/round_more_icon">
+            <PreferenceCategory android:title="Botón Home">
+                <SwitchPreference
+                    android:defaultValue="true"
+                    android:title="Habilitar botón Home"
+                    android:key="homewake_toggle"
+                    android:summaryOn="Botón Home despertará el teléfono"
+                    android:summaryOff="Botón Home está desactivado" />
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/home_doubletap"
+                    android:title="Doble toque Home"
+                    android:key="home_doubletap_button"
+                    android:summary="%s"
+                    android:dependency="home_doubletap_button"
+                    android:entryValues="@array/home_doubletap_values" />
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/home_tripletap"
+                    android:title="Triple toque Home"
+                    android:key="home_tripletap_button"
+                    android:summary="%s"
+                    android:dependency="home_tripletap_button"
+                    android:entryValues="@array/home_tripletap_values" />
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/home_longpress"
+                    android:title="Pulsación prolongada botón Home"
+                    android:key="home_longpress_button"
+                    android:summary="%s"
+                    android:dependency="home_longpress_button"
+                    android:entryValues="@array/home_longpress_values" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:icon="@drawable/ic_recients"
+            android:title="Botón Recientes"
+            android:summary="Elegir comportamiento del botón Recientes (Izquierda)"
+            android:widgetLayout="@layout/round_more_icon">
+            <PreferenceCategory android:title="Botón Recientes">
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/left_shortpress"
+                    android:title="Botón Recientes"
+                    android:key="left_shortpress_button"
+                    android:summary="%s"
+                    android:dependency="left_shortpress_button"
+                    android:entryValues="@array/left_shortpress_values" />
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/left_longpress"
+                    android:title="Pulsación prolongada botón Recientes"
+                    android:key="left_longpress_button"
+                    android:summary="%s"
+                    android:dependency="left_longpress_button"
+                    android:entryValues="@array/left_longpress_values" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:icon="@drawable/ic_atras"
+            android:title="Botón Atrás"
+            android:summary="Elegir comportamiento del botón Atrás (Derecha)"
+            android:widgetLayout="@layout/round_more_icon">
+            <PreferenceCategory android:title="Botón Atrás">
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/right_longpress"
+                    android:title="Pulsación prolongada botón Atrás"
+                    android:key="right_longpress_button"
+                    android:summary="%s"
+                    android:dependency="right_longpress_button"
+                    android:entryValues="@array/right_longpress_values" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:icon="@drawable/ic_power"
+            android:title="Botón Power"
+            android:summary="Elegir comportamiento del botón Power"
+            android:widgetLayout="@layout/round_more_icon">
+            <PreferenceCategory android:title="Botón Power">
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/power_doubletap"
+                    android:title="Doble toque Power"
+                    android:key="power_doubletap_button"
+                    android:summary="%s"
+                    android:dependency="power_doubletap_button"
+                    android:entryValues="@array/power_doubletap_values" />
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

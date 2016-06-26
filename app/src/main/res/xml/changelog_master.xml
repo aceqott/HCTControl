@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="1.0" versioncode="10" >
+        <change>Activar/Desactivar popup Volúmen seguro</change>
+        <change>Añadido Número de notificaciones visibles en Pantalla de Bloqueo</change>
+        <change>Opciones de Reloj (Estilo AM/PM, Estilo Fecha y Formato Fecha). Alineación, ajuste de color, Fuente y animación</change>
+        <change>Tráfico de red con múltiples Opciones de personalización</change>
+        <change>Añadido Botón Bloqueo y Home en la Statusbar</change>
+        <change>Ocultar icono Alarma/Bluetooth en Statusbar</change>
+        <change>Activar/Ocultar SFinder/QuickConnect en el panel</change>
+        <change>Opciones para configurar y personalizar las Llamadas entrantes (Activar/Desactivar tono ascendente y Grabación automática de Llamadas Entrantes/Salientes)</change>
+        <change>Añadido Statusbar Gradient</change>
+        <change>Añadido Emojis HCT (Posibilidad de cambiar los iconos del sistema: AOSP, Sammy,IOS)</change>
+        <change>Añadido Battery Bar</change>
+        <change>Añadido 3 MinitBattery</change>
+        <change>Añadido Nº bótones Quicksetting (4-7) en Cortina</change>
+        <change>Modificado Nº Toggles Scroll (Ahora se podrá elegir de 5 a 20)</change>
+        <change>Añadido Sonidos Notificaciones (Activar/Desactivar sonido de carga y Activar/Desactivar sonido de Captura de pantalla) y Sonidos Sistema (Varios niveles de sonido: Stock/Medio/Alto/Extremo y Activar/Desactivar sonido Animación de inicio)</change>
+        <change>Personalizar Color fondo: Cabecera, Toggle, Barra Brillo, Panel SFinder</change>
+        <change>Configurar y personalizar CPU Usage View</change>
+        <change>Añadido Memory Cleaner</change>
+        <change>Añadido DPI Changer</change>
+        <change>Añadido HCT OTA</change>
+        <change>Añadido CPUSpy (v3.2.1 Material)</change>
+        <change>Añadido Adaway (Build 14Apr16)</change>
+        <change>Añadido CatLog (v1.6.0)</change>
+    </release>
+    <release version="0.1" versioncode="1">
+        <change>Versión Beta para pruebas</change>
+    </release>
+</changelog>

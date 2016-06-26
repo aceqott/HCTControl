@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hctrom.romcontrol" >
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".cpuspy.CpuSpyApp"
+        android:theme="@style/Theme.Transparent" >
+        <receiver
+            android:name="backup.BootCompleteReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".MainViewActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dpichanger.DPIActivity"
+            android:label="DPI Changer"
+            android:theme="@style/Theme.AppCompat.Translucent">
+            <intent-filter>
+                <action android:name=".dpichanger.DPIActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".licenseadapter.LicenseMain"
+            android:label="Licencias"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".videotutorial.VideoTutorial"
+            android:label="VideoTutorial"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".mail.Mail"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".ImagenPerfil"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".HostWhiteListView"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".cpuspy.ui.HomeActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".build.prop.editor.EditPropActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".build.prop.editor.BuildPropEditor"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".fastergps.ui.BaseActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".fastergps.ui.AdvancedSettingsActivity"
+            android:theme="@style/AppTheme" >
+        </activity>
+
+        <activity android:name=".logcat.ShowRecordLogDialogActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name=".logcat.LogcatActivity"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.hctrom.romcontrol.logcat.intents.LAUNCH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".logcat.SettingsActivity"
+            android:theme="@style/AppTheme" />
+
+        <receiver android:name=".logcat.RecordingWidgetProvider">
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <data android:scheme="catlog_widget"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.hctrom.romcontrol.logcat.action.RECORD_OR_STOP" />
+                <data android:scheme="catlog_widget" />
+            </intent-filter>
+
+
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_catlog_hct" />
+        </receiver>
+
+        <service android:name=".logcat.LogcatRecordingService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <service android:name=".logcat.CrazyLoggerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name="backup.BootRestoreService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".toolboxsettings.ToolboxSettings"
+            android:label="Toolbox"
+            android:icon="@drawable/ic_toolbox"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.samsung.TOOLBOX_LIST" />
+                <action android:name="com.samsung.TOOLBOX_MENU" />
+                <action android:name="android.settings.TOOLBOX_LIST" />
+                <action android:name="android.settings.TOOLBOX_MENU" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".toolboxsettings.SortActivity"
+            android:label="@string/title_activity_sort"
+            android:parentActivityName=".toolboxsettings.ToolboxSettings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,7 @@
+<!-- 180000 = 3 minutes in milliseconds -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="180dip"
+    android:minHeight="110dip"
+    android:updatePeriodMillis="5000"
+    android:initialLayout="@layout/widget_catlog_hctcontrol"
+ />
