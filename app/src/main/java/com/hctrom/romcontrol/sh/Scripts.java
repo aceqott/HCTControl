@@ -53,7 +53,7 @@ public class Scripts {
     }
 
     public String getNivelSonidoMedio(){
-        script = "cp -p /system/hct/sound/mild/mixer_paths.xml /system/etc/mixer_paths.xml";
+        script = "cp -p /system/hct/sound/mid/mixer_paths.xml /system/etc/mixer_paths.xml";
 
         return "" + path + script;
     }

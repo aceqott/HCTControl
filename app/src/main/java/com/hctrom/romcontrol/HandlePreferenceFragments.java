@@ -25,6 +25,7 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.Toast;
 
+import com.hctrom.romcontrol.prefs.Shell;
 import com.stericson.RootShell.exceptions.RootDeniedException;
 import com.stericson.RootShell.execution.Command;
 import com.stericson.RootTools.RootTools;
@@ -282,29 +283,95 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
             case "SwitchPreference":
                 SwitchPreference s = (SwitchPreference) pf.findPreference(key);
                 s.setChecked(sharedPreferences.getBoolean(key, true));
-                if (key.equals("quick_connect_toggle")) {
+                if (key.equals("sb_global_toggle")) {
                     appRebootRequired("com.android.systemui");
                 }
-                if (key.equals("hide_ongoing_notif")) {
+                if (key.equals("minit_battery_visible")) {
                     appRebootRequired("com.android.systemui");
                 }
-                if (key.equals("custom_carrier")) {
+                if (key.equals("link_colors")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("panel_blur_view")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_colors_clockdate")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("switch_quickconnect_color")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_clear_colors")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("unlock_guide_text")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("use_lockscreen_clock_font_style")) {
                     appRebootRequired("com.android.systemui");
                 }
                 if (key.equals("lockscreen_rotate")) {
                     appRebootRequired("com.android.systemui");
                 }
-                if (key.equals("toggle_text")) {
+                if (key.equals("link_pulldown_clock_date_color")) {
                     appRebootRequired("com.android.systemui");
                 }
-                if (key.equals("minit_battery_visible")) {
+                if (key.equals("link_header_settings_button")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_qconnect_soundpatch_color")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("scaling_toggle")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_lockscreen_clock_colors")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("enable_clock_text_color")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_toggle_text_colors")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_toggle_icon_background_colors")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_stock_battery_icon_color")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_data_usage_text_color")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("link_launcher_icons_text_color")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("privatemode_toggle")) {
                     appRebootRequired("com.android.systemui");
                 }
                 break;
             case "CheckBoxPreference":
                 CheckBoxPreference cbp = (CheckBoxPreference) pf.findPreference(key);
                 cbp.setChecked(sharedPreferences.getBoolean(key, true));
-                if (key.equals("rotacion_launcher")) {
+                if (key.equals("statusbar_hide_alarm")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("statusbar_hide_bluetooth")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("custom_lock_carrier")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                if (key.equals("need_dark_font")) {
                     Command c = new Command(0, "pkill com.sec.android.app.launcher");
                     try {
                         RootTools.getShell(true).add(c);
@@ -329,6 +396,78 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                 } else {
                     l.setSummary("");
                 }
+                if (key.equals("tw_page_effect")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("doubletap")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("swipe_up")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("swipe_down")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("QSPanel_NumberCount")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("display_timeout_delay")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
                 break;
             case "MyEditTextPreference":
                 MyEditTextPreference et = (MyEditTextPreference) pf.findPreference(key);
@@ -336,7 +475,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                 if (etValue != null) {
                     et.setSummary(sharedPreferences.getString(key, ""));
                 }
-                if (key.equals("custom_carrier_text")) {
+                if (key.equals("custom_lock_carrier_text")) {
                     Command c = new Command(0, "pkill com.android.systemui");
                     try {
                         RootTools.getShell(true).add(c);
@@ -352,30 +491,6 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
             case "ColorPickerPreference":
                 ColorPickerPreference cpp = (ColorPickerPreference) pf.findPreference(key);
                 cpp.setColor(sharedPreferences.getInt(key, Color.WHITE));
-                if (key.equals("statusbar_icon_color")) {
-                    Command c = new Command(0, "pkill com.android.systemui");
-                    try {
-                        RootTools.getShell(true).add(c);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (TimeoutException e) {
-                        e.printStackTrace();
-                    } catch (RootDeniedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (key.equals("sfinder_bg_color")) {
-                    Command c = new Command(0, "pkill com.android.systemui");
-                    try {
-                        RootTools.getShell(true).add(c);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (TimeoutException e) {
-                        e.printStackTrace();
-                    } catch (RootDeniedException e) {
-                        e.printStackTrace();
-                    }
-                }
                 if (key.equals("carrier_color")) {
                     Command c = new Command(0, "pkill com.android.systemui");
                     try {
@@ -388,7 +503,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
-                if (key.equals("kg_clock_color")) {
+                if (key.equals("sb_global_color")) {
                     Command c = new Command(0, "pkill com.android.systemui");
                     try {
                         RootTools.getShell(true).add(c);
@@ -400,7 +515,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
-                if (key.equals("kg_clock_AMPM_color")) {
+                if (key.equals("color_temp")) {
                     Command c = new Command(0, "pkill com.android.systemui");
                     try {
                         RootTools.getShell(true).add(c);
@@ -412,7 +527,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
-                if (key.equals("kg_date_color")) {
+                if (key.equals("color_high_temp")) {
                     Command c = new Command(0, "pkill com.android.systemui");
                     try {
                         RootTools.getShell(true).add(c);
@@ -424,56 +539,8 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
-                if (key.equals("next_alarm_color")) {
+                if (key.equals("color_low_temp")) {
                     Command c = new Command(0, "pkill com.android.systemui");
-                    try {
-                        RootTools.getShell(true).add(c);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (TimeoutException e) {
-                        e.printStackTrace();
-                    } catch (RootDeniedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (key.equals("device_info_color")) {
-                    Command c = new Command(0, "pkill com.android.systemui");
-                    try {
-                        RootTools.getShell(true).add(c);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (TimeoutException e) {
-                        e.printStackTrace();
-                    } catch (RootDeniedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (key.equals("device_info_color2")) {
-                    Command c = new Command(0, "pkill com.android.systemui");
-                    try {
-                        RootTools.getShell(true).add(c);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (TimeoutException e) {
-                        e.printStackTrace();
-                    } catch (RootDeniedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (key.equals("incall_digit_color")) {
-                    Command c = new Command(0, "pkill com.android.incallui");
-                    try {
-                        RootTools.getShell(true).add(c);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (TimeoutException e) {
-                        e.printStackTrace();
-                    } catch (RootDeniedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (key.equals("incall_letter_color")) {
-                    Command c = new Command(0, "pkill com.android.incallui");
                     try {
                         RootTools.getShell(true).add(c);
                     } catch (IOException e) {
@@ -508,6 +575,114 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
+                if (key.equals("main_divider_color")) {
+                    Command c = new Command(0, "pkill com.android.contacts");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("main_digit_color_pressed")) {
+                    Command c = new Command(0, "pkill com.android.contacts");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("statusbar_icon_color")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("statusbar_signal_color")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("statusbar_data_color")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("statusbar_wifi_color")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("statusbar_db_color")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("statusbar_airplane_color")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (key.equals("battery_bolt_color")) {
+                    Command c = new Command(0, "pkill com.android.systemui");
+                    try {
+                        RootTools.getShell(true).add(c);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (TimeoutException e) {
+                        e.printStackTrace();
+                    } catch (RootDeniedException e) {
+                        e.printStackTrace();
+                    }
+                }
                 if (key.equals("toggle_text_color")) {
                     Command c = new Command(0, "pkill com.android.systemui");
                     try {
@@ -520,7 +695,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
-                if (key.equals("toggle_on_color")) {
+                if (key.equals("toggle_sec_text_color")) {
                     Command c = new Command(0, "pkill com.android.systemui");
                     try {
                         RootTools.getShell(true).add(c);
@@ -532,8 +707,8 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
-                if (key.equals("toggle_buttons_background_color")) {
-                    Command c = new Command(0, "pkill com.android.systemui");
+                if (key.equals("launcher_icons_text_color")) {
+                    Command c = new Command(0, "pkill com.sec.android.app.launcher");
                     try {
                         RootTools.getShell(true).add(c);
                     } catch (IOException e) {
@@ -544,19 +719,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                         e.printStackTrace();
                     }
                 }
-                if (key.equals("notification_background_color")) {
-                    Command c = new Command(0, "pkill com.android.systemui");
-                    try {
-                        RootTools.getShell(true).add(c);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (TimeoutException e) {
-                        e.printStackTrace();
-                    } catch (RootDeniedException e) {
-                        e.printStackTrace();
-                    }
-                }
-                if (key.equals("launcher_text_color")) {
+                if (key.equals("launcher_widgets_text_color")) {
                     Command c = new Command(0, "pkill com.sec.android.app.launcher");
                     try {
                         RootTools.getShell(true).add(c);
@@ -569,9 +732,15 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
                     }
                 }
                 break;
-        }
-        if (key.equals("toggle_buttons_background")) {
-            appRebootRequired("com.android.systemui");
+            case "FilePreference":
+                FilePreference f = (FilePreference) pf.findPreference(key);
+                f.setChecked(sharedPreferences.getBoolean(key, true));
+                if (key.equals("modcfg_nativeST_colors")) {
+                    appRebootRequired("com.android.systemui");
+                } else if (key.equals("modcfg_nativeTG_colors")) {
+                    appRebootRequired("com.android.systemui");
+                }
+                break;
         }
         /*Calling build_prop_main method to handle updating database based on preference changes*/
         if (p instanceof FilePreference) {
@@ -696,7 +865,7 @@ public class HandlePreferenceFragments implements SharedPreferences.OnSharedPref
         AlertDialog.Builder b = new AlertDialog.Builder(c);
         b
                 .setTitle(c.getString(R.string.app_reboot_required_title).toUpperCase())
-                .setIcon(-1).setIcon(appIcon)
+                .setIcon(-1).setIcon(R.drawable.ic_reboot_dialog)
                 .setMessage(String.format(c.getString(R.string.app_reboot_required_message), appName))
                 .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override

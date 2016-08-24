@@ -53,6 +53,8 @@ public class BuildPropEditor extends ListActivity {
         theme.onActivityCreateSetTheme(this);
         if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
             getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
+        }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 4){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorMaterialDark));
         }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
             getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
         }else{
@@ -159,6 +161,10 @@ public class BuildPropEditor extends ListActivity {
                     dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
                     positive_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
                     negative_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
+                }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 4){
+                    dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+                    positive_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
+                    negative_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
                 }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
                     dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
                     positive_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));

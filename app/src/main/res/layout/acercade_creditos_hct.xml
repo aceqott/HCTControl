@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fila0"
+        android:layout_marginTop="5dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/jiterron"
+            android:id="@+id/imageViewJite"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textJite"
+            android:text="Jiterron"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewJite"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gracias por confiar y colaborar en este proyecto. Muchas gracias amigo por tu ayuda."
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewJite"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textJite" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fila1"
+        android:layout_marginTop="70dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/kijodoari"
+            android:id="@+id/imageViewKijo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textKijo"
+            android:text="Kijodoari"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewKijo"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gracias por tus consejos y la colabaración con la ROM."
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewKijo"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textKijo" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/credits_hct"
+        android:id="@+id/textCredits"
+        style="@style/AppTheme"
+        android:textSize="14dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="1dp" />
+</RelativeLayout>

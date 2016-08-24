@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceScreen
-        android:icon="@drawable/ic_lcd"
+        android:icon="@drawable/ic_launcherpsm"
+        android:widgetLayout="@layout/round_more_icon"
+        android:key="mobi.xperiacle.upsm.manager.MainActivity"
+        android:summary="Añade fácilmente más aplicaciones al modo ultra ahorro de energía."
+        android:title="UPSM Manager" />
+    <PreferenceScreen
+        android:icon="@drawable/ic_hexconverter"
+        android:title="HexConverter"
+        android:summary="Comprueba o busca un color para obtener su código Hexadecimal..."
+        android:widgetLayout="@layout/round_more_icon" >
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.hctrom.romcontrol"
+            android:targetClass="com.hctrom.romcontrol.hexconverter.HexConverterMain"
+            android:data="mydata" />
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_dpichanger"
         android:title="DPI Changer"
         android:summary="Cambia la densidad de la pantalla a tu gusto..."
         android:widgetLayout="@layout/round_more_icon" >
@@ -12,14 +29,13 @@
             android:data="mydata" />
     </PreferenceScreen>
     <PreferenceScreen
-        android:icon="@drawable/ic_emoji2"
+        android:icon="@drawable/ic_emoji"
         android:key="emojis_key"
         android:summary="Cambia entre diferentes emojis para el sistema."
         android:title="Emojis"
         android:widgetLayout="@layout/round_more_icon" />
     <PreferenceScreen
         android:icon="@drawable/ic_toolbox"
-        android:key="toolbox"
         android:summary="Caja de herramientas para acceder a cualquier app de una forma más rápida."
         android:title="Toolbox"
         android:widgetLayout="@layout/round_more_icon" >
@@ -29,9 +45,27 @@
             android:targetClass="com.hctrom.romcontrol.toolboxsettings.ToolboxSettings"
             android:data="mydata" />
     </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_omniswitch"
+        android:summary="Multitarea avanzada de OmniROM."
+        android:title="OmniSwitch"
+        android:widgetLayout="@layout/round_more_icon" >
+        <intent
+            android:icon="@drawable/ic_omniswitch"
+            android:targetPackage="org.omnirom.omniswitch"
+            android:targetClass="org.omnirom.omniswitch.SettingsActivity" />
+    </PreferenceScreen>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="HCT OTA">
+        <PreferenceScreen
+            android:icon="@drawable/ic_ota"
+            android:widgetLayout="@layout/round_more_icon"
+            android:key="com.otaupdater.OTAUpdaterActivity"
+            android:summary="Accede a nuestra zona de descargas (ROM, Kernels, Zips Flasheables...)"
+            android:title="HCT OTA" />
+    </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="AdBlocker">
         <CheckBoxPreference
-            android:icon="@drawable/ic_adaway2"
+            android:icon="@drawable/ic_adaway"
             android:key="hfm_disable_ads"
             android:title="@string/hfm_disable_ads_title"
             android:summaryOn="@string/hfm_disable_ads_summary_on"
@@ -43,7 +77,6 @@
             android:summary="@string/hfm_update_hosts_summary"
             android:dependency="hfm_disable_ads" />
         <PreferenceScreen
-            android:key="hfm_delete_dominio"
             android:title="Eliminar Dominio de Hosts"
             android:summary="Puede eliminar un dominio de la lista de bloqueo."
             android:dependency="hfm_disable_ads" >
@@ -54,23 +87,21 @@
                 android:data="mydata" />
         </PreferenceScreen>
     </PreferenceCategory>
-    <PreferenceCategory android:layout="@layout/preferences_category" android:title="CPUSpy">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Diagnostico">
         <PreferenceScreen
-            android:icon="@drawable/ic_cpuspy2"
-            android:key="cpu_spy"
-            android:title="CPUSpy"
-            android:summary="Puedes controlar la frecuencia a la que trabajan los procesadores." >
+            android:icon="@drawable/ic_diagnostico"
+            android:title="Diagnóstico"
+            android:summary="Visualiza y comprueba el funcionamiento de distintos dispositivos hardware de tú móvil (procesadores, batería, ...)." >
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="com.hctrom.romcontrol"
-                android:targetClass="com.hctrom.romcontrol.cpuspy.ui.HomeActivity"
+                android:targetClass="com.hctrom.romcontrol.diagnostic.DiagnosticActivity"
                 android:data="mydata" />
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Faster GPS">
         <PreferenceScreen
-            android:icon="@drawable/ic_faster_gps"
-            android:key="faster_gps"
+            android:icon="@drawable/ic_fastergps"
             android:title="Faster GPS"
             android:summary="Configura tu GPS de una forma óptima según tu situación." >
             <intent
@@ -83,7 +114,6 @@
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="CatLog">
         <PreferenceScreen
             android:icon="@drawable/ic_catlog"
-            android:key="cat_log"
             android:title="CatLog"
             android:summary="Depura y encuentra errores a través de registros o Logs." >
             <intent
@@ -95,7 +125,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Build.prop Edit">
         <PreferenceScreen
-            android:icon="@drawable/ic_aviso"
+            android:icon="@drawable/ic_buildpropeditor"
             android:key="build_prop"
             android:title="Build.prop Edit"
             android:summary="Puedes modificar/añadir datos al Build.prop. Si no se sabe lo que es o para que sirve, rogamos no modifiquen nada."

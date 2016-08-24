@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme"
+    android:background="@drawable/dialog_bg_acerca_de" >
+    <TextView android:textSize="20dp" android:textStyle="bold"
+        android:textColor="#fff" android:layout_width="match_parent"
+        android:id="@+id/textView1"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp" android:text="Nivel Sonido Sistema"
+        android:background="?attr/colorAccent"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp" />
+    <RadioGroup android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:id="@+id/radiogroup"
+        android:layout_marginLeft="10dp">
+        <RadioButton android:id="@+id/stock"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Nivel Stock" android:checked="true"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <RadioButton android:layout_width="match_parent"
+            android:id="@+id/medio" android:layout_height="wrap_content"
+            android:text="Nivel Medio"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <RadioButton android:layout_width="match_parent"
+            android:id="@+id/alto" android:layout_height="wrap_content"
+            android:text="Nivel Alto"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <RadioButton android:layout_width="match_parent"
+            android:id="@+id/extremo" android:layout_height="wrap_content"
+            android:text="Nivel Extremo"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </RadioGroup>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorAccent"
+        android:layout_marginTop="10dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button android:text="CANCELAR" android:layout_width="120dp"
+            android:layout_height="wrap_content" android:id="@+id/cancelar"
+            android:textColor="@color/selector"
+            android:background="@android:color/transparent"
+            android:layout_gravity="left"
+            android:textSize="18dp" />
+        <Button android:text="OK" android:layout_width="70dp"
+            android:layout_height="wrap_content" android:id="@+id/ok"
+            android:textColor="@color/selector"
+            android:background="@android:color/transparent"
+            android:layout_gravity="right"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

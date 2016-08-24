@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    style="@style/AppTheme"
+    android:background="?attr/nav_drawer_bg_color" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            style="@style/AppTheme"
+            android:background="?attr/nav_drawer_bg_color">
+
+            <TextView
+                style="@style/infoHeader"
+                android:text="● Tiempo en cada estado"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ui_states_view"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:background="#551111"
+                android:text="Error leyendo datos del Kernel. Puede que el Kernel instalado no sea compatible."
+                android:visibility="gone"
+                android:id="@+id/ui_states_warning"/>
+
+
+            <TextView
+                android:id="@+id/ui_header_additional_states"
+                style="@style/infoHeader"
+                android:visibility="gone"
+                android:text="● Estados NO usados de CPU"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/ui_additional_states"
+                android:padding="6dp" />
+
+            <TextView
+                android:id="@+id/ui_header_total_state_time"
+                style="@style/infoHeader"
+                android:text="● Tiempo total de estados"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:textColor="#777777"
+                android:padding="7dp"
+                android:id="@+id/ui_total_state_time"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                style="@style/infoHeader"
+                android:text="● Kernel Info:"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Kernel"
+                android:textSize="19dp"
+                android:textColor="#777777"
+                android:padding="10dp"
+                android:id="@+id/ui_kernel_string" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

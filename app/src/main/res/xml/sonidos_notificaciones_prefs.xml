@@ -1,21 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Dialogos">
-        <!--
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Notificaciones">
         <SwitchPreference
-            android:icon="@drawable/ic_airplane_white_24dp"
-            android:title="Popup toggle Modo Avión"
-            android:key="airplane_mode_notif"
+            android:title="Remover Notificación persistente"
+            android:key="ongoing_notifications"
             android:defaultValue="false"
-            android:summaryOn="Confirmación de Popup desactivado"
-            android:summaryOff="Confirmación de Popup activado" />
-            -->
+            android:summaryOn="Notificación persistente es removible"
+            android:summaryOff="Notificación persistente es permanente" />
         <SwitchPreference
+            android:icon="@drawable/ic_ahorro1"
+            android:title="Notificación Modo Ahorro"
+            android:key="psm_notif"
+            android:defaultValue="true"
+            android:summaryOn="Notificación en curso habilitado"
+            android:summaryOff="Notificación en curso deshabilitado" />
+        <SwitchPreference
+            android:icon="@drawable/ic_sms_failed_white_48dp"
+            android:title="Notificaciones Heads Up"
+            android:key="heads_up_notifications_enabled"
+            android:defaultValue="true"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" />
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:entries="@array/pref_heads_up_timeout_titles"
+            android:title="Tiempo notificación Heads Up"
+            android:key="heads_up_timeout"
+            android:dependency="heads_up_notifications_enabled"
+            android:defaultValue="3000"
+            android:positiveButtonText="@null"
+            android:negativeButtonText="@null"
+            android:entryValues="@array/pref_heads_up_timeout_values" />
+        <SwitchPreference
+            android:icon="@drawable/ic_usb_white_48dp"
+            android:title="Conectado a disp. de medios"
+            android:key="media_connect_notif"
+            android:defaultValue="true"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Dialogos">
+        <SwitchPreference
+            android:icon="@drawable/ic_volume_up_white_48dp"
             android:title="Popup toggle Volúmen seguro"
             android:key="volume_warning_toggle"
-            android:defaultValue="false"
-            android:summaryOn="Confirmación de Popup activado."
-            android:summaryOff="Confirmación de Popup desactivado." />
+            android:defaultValue="true"
+            android:summaryOn="Confirmación de Popup activado"
+            android:summaryOff="Confirmación de Popup desactivado" />
+        <SwitchPreference
+            android:icon="@drawable/ic_warning_white_48dp"
+            android:title="Popup Comprobar cubierta de batería"
+            android:key="cover_warnings"
+            android:defaultValue="true"
+            android:summaryOn="Confirmación de Popup activado"
+            android:summaryOff="Confirmación de Popup desactivado" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Batería baja" />
+        <SwitchPreference
+            android:icon="@drawable/ic_battery_alert_white_24dp"
+            android:title="Batería baja"
+            android:key="low_battery_notif"
+            android:defaultValue="true"
+            android:summaryOn="Advertencia de batería baja está habilitada"
+            android:summaryOff="Advertencia de batería baja está desactivada" />
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:entries="@array/lowbattpercentage_entries"
+            android:title="Advertencia de batería baja"
+            android:key="low_battery_warning_percentage"
+            android:defaultValue="15"
+            android:summary="Ajustar el porcentaje de aviso de batería baja"
+            android:entryValues="@array/lowbattpercentage_values" />
+    <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar los cambios! ⇡⇡" />
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:entries="@array/critbattpercentage_entries"
+            android:title="Advertencia de batería crítica"
+            android:key="critical_battery_warning_percentage"
+            android:defaultValue="5"
+            android:summary="Ajustar el porcentaje de aviso de batería crítica"
+            android:entryValues="@array/critbattpercentage_values" />
+    <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar los cambios! ⇡⇡" />
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Otras Notificaciones">
+        <SwitchPreference
+            android:title="Despertar pantalla al conectar/desconectar USB/AC"
+            android:key="usb_plugged"
+            android:defaultValue="true"
+            android:summaryOn="Despierta la pantalla cuando conectamos/desconectamos USB/AC"
+            android:summaryOff="No se despierta" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Control de música">
+        <SwitchPreference
+            android:title="Control de música"
+            android:summaryOn="Las acciones de control del volúmen en el bloqueo mientras escuchas música ha sido habilitado"
+            android:summaryOff="Deshabilitado"
+            android:key="volbtn_music_controls"
+            android:defaultValue="false" />
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:entries="@array/volbtn_timeout_entries"
+            android:title="Retardo del botón"
+            android:key="volbtn_timeout"
+            android:summary="%s"
+            android:widgetLayout="@layout/round_more_icon"
+            android:defaultValue="350"
+            android:dependency="volbtn_music_controls"
+            android:entryValues="@array/volbtn_timeout_values" />
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Sonidos de Sistema">
         <SwitchPreference

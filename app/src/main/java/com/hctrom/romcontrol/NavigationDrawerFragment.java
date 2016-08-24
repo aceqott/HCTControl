@@ -191,18 +191,19 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
     public List<NavItem> getMenu() {
         List<NavItem> items = new ArrayList<>();
         String[] mTitles = getResources().getStringArray(R.array.nav_drawer_items);
-        int[] mIcons = {R.drawable.ic_ui_mods,
+        int[] mIcons = {R.drawable.ic_statusbar,
+                R.drawable.ic_general,
                 R.drawable.ic_notificaciones,
                 R.drawable.ic_bloqueo,
                 R.drawable.ic_sound_notifications,
                 R.drawable.ic_phone_mods,
+                R.drawable.ic_twlauncher,
                 R.drawable.ic_general_framework,
-                R.drawable.ic_apps,
-                R.drawable.ic_settings,
+                R.drawable.ic_theme_menu,
                 R.drawable.ic_backup_settings,
                 R.drawable.ic_menu,
                 R.drawable.ic_acerca_de};
-        for (int i=0; i<mTitles.length && i<mIcons.length; i++){
+        for (int i = 0; i < mTitles.length && i < mIcons.length; i++){
             NavItem current = new NavItem();
             current.setText(mTitles[i]);
             current.setDrawable(mIcons[i]);

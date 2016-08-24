@@ -37,6 +37,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.hctrom.romcontrol.R;
@@ -195,6 +196,9 @@ public class BaseActivity extends PreferenceActivity {
         if (i == 3) {
             getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
             getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
+        }else if (i == 4){
+            getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColorMaterialDark));
+            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorMaterialDark));
         }else if (i == 0){
             getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
             getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
@@ -354,8 +358,30 @@ public class BaseActivity extends PreferenceActivity {
 
                     builder.setTitle(R.string.revert_dialog_title);
                     builder.setMessage(mActivity.getString(R.string.revert_dialog));
-                    AlertDialog alertDialog = builder.create();
-                    alertDialog.show();
+                    AlertDialog dialog = builder.create();
+                    dialog.setCancelable(false);
+                    dialog.setCanceledOnTouchOutside(false);
+                    dialog.show();
+
+                    Button positive_button = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+                    Button negative_button = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+                    if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
+                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
+                        positive_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
+                        negative_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
+                    }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 4){
+                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+                        positive_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
+                        negative_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
+                    }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
+                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+                        positive_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));
+                        negative_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));
+                    }else {
+                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
+                        positive_button.setTextColor(getResources().getColor(R.color.myAccentColor));
+                        negative_button.setTextColor(getResources().getColor(R.color.myAccentColor));
+                    }
                     return false;
                 }
 

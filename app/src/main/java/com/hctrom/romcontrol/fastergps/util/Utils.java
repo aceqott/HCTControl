@@ -24,9 +24,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.preference.PreferenceManager;
 import android.support.v7.appcompat.BuildConfig;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.stericson.RootTools.RootTools;
@@ -89,8 +91,22 @@ public class Utils {
                                 }
                             });
 
-                    AlertDialog alert = builder.create();
-                    alert.show();
+                    AlertDialog dialog = builder.create();
+                    dialog.setCancelable(false);
+                    dialog.setCanceledOnTouchOutside(false);
+                    dialog.show();
+
+                    Button neutral_button = dialog.getButton(DialogInterface.BUTTON_NEUTRAL);
+                    if (PreferenceManager.getDefaultSharedPreferences(activity).getInt("theme_prefs", 0) == 3) {
+                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
+                        neutral_button.setTextColor(activity.getResources().getColor(R.color.color_iconos_samsung_light));
+                    }else if (PreferenceManager.getDefaultSharedPreferences(activity).getInt("theme_prefs", 0) == 0){
+                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+                        neutral_button.setTextColor(activity.getResources().getColor(R.color.myAccentColorHCT));
+                    }else {
+                        dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_dark_light);
+                        neutral_button.setTextColor(activity.getResources().getColor(R.color.myAccentColor));
+                    }
                 } else {
                     rootAvailable = true;
                 }

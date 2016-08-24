@@ -9,19 +9,11 @@
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Links Externos" >
         <PreferenceScreen
             android:icon="@drawable/hctnuevoforo"
-            android:title="HCT ROM Web Oficial"
+            android:title="HCTROM Web Oficial"
             android:summary="Visite nuestra página oficial">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="http://hctrom.nuevoforo.es/" />
-        </PreferenceScreen>
-        <PreferenceScreen
-            android:icon="@drawable/hctrom_nuevoforo"
-            android:title="Hilo Oficial HCT ROM"
-            android:summary="Visite nuestro hilo oficial en hctrom.nuevoforo.es">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://hctrom.nuevoforo.es/hctroms-s5-base-samsung-f49/-hctrom-mm-601cpe1-sm-g900f-v70-ota--t239/" />
         </PreferenceScreen>
         <PreferenceScreen
             android:icon="@drawable/htcmania"
@@ -33,69 +25,24 @@
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="HCTeam S5" >
-        <PreferenceScreen
-            android:icon="@drawable/aceqott"
-            android:title="Aceqott"
-            android:summary="Cocinero">
-            <intent android:icon="@drawable/aceqott"
-                android:action="android.intent.action.VIEW"
-                android:data="http://forum.xda-developers.com/member.php?u=5159216"/>
-        </PreferenceScreen>
-        <PreferenceScreen
-            android:icon="@drawable/jiterron"
-            android:title="Jiterron"
-            android:summary="Cocinero">
-            <intent android:icon="@drawable/aceqott"
-                android:action="android.intent.action.VIEW"
-                android:data="http://forum.xda-developers.com/member.php?u=6889524"/>
-        </PreferenceScreen>
-        <PreferenceScreen
-            android:icon="@drawable/benjitawx"
-            android:title="Benjitawx"
-            android:summary="Cocinero"/>
-        <PreferenceScreen
-            android:icon="@drawable/mikele"
-            android:title="Mikele"
-            android:summary="Betatester"/>
-        <PreferenceScreen
-            android:icon="@drawable/marcos"
-            android:title="4Pepito4"
-            android:summary="Betatester" />
-        <PreferenceScreen
-            android:icon="@drawable/gask"
-            android:title="Gask7"
-            android:summary="Betatester" />
-        <PreferenceScreen
-            android:icon="@drawable/sumejorpista"
-            android:title="Sumejorpista"
-            android:summary="Betatester" />
-        <PreferenceScreen
-            android:icon="@drawable/escaliboor"
-            android:title="Escaliboor"
-            android:summary="Betatester" />
-        <PreferenceScreen
-            android:icon="@drawable/garrapatero"
-            android:title="garrapatero123"
-            android:summary="Betatester" />
-        <PreferenceScreen
-            android:icon="@drawable/gamberrete75"
-            android:title="gamberrete75"
-            android:summary="Betatester" />
+        <PreferenceScreen android:layout="@layout/acercade_hcteam_s5"  android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Creditos" >
-        <PreferenceScreen android:layout="@layout/creditos_hct"  android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <PreferenceScreen android:layout="@layout/acercade_creditos_hct"  android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Donativo" />
     <PreferenceScreen
-        android:key="paypal_me"
+        android:icon="@drawable/ic_paypal"
         android:title="PayPal.Me"
-        android:summary="Mantener este proyecto Arriba. Nos ayudas por mínima que sea la donación. Gracias por valorar nuestro trabajo.">
+        android:summary="Mantener este proyecto arriba. Nos ayudas por mínima que sea la donación. Gracias por valorar nuestro trabajo.">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=hctrom%2esoporte%40gmail%2ecom&amp;lc=ES&amp;item_name=HCTRom&amp;currency_code=EUR&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" />
     </PreferenceScreen>
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="VideoTutorial" >
         <PreferenceScreen
+            android:title="Videotutorial"
+            android:icon="@drawable/ic_videoder"
             android:key="videotutorial_hct"
             android:summary="Echa un vistazo a nuestro VideoTutorial de la HCTRom (Es necesaria conexión a internet)"
             android:widgetLayout="@layout/round_more_icon" >

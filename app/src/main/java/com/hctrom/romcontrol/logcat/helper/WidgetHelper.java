@@ -159,7 +159,7 @@ public class WidgetHelper extends AppWidgetProvider {
 			widgetViews.setViewVisibility(R.id.bar10, View.INVISIBLE);
 	    	/*
 			 * We also want to show a partially visible level to represent the
-			 * battery level more accurately.
+			 * diagnostic_battery level more accurately.
 			 * E.G. for 34% there should be three fully visible bars and one partially visible
 			 * We need to work out which level should be set partially visible
 			 */

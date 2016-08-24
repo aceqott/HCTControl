@@ -63,6 +63,9 @@ public class AdvancedSettingsActivity extends PreferenceActivity {
         if (i == 3) {
             getListView().setBackgroundColor(getResources().getColor(R.color.myDrawerBackground));
             getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
+        }else if (i == 4){
+            getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColorMaterialDark));
+            getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorMaterialDark));
         }else if (i == 0){
             getListView().setBackgroundColor(getResources().getColor(R.color.myInverseColor));
             getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));

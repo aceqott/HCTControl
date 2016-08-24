@@ -2,10 +2,8 @@ package com.hctrom.romcontrol.backup;
 
 import android.app.Activity;
 import android.app.Service;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
@@ -44,10 +42,6 @@ public class BootRestoreService extends Service {
                                 RestorePreferences rp = new RestorePreferences(BootRestoreService.this);
                                 rp.restoreSettings();
                                 BootRestoreService.this.stopSelf();
-                                final SharedPreferences prefs = getSharedPreferences("Backup", Context.MODE_PRIVATE);
-                                SharedPreferences.Editor editor = prefs.edit();
-                                editor.putBoolean("check_restaurar", true);
-                                editor.commit();
                             }
                         }
 
@@ -71,6 +65,10 @@ public class BootRestoreService extends Service {
             dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
             positive_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
             negative_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
+        }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 4){
+            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+            positive_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
+            negative_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
         }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
             dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
             positive_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));

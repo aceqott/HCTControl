@@ -28,6 +28,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -36,6 +37,7 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Adapter;
@@ -48,21 +50,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.hctrom.romcontrol.backup.RestorePreferences;
+import com.hctrom.romcontrol.backup.BackupPreferences;
+import com.hctrom.romcontrol.blurry.Blurry;
 import com.hctrom.romcontrol.changelog.ChangeLog;
 import com.hctrom.romcontrol.prefs.Shell;
 import com.hctrom.romcontrol.prefs.ThemeSwitch;
 import com.software.shell.fab.ActionButton;
 import com.stericson.RootTools.RootTools;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -116,6 +114,12 @@ public class MainViewActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        ThemeSwitch.getIconsColor(getBaseContext());
+    }
+
     //Creates a list of NavItem objects to retrieve elements for the Navigation Drawer list of choices
     public List<NavItem> getMenu() {
         List<NavItem> items = new ArrayList<>();
@@ -130,14 +134,15 @@ public class MainViewActivity extends AppCompatActivity
         * 7. Add an action based on position. Remember that positions in array are beginning at 0. So if your item is number 6 in array, it will have a position of 5... etc
         * 8. You need to add same items to the int array in NavigationDrawerFragment, which has the same method*/
         String[] mTitles = getResources().getStringArray(R.array.nav_drawer_items);
-        int[] mIcons = {R.drawable.ic_ui_mods,
+        int[] mIcons = {R.drawable.ic_statusbar,
+                R.drawable.ic_general,
                 R.drawable.ic_notificaciones,
                 R.drawable.ic_bloqueo,
                 R.drawable.ic_sound_notifications,
                 R.drawable.ic_phone_mods,
+                R.drawable.ic_twlauncher,
                 R.drawable.ic_general_framework,
-                R.drawable.ic_apps,
-                R.drawable.ic_settings,
+                R.drawable.ic_theme_menu,
                 R.drawable.ic_backup_settings,
                 R.drawable.ic_menu,
                 R.drawable.ic_acerca_de};
@@ -159,48 +164,44 @@ public class MainViewActivity extends AppCompatActivity
         setTitle(getMenu().get(position).getText());
         switch (position) {
             case 0:
-                ThemeSwitch.getIconsColor(getBaseContext());
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new UIPrefsFragment()).commitAllowingStateLoss();
                 break;
             case 1:
-                ThemeSwitch.getIconsColor(getBaseContext());
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new PhonePrefsFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().replace(R.id.container, GeneralFragment.newInstance("general_prefs")).commit();
                 break;
             case 2:
-                ThemeSwitch.getIconsColor(getBaseContext());
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new BloqueoDePantallaFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().replace(R.id.container, PhonePrefsFragment.newInstance("phone_prefs")).commit();
                 break;
             case 3:
-                ThemeSwitch.getIconsColor(getBaseContext());
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new SonidosNotificacionesFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().replace(R.id.container, BloqueoDePantallaFragment.newInstance("bloqueo_de_pantalla_prefs")).commit();
                 break;
             case 4:
-                ThemeSwitch.getIconsColor(getBaseContext());
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new TelefonoLlamadasFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new SonidosNotificacionesFragment()).commitAllowingStateLoss();
                 break;
             case 5:
-                ThemeSwitch.getIconsColor(getBaseContext());
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new FrameworksGeneralFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().replace(R.id.container, TelefonoLlamadasFragment.newInstance("telefono_llamadas_prefs")).commit();
                 break;
             case 6:
-                ThemeSwitch.getIconsColor(getBaseContext());
-                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AppLinksFragment()).commitAllowingStateLoss();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new TWLauncherFragment()).commitAllowingStateLoss();
                 break;
             case 7:
-                showThemeChooserDialog();
+                getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new FrameworksGeneralFragment()).commitAllowingStateLoss();
                 break;
             case 8:
-                showBackupDialog();
-                //startActivity(new Intent(this, ToolboxSettings.class));
+                showThemeChooserDialog();
                 break;
             case 9:
+                BackupPreferences rp = new BackupPreferences(MainViewActivity.this);
+                rp.showBackupDialog();
+                //startActivity(new Intent(this, MainActivity.class));
+                break;
+            case 10:
                 ChangeLog cl = new ChangeLog(this);
                 //if (cl.isFirstRun()) {
                 cl.getLogDialog().show();
                 //}
                 break;
-            case 10:
-                ThemeSwitch.getIconsColor(getBaseContext());
+            case 11:
                 getFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container, new AcercaDeFragment()).commitAllowingStateLoss();
                 break;
 
@@ -212,6 +213,7 @@ public class MainViewActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         if (overlay.getVisibility() == View.VISIBLE){
+            Blurry.delete((ViewGroup) findViewById(R.id.content));
             for (int i = 0; i < rebootFabs.length; i++) {
                 overlay.setVisibility(View.GONE);
                 rebootFabs[i].hide();
@@ -223,7 +225,7 @@ public class MainViewActivity extends AppCompatActivity
             super.onBackPressed();
         }
         else{
-            Toast.makeText(getBaseContext(), "Pulsa de nuevo para salir", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Pulsa de nuevo para Salir", Toast.LENGTH_SHORT).show();
             back_pressed = System.currentTimeMillis();
         }
     }
@@ -378,6 +380,17 @@ public class MainViewActivity extends AppCompatActivity
                 rebootFabs_text[i].setBackgroundDrawable(gd);
             }
         }
+
+        if (!overlay.isShown()){
+            Blurry.delete((ViewGroup) findViewById(R.id.content));
+        }else{
+            Blurry.with(MainViewActivity.this)
+                    .radius(25)
+                    .sampling(2)
+                    .async()
+                    .animate(200)
+                    .onto((ViewGroup) findViewById(R.id.content));
+        }
     }
 
     //Activates a chosen theme based on single choice list dialog, which opens upon selecting item at position 4 in nav drawer list
@@ -422,7 +435,8 @@ public class MainViewActivity extends AppCompatActivity
     private void showThemeChooserDialog() {
         AlertDialog.Builder b = new AlertDialog.Builder(this);
         Adapter adapter = new ArrayAdapter<>(this, R.layout.simple_list_item_single_choice, getResources().getStringArray(R.array.theme_items));
-        b.setTitle(getString(R.string.theme_chooser_dialog_title))
+        b.setIcon(R.drawable.ic_htc_personalize)
+         .setTitle(getString(R.string.theme_chooser_dialog_title))
                 .setSingleChoiceItems((ListAdapter) adapter, PreferenceManager.getDefaultSharedPreferences(this).getInt("theme_prefs", 0), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -462,7 +476,7 @@ public class MainViewActivity extends AppCompatActivity
     }
 
     //Asynchronous class to ask for su rights at the beginning of the activity. If the root rights have been denied or the device is not rooted, the app will not run.
-    public class CheckSu extends AsyncTask<String, Integer, Boolean> {
+    public class CheckSu extends AsyncTask<Void, Void, Boolean> {
         ProgressDialog mProgressDialog;
 
         @Override
@@ -474,11 +488,11 @@ public class MainViewActivity extends AppCompatActivity
         }
 
         @Override
-        protected Boolean doInBackground(String... params) {
+        protected Boolean doInBackground(Void... voids) {
             //Accessing the ability of the device to get root and the ability of app to achieve su privileges.
+            sddir = new File(Environment.getExternalStorageDirectory().getPath() + "/HCTControl");
+            bkpdir = new File(sddir + "/backup");
             if (RootTools.isAccessGiven()) {
-                sddir = new File(Environment.getExternalStorageDirectory().getPath() + "/HCTControl");
-                bkpdir = new File(sddir + "/backup");
                 if (!sddir.exists()) {
                     Log.d("sddir", "sddir doesn't exists");
                     sddir.mkdir();
@@ -603,139 +617,5 @@ public class MainViewActivity extends AppCompatActivity
         } else if(!isMountedRW && mount.equals("rw")){
             RootTools.remount(system, "rw");
         }
-    }
-
-    // Copiar/Restaurar ajustes HCT Control
-    private void showBackupDialog() {
-        File myDirectory = new File(Environment.getExternalStorageDirectory(), "/HCTControl/backup/data");
-        if(!myDirectory.exists()) {
-            myDirectory.mkdirs();
-        }
-        AlertDialog.Builder b = new AlertDialog.Builder(this);
-        Adapter adapter = new ArrayAdapter<>(this, R.layout.simple_list_item_single_choice, getResources().getStringArray(R.array.backup_items));
-        b.setTitle(getString(R.string.backup_dialog_title))
-                .setSingleChoiceItems((ListAdapter) adapter, PreferenceManager.getDefaultSharedPreferences(this).getInt("backup", 0), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int position) {
-                        //based on position we do something
-                        if (position == 0) {
-                            dialog.dismiss();
-                            //close dialog and open a new one
-                            AlertDialog.Builder confirm = new AlertDialog.Builder(MainViewActivity.this);
-                            confirm.setMessage(R.string.confirm_backup)
-                                    .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    dialog.dismiss();
-                                                    File prefdir = new File("/data/data/com.hctrom.romcontrol/shared_prefs");
-                                                    File prefdir2 = new File("/data/data/com.hctrom.romcontrol/files");
-                                                    File filesdir = new File(Environment.getExternalStorageDirectory().getPath()+"/HCTControl/backup/data/shared_prefs");
-                                                    File filesdir2 = new File(Environment.getExternalStorageDirectory().getPath()+"/HCTControl/backup/data/files");
-                                                    RestorePreferences.directoryDelete(filesdir);
-                                                    RestorePreferences.directoryDelete(filesdir2);
-                                                    try {
-                                                        RestorePreferences.directoryBackupRestore(prefdir, filesdir);
-                                                        if (prefdir2.exists()) {
-                                                            RestorePreferences.directoryBackupRestore(prefdir2, filesdir2);
-                                                        }
-                                                    } catch (IOException e) {
-                                                        e.printStackTrace();
-                                                    }
-
-                                                    Toast.makeText(getApplicationContext(), "Backup creado en: " + filesdir.getAbsolutePath(), Toast.LENGTH_SHORT).show();
-
-                                                    backupPreferences();
-                                                    //if file for auto_restore is present we delete it
-                                                    File file = new File(bkpdir + "/auto_restore.txt");
-                                                    if (file.exists()) {
-                                                        file.delete();
-                                                    }
-                                                }
-                                            }
-
-                                    )
-                                    .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            dialog.dismiss();
-
-                                        }
-                                    });
-                            AlertDialog d = confirm.create();
-                            d.show();
-                            TypedValue typedValue = new TypedValue();
-                            Resources.Theme theme = getApplicationContext().getTheme();
-                            theme.resolveAttribute(R.attr.colorAccent, typedValue, true);
-                            d.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
-                        } else if (position == 1 ){
-                            dialog.dismiss();
-                            RestorePreferences rp = new RestorePreferences(MainViewActivity.this);
-                            //this is the call for constructor
-                            rp.showConfirmDialog();
-                        }
-                    }
-                });
-        AlertDialog d = b.create();
-        d.show();
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = this.getTheme();
-        theme.resolveAttribute(R.attr.colorAccent, typedValue, true);
-        d.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg);
-    }
-
-    private void backupPreferences() {
-        //we go into the shared_prefs folder and we read the files name's
-        File prefdir = new File("/data/data/com.hctrom.romcontrol/shared_prefs");
-        File filesdir = new File("/data/data/com.hctrom.romcontrol/FilePrefs/files");
-        if (bkpdir.listFiles() != null) {
-            for (File deleteBkp : bkpdir.listFiles()) {
-                deleteBkp.delete();
-
-            }
-        }
-        for (File f : prefdir.listFiles()) {
-            if (f.isFile()) {
-                String name = f.getName();
-                //if file is defult pref we don't backup as it doesn't go in the bd
-                if (!name.equals("com.hctrom.romcontrol_preferences.xml")) {
-                    //we remove the xml suffix from filename and we assign it in the loop to the shared prefs
-                    //this way we can use the getAll method of shared prefs for all the existing files in the folder
-                    name = name.replace(".xml", "");
-                    SharedPreferences pref = getSharedPreferences(name, MODE_PRIVATE);
-                    //now we write to the backup file
-                    Map<String, ?> allEntries = pref.getAll();
-                    for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
-                        try(
-                                PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(bkpdir + "/prefs_HCTControl.txt", true)))) {
-                            out.println(entry.getKey() + ": " + entry.getValue().toString());
-
-                        }catch (IOException e) {
-
-                        }
-                    }
-                }
-            }
-        }
-
-        if (filesdir.exists()) {
-            for (File files : filesdir.listFiles()) {
-                if (files.isFile()) {
-                    String name = files.getName();
-                    if (!name.contains("com.hctrom")) {
-                        File filebackup = new File(bkpdir + "/" + name);
-                        try {
-                            filebackup.createNewFile();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-        }
-
-        finish();
-        this.overridePendingTransition(0, R.animator.fadeout);
-        startActivity(new Intent(this, MainViewActivity.class));
-        this.overridePendingTransition(R.animator.fadein, 0);
     }
 }

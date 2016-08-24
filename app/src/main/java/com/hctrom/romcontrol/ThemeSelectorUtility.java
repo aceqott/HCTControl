@@ -55,6 +55,10 @@ public class ThemeSelectorUtility {
                 activity.setTheme(R.style.AppThemeSamsungLight);
                 ThemeSwitch.getIconsColor(c);
                 break;
+            case 4:
+                activity.setTheme(R.style.AppThemeMaterialDark);
+                ThemeSwitch.getIconsColor(c);
+                break;
 
         }
     }

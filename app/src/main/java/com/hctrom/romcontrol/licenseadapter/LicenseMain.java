@@ -26,6 +26,8 @@ public class LicenseMain extends AppCompatActivity {
     setContentView(R.layout.license_main);
     if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 3) {
       getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorSamsungLight));
+    }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 4){
+      getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorMaterialDark));
     }else if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt("theme_prefs", 0) == 0){
       getWindow().setStatusBarColor(getResources().getColor(R.color.myPrimaryDarkColorHCT));
     }else{
@@ -44,7 +46,7 @@ public class LicenseMain extends AppCompatActivity {
 
     licenses.add(Licenses.noContent("Android SDK", "Google Inc.", "https://developer.android.com/sdk/terms.html"));
     licenses.add(Licenses.noContent("RootTools", "Stericson", "https://github.com/Stericson/RootTools"));
-    licenses.add(Licenses.noContent("HCT Control", "HCTeam", "https://github.com/Palleiro/HCTControl"));
+    licenses.add(Licenses.noContent("HCT Control", "HCTeam", "https://github.com/aceqott/HCTControl"));
     licenses.add(Licenses.noContent("CustomSettingsForDevs", "wubydax", "https://github.com/wubydax/CustomSettingsForDevs"));
     licenses.add(Licenses.fromGitHub("hdodenhof/CircleImageView", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("shell-software/fab", Licenses.LICENSE_APACHE_V2));
@@ -57,6 +59,9 @@ public class LicenseMain extends AppCompatActivity {
     licenses.add(Licenses.fromGitHub("yshrsmz/LicenseAdapter", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("nolanlawson/Catlog", Licenses.LICENSE_APACHE_V2));
     licenses.add(Licenses.fromGitHub("wubydax/ToolboxController", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("wasabeef/Blurry", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("wubydax/HexConverter-v2.0", Licenses.LICENSE_APACHE_V2));
+    licenses.add(Licenses.fromGitHub("nisrulz/packagehunter", Licenses.LICENSE_APACHE_V2));
 
     LicenseAdapter adapter = new LicenseAdapter(licenses);
     RecyclerView list = (RecyclerView) findViewById(R.id.list);

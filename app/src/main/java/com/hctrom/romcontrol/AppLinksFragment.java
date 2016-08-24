@@ -12,8 +12,9 @@ public class AppLinksFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        hpf = new HandlePreferenceFragments(getActivity(), this, "app_links_prefs");
         ThemeSwitch.getIconsColor(getActivity());
+        //addPreferencesFromResource(R.xml.app_links_prefs);
+        hpf = new HandlePreferenceFragments(getActivity(), this, "app_links_prefs");
     }
 
     @Override
@@ -27,6 +28,5 @@ public class AppLinksFragment extends PreferenceFragment {
         super.onPause();
         hpf.onPauseFragment();
     }
-
 
 }

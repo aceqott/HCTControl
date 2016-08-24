@@ -17,6 +17,8 @@ package com.hctrom.romcontrol;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
+import com.hctrom.romcontrol.prefs.ThemeSwitch;
+
 
 public class UIPrefsFragment extends PreferenceFragment {
     HandlePreferenceFragments hpf;
@@ -24,6 +26,7 @@ public class UIPrefsFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeSwitch.getIconsColor(getActivity());
         /*
         ThemeSelectorUtility theme = new ThemeSelectorUtility(getActivity());
         theme.onActivityCreateSetTheme(getActivity());

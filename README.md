@@ -1,5 +1,43 @@
 # HCTControl by HCTeam™
 
+[![Platform](http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat)](http://developer.android.com/index.html) [![Language](http://img.shields.io/badge/language-java-orange.svg?style=flat)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+### Librerías y dependencias utilizadas en este proyecto
+
+- Android SDK: [Google Inc.](https://developer.android.com/sdk/terms.html)
+
+- RootTools: [Stericson](https://github.com/Stericson/RootTools)
+
+- CustomSettingsForDevs: [Wubydax](https://github.com/wubydax/CustomSettingsForDevs)
+
+- CircleImageView: [Hdodenhof](https://github.com/hdodenhof/CircleImageView)
+
+- Fab Button: [Shell-software](https://github.com/shell-software/fab)
+
+- Calligraphy: [Chrisjenx](https://github.com/chrisjenx/Calligraphy)
+
+- CkChangeLog: [Cketti](https://github.com/cketti/ckChangeLog)
+
+- Build.prop-Editor: [Nathanpc](https://github.com/nathanpc/Build.prop-Editor)
+
+- CPU-Spy: [Bvalosek](https://github.com/bvalosek/cpuspy)
+
+- DPI-Changer: [Grennis](https://github.com/grennis/dpi-changer)
+
+- FasterGPS: [Free-Software-for-Android](https://github.com/Free-Software-for-Android/FasterGPS)
+
+- LicenseAdapter: [Yshrsmz](https://github.com/yshrsmz/LicenseAdapter)
+
+- Catlog: [Nolanlawson](https://github.com/nolanlawson/Catlog)
+
+- Toolbox Controller: [Wubydax](https://github.com/wubydax/ToolboxController)
+
+- Blurry: [Wasabeef](https://github.com/wasabeef/Blurry)
+
+Dar las gracias en nombre del `HCTeam` a todos los desarrolladores arriba mencionados por compartir su código y poder hacer esto más grande...
+
+### Capturas
+
 ![HCTControl](https://github.com/Palleiro/HCTControl/blob/master/HCTControl.png)
 
 License

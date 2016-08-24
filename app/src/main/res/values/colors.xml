@@ -38,6 +38,11 @@
     <color name="myAccentColorHCT">#ff527ca3</color>
     <color name="back_text_mail_hct">#3f527ca3</color>
 
+    <color name="myPrimaryColorMaterialDark">#ff057fd1</color>
+    <color name="myPrimaryDarkColorMaterialDark">#ff7aab41</color>
+    <color name="myAccentColorMaterialDark">#ff8bc34a</color>
+    <color name="myInverseColorMaterialDark">#ff121212</color>
+
     <drawable name="pressed_gray">#0c2e4d50</drawable>
     <drawable name="selected_gray">?colorPrimary</drawable>
     <drawable name="accent">?colorAccent</drawable>
@@ -171,4 +176,5 @@
     <color name="light_red_alpha">#99FF9999</color>
     <color name="dark_yellow_alpha">#99CC9900</color>
     <color name="light_yellow_alpha">#99FFFF66</color>
+    <color name="LineasTab">#7fffffff</color>
 </resources>

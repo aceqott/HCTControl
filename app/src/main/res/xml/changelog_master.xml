@@ -1,31 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="1.0" versioncode="10" >
-        <change>Activar/Desactivar popup Volúmen seguro</change>
+    <release version="8.0-Edition-" versioncode="10" >
+        <change>Añadido Remover notificación persistente</change>
+        <change>Añadido Battery Bar V2</change>
+        <change>Añadido tráfico de red con múltiples Opciones de personalización</change>
+        <change>Añadido Nº bótones Quicksetting en Panel</change>
+        <change>Añadido Nº bótones Scroll en Panel</change>
+        <change>Añadido botones Bloqueo y Home</change>
+        <change>Ocultar iconos de Alarma y Bluetooth en Statusbar</change>
+        <change>Alternar entre 3MinitBattery/Stock en Statusbar</change>
+        <change>Añadido color global de iconos en Statusbar; color iconos Notificaciones; color icono Wifi; color icono Datos; color icono Señal</change>
+        <change>Añadido texto operadora personalizado en la Statusbar del Bloqueo y ajuste de color</change>
+        <change>Añadido posición de iconos Wifi, Datos y Señal en Statusbar</change>
+        <change>Añadido Dynamic Statusbar Color</change>
+        <change>Añadido AOKP Ram bar en Recientes y ajuste de color del texto</change>
+        <change>Añadido QuickLaunch en Recientes</change>
+        <change>Añadido Blur effect en Recientes</change>
+        <change>Añadido potato Statusbar Gradient (Fix cuadro de color) (Traducido por @HCTeam)</change>
+        <change>Añadido Activar/Desactivar Notificación modo ahorro</change>
+        <change>Añadido Activar/Desactivar Popup volúmen seguro</change>
+        <change>Añadido Activar/Desactivar Despertar pantalla al conectar/desconectar USB/AC</change>
+        <change>Añadido fondo personalizado en Llamada (IncallUI)</change>
+        <change>Añadido ajuste de retraso al finalizar llamada</change>
+        <change>Añadido Activar/Desactivar tono ascendente en Llamada</change>
+        <change>Añadido Activar/Desactivar comprobar cubierta de batería</change>
+        <change>Añadido efectos de transición en escritorio TWLauncher</change>
+        <change>Añadido gestos de escritorio en TWLauncher</change>
+        <change>Personalicar color de Fondo de Cabecera/Toggles/Barra Brillo/Uso de Datos/Quickconnect/Notificación</change>
+        <change>Añadido ocultar Barra de brillo en Panel</change>
+        <change>Añadido color de Toggles ON/OFF</change>
+        <change>Añadido Botones de Fondo Toggles y color</change>
+        <change>Añadido Blur effect en Panel</change>
+        <change>Añadido color porcentaje batería Stock</change>
+        <change>Añadido porcentaje dentro batería Stock</change>
+        <change>Añadido color texto Toggle</change>
+        <change>Añadido color reloj Stock/Fecha/Ajustes</change>
+        <change>Añadido color línea divisora en Panel</change>
+        <change>Añadido color fondo Soundpath y color del texto</change>
+        <change>Añadido color texto Quickconnect</change>
+        <change>Añadido Mod reloj y fecha personalizado + ajuste de color</change>
+        <change>Añadido fondo del panel con múltiples opciones de personalización</change>
+        <change>Añadido tercer botón en Panel + ajuste de color</change>
+        <change>Añadido información del dispositivo en Panel con múltiples opciones de personalización</change>
+        <change>Añadido texto operadora personalizado en Panel</change>
+        <change>Añadido Mod uso de datos en Panel con múltiples opciones de personalización</change>
+        <change>Añadido tiempo en Bloqueo con múltiples opciones de personalización</change>
+        <change>Añadido color Hora/Minutos/Fecha/Segundos en Bloqueo</change>
         <change>Añadido Número de notificaciones visibles en Pantalla de Bloqueo</change>
-        <change>Opciones de Reloj (Estilo AM/PM, Estilo Fecha y Formato Fecha). Alineación, ajuste de color, Fuente y animación</change>
-        <change>Tráfico de red con múltiples Opciones de personalización</change>
-        <change>Añadido Botón Bloqueo y Home en la Statusbar</change>
-        <change>Ocultar icono Alarma/Bluetooth en Statusbar</change>
-        <change>Activar/Ocultar SFinder/QuickConnect en el panel</change>
-        <change>Opciones para configurar y personalizar las Llamadas entrantes (Activar/Desactivar tono ascendente y Grabación automática de Llamadas Entrantes/Salientes)</change>
-        <change>Añadido Statusbar Gradient</change>
-        <change>Añadido Emojis HCT (Posibilidad de cambiar los iconos del sistema: AOSP, Sammy,IOS)</change>
-        <change>Añadido Battery Bar</change>
-        <change>Añadido 3 MinitBattery</change>
-        <change>Añadido Nº bótones Quicksetting (4-7) en Cortina</change>
-        <change>Modificado Nº Toggles Scroll (Ahora se podrá elegir de 5 a 20)</change>
+        <change>Añadido Activar/Desactivar notificación Batería baja</change>
+        <change>Añadido Activar/Desactivar texto de ayuda en Bloqueo</change>
+        <change>Añadido siguiente alarma en Bloqueo + ajuste de color</change>
+        <change>Añadido color texto botón Borrar y Notificaciones</change>
+        <change>Añadido formato de fecha en Panel</change>
+        <change>Añadido Activar/Desactivar notificación Heads up</change>
+        <change>Añadido Golpe único para Panel de notificación</change>
+        <change>Añadido texto color Secciones y Favoritos de Settings</change>
+        <change>Añadido fondo personalizado en Settings con múltiples opciones de personalización</change>
+        <change>Añadido Activar/Desactivar Notificación conectado a dispositivos de medios</change>
+        <change>Añadido Fondo personalizado en Contactos con múltiples opciones de personalización + colores personalizado en teclado de marcación</change>
+        <change>Añadido Activar/Desactivar reiniciar en Recovery/Grabadora de panalla/Captura de pantalla</change>
+        <change>Añadido 3MinitBattery (Traducido por @HCTeam)</change>
+        <change>Añadido WizIconizer (Traducido por @HCTeam)</change>
         <change>Añadido Sonidos Notificaciones (Activar/Desactivar sonido de carga y Activar/Desactivar sonido de Captura de pantalla) y Sonidos Sistema (Varios niveles de sonido: Stock/Medio/Alto/Extremo y Activar/Desactivar sonido Animación de inicio)</change>
-        <change>Personalizar Color fondo: Cabecera, Toggle, Barra Brillo, Panel SFinder</change>
-        <change>Configurar y personalizar CPU Usage View</change>
-        <change>Añadido Memory Cleaner</change>
-        <change>Añadido DPI Changer</change>
+        <change>Añadido Emojis HCT (Posibilidad de cambiar los iconos del sistema: AOSP, Sammy,IOS)</change>
+        <change>Elegir vista de columnas de 1/2 en Ajustes</change>
+        <change>Activar/Ocultar Favoritos en Ajustes</change>
+        <change>Añadido Menú Reinicio Avanzado</change>
+        <change>Añadido Grabadora de pantalla, Captura de pantalla Menú Power</change>
+        <change>Personalizar fuente del Reloj en Bloqueo de pantalla</change>
+        <change>Personalizar color del texto de Notificación</change>
+        <change>Añadido tiempo notificación Heads Up</change>
+        <change>Añadido Control de Música</change>
+        <change>Añadido tiempo de espera Bloqueo de pantalla</change>
+        <change>Rotación en Bloqueo</change>
+        <change>Personalizar porcentaje Advertencia batería baja</change>
+        <change>Personalizar porcentaje Advertencia batería crítica</change>
+        <change>Personalizar barra de brillo con múltiples opciones de personalización</change>
+        <change>Ocultar texto toggle en Panel de notificación</change>
+        <change>Añadido Activar/Desactivar BacktoKill/Menú</change>
+        <change>Añadido Statusbar Clock con múltiples opciones de personalización</change>
+        <change>Añadido Color texto descripción en Panel Quickconnect</change>
+        <change>Añadido Color icono Modo avión y Download Booster</change>
+        <change>Añadido Color icono Batería stock, Batería en carga, Rayo de carga</change>
+        <change>Añadido Activar/Desactivar Multiwindow</change>
+        <change>Añadido Esquinas redondeadas/Stock en Notificación</change>
+        <change>Añadido escala de tamaño en Reloj/Segundos/Fecha en Bloqueo de pantalla</change>
+        <change>Añadido Activar/Desactivar Texto toggle secundario</change>
+        <change>Añadido Color Texto toggle secundario</change>
+        <change>Elegir vista de columnas de 3/4/5 en sección Favoritos de Ajustes</change>
+        <change>Escala de tamaño del texto en Sección Principal/Favoritos/Editar Favoritos de Ajustes</change>
+        <change>Añadido Color texto en negro en TWLauncher</change>
+        <change>Añadido Color del texto de los iconos en TWLauncher</change>
+        <change>Añadido Color del texto de sección Widgets en TWLauncher</change>
+        <change>Añadido Activar/Desactivar Fondo de pantalla en movimiento en TWLauncher</change>
         <change>Añadido HCT OTA</change>
-        <change>Añadido CPUSpy (v3.2.1 Material)</change>
-        <change>Añadido Adaway (Build 14Apr16)</change>
-        <change>Añadido CatLog (v1.6.0)</change>
-    </release>
-    <release version="0.1" versioncode="1">
-        <change>Versión Beta para pruebas</change>
+        <change>Añadido Toolbox Controller</change>
+        <change>Añadido HexConverter</change>
+        <change>Añadido DPI Changer</change>
+        <change>Añadido Adblocker</change>
+        <change>Añadido Diagnóstico (CPU Spy, Batería, APP Info)</change>
+        <change>Añadido Faster GPS</change>
+        <change>Añadido CatLog</change>
+        <change>Añadido Buil.pro Edit</change>
+        <change>Añadido 6thGear TWSwipe</change>
+        <change>Añadido UPSM Manager (Traducido por @HCTeam)</change>
+        <change>...</change>
     </release>
 </changelog>

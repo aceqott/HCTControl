@@ -51,6 +51,9 @@ public class DialogoAlertaConexion extends DialogFragment {
         if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 3) {
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
             positive_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
+        }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 4){
+            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+            positive_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
         }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 0){
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
             positive_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));

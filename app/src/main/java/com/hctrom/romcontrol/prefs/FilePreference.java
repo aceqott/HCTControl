@@ -35,7 +35,6 @@ public class FilePreference extends SwitchPreference implements CompoundButton.O
     String defaultNameSpace;
     CharSequence summaryOn, summaryOff;
     File file;
-    File filedir;
     boolean isOn;
     Context c;
     Switch swView;
@@ -48,12 +47,8 @@ public class FilePreference extends SwitchPreference implements CompoundButton.O
         key = getStringForAttr(attrs, defaultNameSpace, "key", "file");
         summaryOn = getStringForAttr(attrs, defaultNameSpace, "summaryOn", "");
         summaryOff = getStringForAttr(attrs, defaultNameSpace, "summaryOff", "");
-        //We will store our files inside package default files dir in /data/data/packagename/files/FilePrefs
-        filedir = new File(c.getFilesDir() +"/FilePrefs");
-        if (!filedir.exists())  {
-            filedir.mkdir();
-        }
-        file = new File(filedir + File.separator + key);
+        //We will store our files inside package default files dir in /data/data/packagename/files
+        file = new File(c.getFilesDir() + File.separator + key);
         isOn = file.exists() ? true : false;
         FilePreference.this.setOnPreferenceClickListener(this);
     }

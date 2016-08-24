@@ -4,13 +4,14 @@
     <string name="drawer_close">Menu closed</string>
     <string name="action_settings">Settings</string>
     <string-array name="nav_drawer_items">
-        <item>Barra de estado</item>
+        <item>Statusbar</item>
+        <item>General</item>
         <item>Panel de notificaciones</item>
         <item>Pantalla de bloqueo</item>
         <item>Sonidos y Notificaciones</item>
         <item>Teléfono y Llamadas</item>
+        <item>TW Launcher</item>
         <item>Utilidades</item>
-        <item>Apps Extras</item>
         <item>Theme</item>
         <item>Copiar/Restaurar</item>
         <item>Changelog</item>
@@ -36,88 +37,8 @@
         <item>2</item>
         <item>3</item>
     </string-array>
-    <string-array name="battery_bar_entries">
-        <item>Ocultar</item>
-        <item>Statusbar</item>
-    </string-array>
-    <string-array name="battery_bar_values">
-        <item>0</item>
-        <item>1</item>
-    </string-array>
-    <string-array name="battery_bar_style_entries">
-        <item>Normal</item>
-        <item>Centrado</item>
-    </string-array>
-    <string-array name="battery_bar_style_values">
-        <item>0</item>
-        <item>1</item>
-    </string-array>
-    <string-array name="battery_bar_thickness_entries">
-        <item>1 dp</item>
-        <item>2 dp</item>
-        <item>3 dp</item>
-        <item>4 dp</item>
-    </string-array>
-    <string-array name="battery_bar_thickness_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </string-array>
-    <string-array name="anlorlock_entries">
-        <item>Derecha</item>
-        <item>Centro transparente</item>
-        <item>Izquierda</item>
-        <item>Ocultar</item>
-    </string-array>
-    <string-array name="anlorlock_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-    <string-array name="anlorhome_entries">
-        <item>Ocultar</item>
-        <item>Derecha</item>
-        <item>Izquierda</item>
-    </string-array>
-    <string-array name="anlorhome_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-    <string-array name="traffic_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-    <string-array name="traffic_entries">
-        <item>Desactivado</item>
-        <item>Saliente</item>
-        <item>Entrante</item>
-        <item>Saliente y entrante</item>
-    </string-array>
-    <string-array name="traffic_update_entries">
-        <item>500 ms</item>
-        <item>1000 ms</item>
-        <item>1500 ms</item>
-        <item>2000 ms</item>
-    </string-array>
-    <string-array name="traffic_update_values">
-        <item>500</item>
-        <item>1000</item>
-        <item>1500</item>
-        <item>2000</item>
-    </string-array>
-    <string-array name="traffic_unit_entries">
-        <item>Bits por segundo</item>
-        <item>Bytes por segundo</item>
-    </string-array>
-    <string-array name="traffic_unit_values">
-        <item>0</item>
-        <item>1</item>
-    </string-array>
+
+
     <string-array name="notification_panel_background_images_entries">
         <item>Stock</item>
         <item>Personalizado 1</item>
@@ -144,42 +65,7 @@
         <item>6</item>
         <item>7</item>
     </string-array>
-    <string-array name="toggle_scroll_entries">
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-    </string-array>
-    <string-array name="toggle_scroll_values">
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-    </string-array>
+
 
     <string-array name="sysbar_recent">
         <item>Oculto</item>
@@ -214,22 +100,6 @@
         <item>400</item>
         <item>450</item>
         <item>500</item>
-    </string-array>
-    <string-array name="volbtn_action_entries">
-        <item>Siguiente</item>
-        <item>Pausa</item>
-        <item>Play</item>
-        <item>Play/Pausa</item>
-        <item>Anterior</item>
-        <item>Stop</item>
-    </string-array>
-    <string-array name="volbtn_action_values">
-        <item>87</item>
-        <item>127</item>
-        <item>126</item>
-        <item>85</item>
-        <item>88</item>
-        <item>86</item>
     </string-array>
     <string-array name="lockscreen_clock_position_entries">
         <item>Arriba izquierda</item>
@@ -271,18 +141,7 @@
         <item>9</item>
         <item>10</item>
     </string-array>
-    <string-array name="call_delay_entries">
-        <item>Sin retraso</item>
-        <item>1000ms</item>
-        <item>2500ms</item>
-        <item>Por defecto (5000ms)</item>
-    </string-array>
-    <string-array name="call_delay_values">
-        <item>0</item>
-        <item>1000</item>
-        <item>2500</item>
-        <item>5000</item>
-    </string-array>
+
 
     <string-array name="listview_animation_entries">
         <item>@string/listview_off</item>
@@ -525,6 +384,69 @@
         <item>4</item>
         <item>5</item>
     </string-array>
+    <!-- clock statusbar-->
+    <string name="right_clock">Right clock</string>
+    <string name="center_clock">Center clock</string>
+    <string name="dont_show">"Don't show"</string>
+    <string name="clock_title_enable">Clock alignment</string>
+    <string name="clock_enabled">Enabled</string>
+    <string name="clock_disabled">Disabled</string>
+    <string name="clock_color_title">Clock color</string>
+    <string name="clock_date_display_summary">Display custom date before the clock</string>
+    <string name="clock_date_style">Date style</string>
+    <string name="clock_date_format">Date format</string>
+    <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Enter string</string>
+    <string name="status_bar_clock_style_reset">Reset color</string>
+    <string name="status_bar_style_clock">Clock Style</string>
+    <string name="status_bar_clock_title">Clock and date style</string>
+    <string name="status_bar_clock_summary">Choose clock and date style</string>
+    <string name="status_bar_show_clock_title">Show clock</string>
+    <string name="am_pm_clock_none">NO AM/PM</string>
+    <string name="am_pm_clock_small">Small</string>
+    <string name="am_pm_clock_normal">Normal</string>
+    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="left_clock">Left clock</string>
+    <string name="clock_use_second_summary">Show second in clock</string>
+    <string name="clock_font_bold">Bold</string>
+    <string name="clock_font_condensed">Condensed</string>
+    <string name="clock_font_light">Light</string>
+    <string name="clock_font_light_italic">Light Italic</string>
+    <string name="clock_font_normal">Normal</string>
+    <string name="default_string">Default</string>
+    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_style_lowercase">Lowercase</string>
+    <string name="clock_date_style_uppercase">Uppercase</string>
+    <string name="clock_date_format_custom">Customization</string>
+    <string name="clock_date_display_none">No Date and clock</string>
+    <string name="clock_date_display_small">Small</string>
+    <string name="clock_date_display_normal">Normal</string>
+    <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
+    <string name="clock_font_italic">Italic</string>
+    <string name="clock_font_bold_italic">Bold Italic</string>
+    <string name="clock_font_thin">Thin</string>
+    <string name="clock_font_thin_italic">Thin Italic</string>
+    <string name="clock_font_condensed_italic">Condensed Italic</string>
+    <string name="clock_font_condensed_bold">Condensed Bold</string>
+    <string name="clock_font_condensed_bold_italic">Condensed Bold Italic</string>
+    <string name="clock_font_medium">Medium</string>
+    <string name="clock_font_medium_italic">Medium Italic</string>
+    <string name="clock_date_right">Right of time</string>
+    <string name="clock_date_left">Left of time</string>
+
+    <!-- Dinamyc status bar -->
+    <string name="dynamic_status_bar_title">Dynamic status bar</string>
+    <string name="dynamic_status_bar_color_title">Dynamic status bar color</string>
+    <string name="dynamic_status_bar_color_summary">Actualizar automáticamente el color de fondo de la Statusbar</string>
+    <string name="dynamic_status_bar_gradient_title">Gradiente</string>
+    <string name="dynamic_status_bar_gradient_summary">Superpone la Statusbar con gradiente</string>
+    <string name="dynamic_status_bar_filter_title">Oscurecimiento</string>
+    <string name="dynamic_status_bar_filter_summary">Superpone la Statusbar con un filtro de oscurecimiento</string>
+    <string name="dsb_gradient_filter_value_0">Desactivado</string>
+    <string name="dsb_gradient_filter_value_1">Sólo en el escritorio</string>
+    <string name="dsb_gradient_filter_value_2">En todas partes excepto el escritorio</string>
+    <string name="dsb_gradient_filter_value_3">Activado</string>
+    <string name="dynamic_status_bar_filter_value">Intensidad del filtro de oscurecimiento</string>
 
 
     <string name="dialog_color_picker">Color Picker</string>
@@ -534,6 +456,7 @@
         <item>Theme Marshmallow Dark</item>
         <item>Theme Marshmallow Light</item>
         <item>Theme TouchWiz Light</item>
+        <item>Theme Material Dark</item>
     </string-array>
     <string name="missing_su">El dispositivo no está rooteado o la aplicación negó los permisos de root.\n\nPor favor, confirma su estado root y vuelva a intentarlo más tarde.</string>
     <string name="exit">Salir</string>
@@ -543,8 +466,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="theme_chooser_dialog_title">Elegir tema</string>
-    <string name="app_reboot_required_title">App requiere Reinicio</string>
-    <string name="app_reboot_required_message">%1$s requiere hacer un reinicio para que los cambios surtan efecto.\n\nReiniciar ahora?</string>
+    <string name="app_reboot_required_title">Mod requiere Reinicio SystemUI</string>
+    <string name="app_reboot_required_message">%1$s requiere hacer un reinicio para que los cambios surtan efecto.\n\n¿Reiniciar ahora?</string>
 
     <!-- DPI CHANGER -->
     <string name="dialog_title">Selecciona Dpi</string>
@@ -574,7 +497,7 @@
     <string name="illegal_value_title">Valor no permitido!</string>
     <string name="text_illegal_value">Este dispositivo no es compatible con %1$s DPI.\n\nIntroduzca un valor comprendido entre 300 y 650 DPI.\n\nGracias!</string>
     <string name="back_button_custom">Volver a DPI Personalizado</string>
-    <string name="credits_hct">En primer lugar, dar las gracias a @Wuby986 y @daxgirl, por este fantástico proyecto que han construido.\n\n Muchísimas gracias a @tdunham, @remuntada78, @talkingmonkeys, @txr33, @ikrom, @asc1977, @kmokhtar79, @tamirda, @Er. Aditya por sus guías.\n\n Gracias especiales a @Palleiro por su ayuda incansable.\n Gracias como no a todo el @HCTeam: @666roi666 @franjua @dav88 @kakarotto24 @Doomper @alrodri @naftydj @Turulai @Broquen @Garrapatero @Aceqott @Gask7 @Mikele @Escaliboor @Kijodoari @koko @palleiro @sumejorpista @benjitawx @Jiterron</string>
+    <string name="credits_hct">Dar las gracias a @Wuby986 y @daxgirl, por esta fantástica herramienta que han construido. \nGracias especiales a @Palleiro por su ayuda. \n\nMuchísimas gracias a XDA Developers, excelente desarrolladores que comparten su trabajo. \nGracias a @tdunham, @daxgirl, @remuntada78, @talkingmonkeys, @ikrom, @asc1977, @Kamy, @kep2008, @stangdriver44, @OvrDriVE por sus tutoriales. \n\nGracias especiales a @tamirda, @thereassaad, @Sac23, @malbert16442, @Er. Aditya por su colaboración con la ROM. \n\nGracias como no a todo el @HCTeam: a todas las grandes personas que hay detrás de este equipo.</string>
 
     <!-- Changelog -->
     <string name="changelog_full_title">Registro de cambios</string>
@@ -665,8 +588,8 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
     <string name="pref_ntp_continent">Continente</string>
     <string name="pref_ntp_continent_summary">Seleccione su continente.</string>
     <string-array name="pref_ntp_continent_entries">
-        <item>- Ninguno seleccionado -</item>
-        <item>- Servidor personalizado -</item>
+        <item>Ninguno seleccionado</item>
+        <item>Servidor personalizado</item>
         <item>Europa</item>
         <item>Oceanía</item>
         <item>Asia</item>
@@ -677,12 +600,12 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
     <string name="pref_ntp_region">Región</string>
     <string name="pref_ntp_region_summary">Seleccione una región cercana a usted.</string>
     <string-array name="pref_ntp_region_entries_europe">
-        <item>- Ninguno seleccionado -</item>
+        <item>Ninguno seleccionado</item>
         <item>Austria</item>
         <item>Suiza</item>
         <item>Alemania</item>
         <item>Dinamarca</item>
-        <item> España</item>
+        <item>España</item>
         <item>Francia</item>
         <item>Italia</item>
         <item>Luxemburgo</item>
@@ -693,7 +616,7 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
         <item>Eslovenia</item>
         <item>Reino Unido</item>
         <item>Finlandia</item>
-        <item> Irlanda</item>
+        <item>Irlanda</item>
         <item>Rusia</item>
         <item>Bélgica</item>
         <item>Portugal</item>
@@ -704,7 +627,7 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
         <item>República Checa</item>
         <item>Yugoslavia</item>
         <item>Estonia</item>
-        <item> Bielorrusia</item>
+        <item>Bielorrusia</item>
         <item>Eslovaquia</item>
         <item>Ucrania</item>
         <item>Lituania</item>
@@ -722,7 +645,7 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
         <item>Malasia</item>
         <item>Turquía</item>
         <item>Singapur</item>
-        <item> India</item>
+        <item>India</item>
         <item>Hong Kong</item>
         <item>Emiratos Árabes Unidos</item>
         <item>Japón</item>
@@ -811,6 +734,22 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
         FasterGPS.\n\nThis can happen when your device is not rooted.\nYou can find information about how to root your
         device on www.cyanogenmod.com or other Android websites.
     </string>
+
+    <!-- 6thGear TWSwipe -->
+    <string name="title_activity_reset_dialog">Restablecer acción deslizante</string>
+    <string name="swipe_reset_title">Restablecer aplicación deslizante</string>
+    <string name="swipe_reset_no_prefs">Sus preferencias de aplicación deslizante están vacías, ¿Le gustaría establecer una ahora?</string>
+    <string name="swipe_reset_message">"Su acción deslizante predeterminado actual se establece en %1$s.\n\nPara restablecer las preferencias y establecer una acción deslizante diferente, por favor pulse OK"</string>
+    <string name="prefs_saved_dialog_title">Preferencia de guardado</string>
+    <string name="reset">Restablecer</string>
+    <string name="prefs_saved_app_dialog_message">"Su aplicación deslizante predeterminado se establece en %1$s.\n\nPara confirmar pulse OK.\n\nPara elegir una aplicación diferente presione RESTABLECER"</string>
+    <string name="prefs_saved_shortcut_dialog_message">"Su atajo deslizante predeterminado se establece en %1$s.\n\nPara confirmar pulse OK.\n\nPara elegir una aplicación diferente presione RESTABLECER"</string>
+    <string name="shortcut_chooser_title">Elija atajo para la acción deslizante</string>
+    <string name="progress_message">Cargando lista de aplicaciones...</string>
+    <string name="set_shortcut_title">Para establecer un atajo personalizado, haga click en el botón de abajo:</string>
+    <string name="set_app_title">O elija una aplicación de la lista:</string>
+    <string name="set_shortcut_button">Establecer atajo personalizado</string>
+    <string name="set_up_twswipe">6thGear TWSwipe</string>
 
     <!-- CatLog -->
     <string name="log_level_debug">Debug</string>
@@ -984,9 +923,9 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
     <string-array name="default_titles">
         <item>S Finder</item>
         <item>Quick Connect</item>
-        <item>Torch Light</item>
-        <item>Screen Write</item>
-        <item>Magnifier</item>
+        <item>Linterna</item>
+        <item>Captura de pantalla</item>
+        <item>Lupa</item>
     </string-array>
     <string-array name="default_summaries">
         <item>Abrir S Finder</item>
@@ -998,4 +937,30 @@ Usando el comando \'revert\' puede restaurar dicho fichero.</string>
     <string name="title_activity_sort">Ordenar Apps</string>
     <string name="max_reached_toast">Se ha alcanzado el número máximo de apps en Toolbox (12).</string>
     <string name="sort">Ordenar</string>
+
+    <!-- HexConverter -->
+    <string name="select_color_picker">Elija un selector de color:</string>
+    <string name="hex_color">Color Hexadecimal: %1$s</string>
+    <string name="color_integer">Color Entero: %1$s</string>
+    <string name="smali_integer">Color Smali: %1$s</string>
+    <string name="select_color">Selecciona un color</string>
+    <string name="color_selector_image_view">Seleccionar un color de una imagen</string>
+    <string name="Select_image">Seleccionar imagen</string>
+    <string name="Crop_image">Recortar imagen</string>
+    <string-array name="spinner_values">
+        <item>Selector de colores</item>
+        <item>Seleccionar color desde imagen</item>
+    </string-array>
+
+    <!-- UriSelectionPreference -->
+    <string name="reboot_menu">Menú Reiniciar</string>
+    <string name="reboot_device_text">Reiniciar dispositivo</string>
+    <string name="reboot_recovery_text">Reiniciar en Recovery</string>
+    <string name="reboot_ui_text">Reiniciar SystemUI</string>
+    <string name="app_reboot_required_dialog_title">Se requiere reiniciar la App</string>
+    <string name="app_reboot_required_dialog_message">Para que esta acción tenga efecto, es necesario reiniciar %1$s.\n\nPulsa OK para reiniciar ahora</string>
+    <string name="reboot_required_dialog_title">Se requiere reiniciar el dispositivo</string>
+    <string name="reboot_required_dialog_message">Para que esta acción tenga efecto, es necesario reiniciar el dispositivo completamente. Desea reiniciar ahora?</string>
+    <string name="reboot_later_negative_button">Más tarde</string>
+    <string name="reboot_now_dialog_button">Reiniciar ahora</string>
 </resources>

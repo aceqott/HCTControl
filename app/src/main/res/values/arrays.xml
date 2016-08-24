@@ -5,20 +5,30 @@
         <item>Restaurar</item>
     </string-array>
     <string-array name="toggle_buttons_background_entries">
-        <item>Stock</item>
-        <item>Icons</item>
+        <item>Default S7 (Para temas)</item>
         <item>Convex</item>
         <item>Concave</item>
         <item>Glass</item>
         <item>Convex square</item>
         <item>Concave square</item>
         <item>Glass square</item>
+        <item>Realms</item>
+        <item>Magnifying glass</item>
+        <item>Dark light</item>
+        <item>Metal</item>
+        <item>Leather</item>
+        <item>Leather rounded</item>
+        <item>Leather round</item>
         <item>Darksyde</item>
-        <item>Circle metal</item>
+        <item>Square</item>
+        <item>Emerald Green</item>
+        <item>Circle</item>
+        <item>Glass Circle</item>
+        <item>Framed Square</item>
+        <item>Elegant Marble</item>
     </string-array>
     <string-array name="toggle_buttons_background_values">
         <item>0</item>
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
@@ -27,32 +37,133 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
     </string-array>
     <array name="toggle_drawables">
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_00</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_10</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_01</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_02</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_03</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_04</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_05</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_06</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_darksyde</item>
-    <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_circle_metal</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_normal</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_01</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_02</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_03</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_04</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_05</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_06</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_07</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_08</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_09</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_10</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_11</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_12</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_13</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_dark</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_square</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_14</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_circle</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_18</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_19</item>
+        <item>@drawable/tw_quick_panel_quick_setting_button_round_bg_focussed_20</item>
     </array>
-    <string-array name="dialer_background_style_entries">
-        <item>Anastasia Style</item>
-        <item>Glassplate Style</item>
-        <item>Gold Style</item>
-        <item>Grill Style</item>
-        <item>Mesh Style</item>
-        <item>Motherboard Style</item>
-        <item>Rainbow Style</item>
-        <item>Round Style</item>
-        <item>Silver Style</item>
-        <item>Stone Style</item>
+
+    <!-- favorite columns-->
+    <string-array name="dashboard_fav_columns_entries">
+        <item>"3 columnas"</item>
+        <item>"4 columnas"</item>
+        <item>"5 columnas"</item>
     </string-array>
-    <string-array name="dialer_background_style_values">
+    <string-array name="dashboard_fav_columns_values">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- clock statusbar-->
+    <string-array name="clock_style_status_entries">
+        <item>Derecha</item>
+        <item>Centro</item>
+        <item>Izquierda</item>
+    </string-array>
+    <string-array name="clock_style_status_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="entries_status_bar_am_pm">
+        <item>No mostrar</item>
+        <item>Pequeño \n*Aplicar formato de 12h</item>
+        <item>Normal \n*Aplicar formato de 12h</item>
+    </string-array>
+    <string-array name="values_status_bar_am_pm">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_date_style_entries">
+        <item>Normal</item>
+        <item>Minúsculas</item>
+        <item>Mayúsculas</item>
+    </string-array>
+    <string-array name="clock_date_style_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_date_format_entries_values">
+        <item>dd/MM/yy</item>
+        <item>MM/dd/yy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy-dd-MM</item>
+        <item>dd-MM-yyyy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MMM dd</item>
+        <item>MMM dd, yyyy</item>
+        <item>MMMM dd, yyyy</item>
+        <item>EEE</item>
+        <item>EEE dd</item>
+        <item>EEE dd/MM</item>
+        <item>EEE MM/dd</item>
+        <item>EEE dd MMM</item>
+        <item>EEE MMM dd</item>
+        <item>EEE MMMM dd</item>
+        <item>EEEE dd/MM</item>
+        <item>EEEE MM/dd</item>
+    </string-array>
+    <string-array name="clock_date_display_entries">
+        <item>No mostrar</item>
+        <item>Pequeño</item>
+        <item>Normal</item>
+    </string-array>
+    <string-array name="clock_date_display_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="clock_font_style_entries">
+        <item>Normal</item>
+        <item>Italic</item>
+        <item>Bold</item>
+        <item>Bold Italic</item>
+        <item>Light</item>
+        <item>Light Italic</item>
+        <item>Thin</item>
+        <item>Thin Italic</item>
+        <item>Condensed</item>
+        <item>Condensed Italic</item>
+        <item>Bold Condensed</item>
+        <item>Bold Condensed Italic</item>
+        <item>Regular</item>
+        <item>Regular Italic</item>
+    </string-array>
+    <string-array name="clock_font_style_values">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -63,32 +174,450 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
-    <array name="dialer_drawables">
-        <item>@drawable/dialer_anastasia_style</item>
-        <item>@drawable/dialer_glassplate_style</item>
-        <item>@drawable/dialer_gold_style</item>
-        <item>@drawable/dialer_grill_style</item>
-        <item>@drawable/dialer_mesh_style</item>
-        <item>@drawable/dialer_motherboard_style</item>
-        <item>@drawable/dialer_rainbow_style</item>
-        <item>@drawable/dialer_round_style</item>
-        <item>@drawable/dialer_silver_style</item>
-        <item>@drawable/dialer_stone_style</item>
-    </array>
-    <string-array name="incall_background_entries">
+    <string-array name="clock_date_position_entries">
+        <item>Al principio</item>
+        <item>Al final</item>
+    </string-array>
+    <string-array name="clock_date_position_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- round notification -->
+    <string-array name="shape_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="shape_entries">
         <item>Stock</item>
-        <item>Personalizado 1</item>
-        <item>Personalizado 2</item>
-        <item>Personalizado 3</item>
-        <item>Personalizado 4</item>
-        <item>Personalizado 5</item>
-        <item>Personalizado 6</item>
-        <item>Personalizado 7</item>
-        <item>Personalizado 8</item>
-        <item>Personalizado 9</item>
+        <item>Esquinas redondeadas</item>
     </string-array>
-    <string-array name="incall_background_values">
+
+    <!-- Settings -->
+    <string-array name="dashboard_num_columns_entries">
+        <item>1 Columna</item>
+        <item>2 Columnas</item>
+    </string-array>
+    <string-array name="dashboard_num_columns_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- lockscreen display timeout-->
+    <string-array name="display_timeout_entries">
+        <item>5 segundos</item>
+        <item>10 segundos (Por defecto)</item>
+        <item>15 segundos</item>
+        <item>30 segundos</item>
+        <item>60 segundos</item>
+        <item>2 minutos</item>
+        <item>5 minutos</item>
+    </string-array>
+    <string-array name="display_timeout_values">
+        <item>5000</item>
+        <item>10000</item>
+        <item>15000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>120000</item>
+        <item>300000</item>
+    </string-array>
+
+    <!-- BatteryBar -->
+    <string-array name="battery_bar_entries">
+        <item>Oculto</item>
+        <item>Mostrar en la parte superior Statusbar</item>
+        <item>Mostrar en la parte inferior Statusbar</item>
+    </string-array>
+    <string-array name="battery_bar_values">
+        <item>2</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_bar_style_entries">
+        <item>Normal</item>
+        <item>Centro</item>
+    </string-array>
+    <string-array name="battery_bar_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_entries">
+        <item>1 dp</item>
+        <item>2 dp</item>
+        <item>3 dp</item>
+        <item>4 dp</item>
+    </string-array>
+    <string-array name="battery_bar_thickness_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <!-- Network Traffic -->
+    <string-array name="traffic_state_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="traffic_state_items">
+        <item>Desactivado</item>
+        <item>Sólo subida</item>
+        <item>Sólo bajada</item>
+        <item>Subida y bajada</item>
+    </string-array>
+    <string-array name="arrow_position_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="arrow_position_entries">
+        <item>Al final</item>
+        <item>Al principio</item>
+    </string-array>
+    <string-array name="traffic_style_entries">
+        <item>Normal</item>
+        <item>Negrita</item>
+        <item>Cursiva</item>
+        <item>Negrita cursiva</item>
+    </string-array>
+    <string-array name="traffic_style_entry_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- heads up time out -->
+    <string-array name="pref_heads_up_timeout_titles">
+        <item>1seg</item>
+        <item>2seg</item>
+        <item>3seg (Por defecto)</item>
+        <item>4seg</item>
+        <item>5seg</item>
+        <item>6seg</item>
+        <item>7seg</item>
+        <item>8seg</item>
+        <item>9seg</item>
+        <item>10seg</item>
+    </string-array>
+    <string-array name="pref_heads_up_timeout_values">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
+    </string-array>
+
+    <!-- low & critical battery -->
+    <string-array name="lowbattpercentage_entries">
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="lowbattpercentage_values">
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="critbattpercentage_entries">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="critbattpercentage_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+    </string-array>
+
+    <!-- Bloqueo y Home -->
+    <string-array name="anlorlock_entries">
+        <item>Ocultar</item>
+        <item>Derecha</item>
+        <item>Izquierda</item>
+    </string-array>
+    <string-array name="anlorlock_values">
+        <item>3</item>
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="anlorhome_entries">
+        <item>Ocultar</item>
+        <item>Derecha</item>
+        <item>Izquierda</item>
+    </string-array>
+    <string-array name="anlorhome_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Signal position -->
+    <string-array name="SignalPositionName">
+        <item>Se muestra a la derecha</item>
+        <item>Se muestra a la izquierda</item>
+    </string-array>
+    <string-array name="SignalPositionValue">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- Dinamyc status bar -->
+    <string-array name="dsb_gradient_filter_entries">
+        <item>@string/dsb_gradient_filter_value_0</item>
+        <item>@string/dsb_gradient_filter_value_1</item>
+        <item>@string/dsb_gradient_filter_value_2</item>
+        <item>@string/dsb_gradient_filter_value_3</item>
+    </string-array>
+    <string-array name="dsb_gradient_filter_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- Custom bg InCallUI -->
+    <string-array name="custom_bg_type_entries">
+        <item>Imagen</item>
+        <item>Color sólido</item>
+        <item>Gradiente</item>
+    </string-array>
+    <string-array name="custom_bg_type_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="gradient_entries">
+        <item>De arriba hacia abajo</item>
+        <item>De abajo hacia arriba</item>
+        <item>De izquierda a derecha</item>
+        <item>De derecha a izquierda</item>
+    </string-array>
+    <string-array name="gradient_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="crop_entries">
+        <item>Recorte central</item>
+        <item>Centrar en el interior</item>
+        <item>Ajustar</item>
+    </string-array>
+    <string-array name="crop_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- End Call Delay -->
+    <string-array name="call_delay_entries">
+        <item>Sin retraso</item>
+        <item>1000ms</item>
+        <item>2500ms</item>
+        <item>Por defecto (5000ms)</item>
+    </string-array>
+    <string-array name="call_delay_values">
+        <item>0</item>
+        <item>1000</item>
+        <item>2500</item>
+        <item>5000</item>
+    </string-array>
+
+    <!-- touchwiz effects -->
+    <string-array name="tw_effect_entries">
+        <item>Ninguno</item>
+        <item>Cascada</item>
+        <item>Cubo exterior</item>
+        <item>Cubo interior</item>
+        <item>Carrusel</item>
+        <item>Simple</item>
+        <item>Transportador</item>
+        <item>Carta</item>
+    </string-array>
+    <string-array name="tw_effect_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <!-- touchwiz swipe -->
+    <string-array name="launcher_gesture_entries">
+        <item>Apagar la pantalla</item>
+        <item>Power menu</item>
+        <item>Aplicaciones Recientes</item>
+        <item>Volume  +</item>
+        <item>Volume  -</item>
+        <item>Dialer</item>
+        <item>Google search</item>
+        <item>Modo de sonido: Sonido / Vibración / Silencio</item>
+        <item>Linterna</item>
+        <item>Captura de pantalla</item>
+        <item>Panel de notificación</item>
+        <item>Activar/Desactivar Wi-Fi</item>
+        <item>Activar/Desactivar Datos</item>
+        <item>Activar/Desactivar Bluetooth</item>
+        <item>Limpiar memoria</item>
+        <item>Desactivado</item>
+    </string-array>
+    <string-array name="launcher_gesture_values">
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>23</item>
+        <item>999</item>
+    </string-array>
+
+    <!-- nºbotones quicksetting -->
+    <string-array name="toggle_entries">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="toggle_values">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <!-- nºbotones quicksetting -->
+    <string-array name="toggle_scroll_entries">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="toggle_scroll_values">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <!-- carrier panel -->
+    <string-array name="carrier_entries">
+        <item>Texto operadora predeterminado</item>
+        <item>Texto personalizado</item>
+    </string-array>
+    <string-array name="carrier_entry_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- data usage -->
+    <string-array name="data_usage_gravity_entries">
+        <item>Al final</item>
+        <item>En el centro</item>
+        <item>Al principio</item>
+    </string-array>
+    <string-array name="data_usage_gravity_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="data_usage_text_style_entries">
+        <item>Normal</item>
+        <item>Negrita</item>
+        <item>Cursiva</item>
+        <item>Negrita cursiva</item>
+    </string-array>
+    <string-array name="data_usage_text_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- custom date -->
+    <string-array name="custom_date">
+        <item>Vie, Octubre 16 (Stock)</item>
+        <item>Vie, 16 Octubre</item>
+        <item>16 Octubre, 2014</item>
+        <item>2014, Octubre 16</item>
+        <item>"Jueves
+Octubre 16, 2014"</item>
+        <item>"Jueves
+Oct 16, 2014"</item>
+        <item>Oct-16-2014</item>
+        <item>"Jueves
+Oct-16-2014"</item>
+        <item>10-16-2014</item>
+        <item>"Jueves
+10-16-2014"</item>
+        <item>10-16-14</item>
+        <item>"Jueves
+10-16-14"</item>
+        <item>Oct/16/2014</item>
+        <item>"Jueves
+Oct/16/2014"</item>
+        <item>10/16/2014</item>
+        <item>"Jueves
+10/16/2014"</item>
+        <item>10/16/14</item>
+        <item>"Jueves
+10/16/14"</item>
+    </string-array>
+    <string-array name="custom_date_values">
         <item>0</item>
         <item>1</item>
         <item>2</item>
@@ -99,19 +628,17 @@
         <item>7</item>
         <item>8</item>
         <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
     </string-array>
-    <array name="incall_drawables">
-        <item>@drawable/call_bg_1</item>
-        <item>@drawable/call_bg_2</item>
-        <item>@drawable/call_bg_3</item>
-        <item>@drawable/call_bg_4</item>
-        <item>@drawable/call_bg_5</item>
-        <item>@drawable/call_bg_6</item>
-        <item>@drawable/call_bg_7</item>
-        <item>@drawable/call_bg_8</item>
-        <item>@drawable/call_bg_9</item>
-        <item>@drawable/call_bg_10</item>
-    </array>
+
+    <!-- mod full screen contacts -->
 
     <!-- LogCat -->
     <string-array name="pref_buffer_choices">

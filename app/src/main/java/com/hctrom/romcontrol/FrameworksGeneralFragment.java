@@ -2,7 +2,6 @@ package com.hctrom.romcontrol;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -16,17 +15,18 @@ import android.support.v4.app.FragmentActivity;
 import com.hctrom.romcontrol.alertas.DialogoAlertaBuildEdit;
 import com.hctrom.romcontrol.alertas.DialogoAlertaEmojis;
 import com.hctrom.romcontrol.hosts.HfmHelpers;
+import com.hctrom.romcontrol.prefs.ThemeSwitch;
 
 import java.io.IOException;
 
 public class FrameworksGeneralFragment extends PreferenceFragment {
+    HandlePreferenceFragments hpf;
     private static final String TAG = "FrameworksGeneralFragment";
     private static final String HFM_DISABLE_ADS = "hfm_disable_ads";
     public static ProgressDialog pd;
     public static CheckBoxPreference mHfmDisableAds;
     private static FragmentActivity myContext;
     Preference mHfmUpdateHosts;
-    Preference mHfmDeleteDominio;
     Preference emojisKey;
     Preference builProp;
     Context context;
@@ -36,8 +36,10 @@ public class FrameworksGeneralFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeSwitch.getIconsColor(getActivity());
         ThemeSelectorUtility theme = new ThemeSelectorUtility(getActivity());
         theme.onActivityCreateSetTheme(getActivity());
+        hpf = new HandlePreferenceFragments(getActivity(), this, "frameworks_general_prefs");
 
         context = getActivity();
         res = getResources();
@@ -45,13 +47,12 @@ public class FrameworksGeneralFragment extends PreferenceFragment {
         pd.setCancelable(false);
         pd.setMessage(res.getString(R.string.hfm_dialog_wait));
 
-        addPreferencesFromResource(R.xml.frameworks_general_prefs);
+        //addPreferencesFromResource(R.xml.frameworks_general_prefs);
         PreferenceScreen prefScreen = getPreferenceScreen();
 
         mHfmDisableAds = (CheckBoxPreference) findPreference(HFM_DISABLE_ADS);
         mHfmDisableAds.setChecked(PreferenceManager.getDefaultSharedPreferences(context).getInt("HFM_DISABLE_ADS", 0) == 1 );
         mHfmUpdateHosts = prefScreen.findPreference("hfm_update_hosts");
-        mHfmDeleteDominio = prefScreen.findPreference("hfm_delete_dominio");
         emojisKey = prefScreen.findPreference("emojis_key");
         builProp = prefScreen.findPreference("build_prop");
     }
@@ -59,6 +60,32 @@ public class FrameworksGeneralFragment extends PreferenceFragment {
     @Override
     public void onResume() {
         super.onResume();
+        hpf.onResumeFragment();
+        emojisKey.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                myContext = (FragmentActivity) context;
+                final DialogoAlertaEmojis dialogo = new DialogoAlertaEmojis();
+                dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
+                return false;
+            }
+        });
+
+        builProp.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                myContext = (FragmentActivity) context;
+                final DialogoAlertaBuildEdit dialogo = new DialogoAlertaBuildEdit();
+                dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
+                return false;
+            }
+        });
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        hpf.onPauseFragment();
     }
 
     @Override
@@ -70,17 +97,7 @@ public class FrameworksGeneralFragment extends PreferenceFragment {
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         SharedPreferences prefs = (PreferenceManager.getDefaultSharedPreferences(context));
         SharedPreferences.Editor editor = prefs.edit();
-        if (preference == builProp){
-            myContext = (FragmentActivity) context;
-            final DialogoAlertaBuildEdit dialogo = new DialogoAlertaBuildEdit();
-            dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
-        }else if (preference == emojisKey){
-            myContext = (FragmentActivity) context;
-            final DialogoAlertaEmojis dialogo = new DialogoAlertaEmojis();
-            dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
-        }else if (preference == mHfmDeleteDominio){
-            startActivity(new Intent(getActivity(), HostWhiteListView.class));
-        }else if  (preference == mHfmDisableAds) {
+        if  (preference == mHfmDisableAds) {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             editor.putInt("HFM_DISABLE_ADS",checked ? 1:0);
             editor.commit();

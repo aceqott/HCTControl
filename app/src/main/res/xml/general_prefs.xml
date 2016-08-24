@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:icon="@drawable/ic_settingsalt"
+        android:title="Settings"
+        android:summary="Personalizar el estilo de Settings"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Visualizacion general" />
+            <PreferenceCategory android:title="Sección Principal">
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:entries="@array/dashboard_num_columns_entries"
+                    android:title="Nº de columnas Principal"
+                    android:key="phronesis_no_columns"
+                    android:defaultValue="1"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entryValues="@array/dashboard_num_columns_values" />
+                <com.hctrom.romcontrol.prefs.SeekBarPreference
+                    android:max="25"
+                    android:title="Tamaño texto Principal"
+                    android:key="dash_title_text"
+                    android:summary="Ajustar el tamaño del texto en sección Principal"
+                    android:defaultValue="12"
+                    min="5"
+                    unitsRight=" dp" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Texto sección Principal"
+                    android:key="settings_sections_text_color"
+                    android:summary="Elegir el color del texto de sección Principal de Settings"
+                    android:defaultValue="#000000"
+                    hexValue="true"
+                    alphaSlider="true" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="Sección Favoritos">
+                <SwitchPreference
+                    android:title="Ocultar favoritos"
+                    android:key="hide_qs_favorites"
+                    android:defaultValue="false"
+                    android:summaryOn="*Sección de Favoritos está oculto"
+                    android:summaryOff="*Sección de Favoritos es visible" />
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/dashboard_fav_columns_entries"
+                    android:title="Nº de columnas Favoritos"
+                    android:key="phronesis_fav_columns"
+                    android:defaultValue="3"
+                    android:entryValues="@array/dashboard_fav_columns_values" />
+                <com.hctrom.romcontrol.prefs.SeekBarPreference
+                    android:max="25"
+                    android:title="Tamaño texto Favoritos"
+                    android:key="dash_fav_title_text"
+                    android:summary="Elegir el color del texto de sección Favoritos de Settings"
+                    android:defaultValue="14"
+                    min="5"
+                    unitsRight=" dp" />
+                <com.hctrom.romcontrol.prefs.SeekBarPreference
+                    android:max="25"
+                    android:title="Tamaño texto editar Favoritos"
+                    android:key="dash_edit_fav_title_text"
+                    android:summary="Elegir el color del texto de la sección de edición Favoritos de Settings"
+                    android:defaultValue="14"
+                    min="5"
+                    unitsRight=" dp" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Texto Favoritos"
+                    android:key="favs_text_color"
+                    android:summary="Elegir el color del texto de Favoritos"
+                    android:defaultValue="#000000"
+                    hexValue="true"
+                    alphaSlider="true" />
+            </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo Settings">
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="enable_setting_custom_bg"
+                android:summaryOff="Desactivado"
+                android:summaryOn="Activado"
+                android:title="Activar fondo personalizado"/>
+        </PreferenceCategory>
+            <PreferenceCategory android:title="Peferencias generales">
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:dependency="enable_setting_custom_bg"
+                    android:defaultValue="0"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:entries="@array/custom_bg_type_entries"
+                    android:entryValues="@array/custom_bg_type_values"
+                    android:key="setting_custom_bg_type"
+                    android:title="Tipo de fondo" />
+                <com.hctrom.romcontrol.prefs.SeekBarPreference
+                    min="0"
+                    android:dependency="enable_setting_custom_bg"
+                    android:max="255"
+                    android:defaultValue="255"
+                    android:key="setting_bg_opacity"
+                    android:title="Opacidad del fondo" />
+            </PreferenceCategory>
+            <PreferenceCategory android:title="Preferencias de imagen">
+                <com.hctrom.romcontrol.prefs.UriSelectionPreference
+                    android:key="setting_bg_image_uri"
+                    android:dependency="enable_setting_custom_bg"
+                    android:title="Seleccionar imagen"/>
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:dependency="enable_setting_custom_bg"
+                    android:entries="@array/crop_entries"
+                    android:entryValues="@array/crop_values"
+                    android:key="setting_bg_crop_type"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:title="Tipo de escala"/>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="Preferencias de color y gradiente">
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:dependency="enable_setting_custom_bg"
+                    android:key="setting_bg_primary_color"
+                    android:title="Seleccionar color primario"
+                    hexValue="true"
+                    alphaSlider="true" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:dependency="enable_setting_custom_bg"
+                    android:key="setting_second_gradient_color"
+                    android:summary="(Para gradiente)"
+                    android:title="Seleccionar color secundario"
+                    hexValue="true"
+                    alphaSlider="true" />
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:dependency="enable_setting_custom_bg"
+                    android:entries="@array/gradient_entries"
+                    android:entryValues="@array/gradient_values"
+                    android:key="setting_bg_gradient_orientation"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:title="Orientación del gradiente"/>
+            </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_recientes"
+        android:title="Recientes"
+        android:summary="Personalizar el estilo de Aplicaciones Recientes"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="AOKP Ram Bar">
+            <SwitchPreference
+                android:title="AOKP Ram Bar"
+                android:key="aokpram"
+                android:defaultValue="false"
+                android:summaryOn="Ram Bar se muestra en Aplicaciones Recientes"
+                android:summaryOff="Ram Bar está oculto en Aplicaciones Recientes" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color Ram libre"
+                android:summary="Elegir el color del texto de la Ram libre"
+                android:key="ram_color1"
+                android:defaultValue="#ffffff"
+                android:dependency="aokpram"
+                alphaSlider="true"
+                hexValue="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color Ram usado"
+                android:summary="Elegir el color del texto de la Ram usado"
+                android:key="ram_color2"
+                android:defaultValue="#ffffff"
+                android:dependency="aokpram"
+                alphaSlider="true"
+                hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="QuickLaunch">
+            <SwitchPreference
+                android:title="Quick Launch"
+                android:key="recents_quick_launch_toggle"
+                android:defaultValue="false"
+                android:summaryOn="Quick Launch es visible"
+                android:summaryOff="Quick Launch está oculto" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Blur effect">
+            <SwitchPreference
+                android:title="Blur effect"
+                android:summary="Efecto de desenfoque en Recientes"
+                android:key="recents_blur_view"
+                android:defaultValue="false"
+                android:summaryOn="Efecto blur en Recientes es visible"
+                android:summaryOff="Efecto blur en Recientes está oculto" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_powermenu"
+        android:title="Power Menu"
+        android:summary="Personalizar el menú de apagado"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Power Menu">
+            <SwitchPreference
+                android:icon="@drawable/ic_rebootrecovery"
+                android:title="Reiniciar en Recovery"
+                android:key="reboot_recovery"
+                android:defaultValue="true"
+                android:summaryOn="Visible"
+                android:summaryOff="Oculto" />
+            <SwitchPreference
+                android:icon="@drawable/ic_screenrecord"
+                android:title="Grabadora de pantalla"
+                android:key="screencast"
+                android:defaultValue="true"
+                android:summaryOn="Visible"
+                android:summaryOff="Oculto" />
+            <SwitchPreference
+                android:icon="@drawable/ic_screenshot"
+                android:title="Captura de pantalla"
+                android:key="screenshot"
+                android:defaultValue="true"
+                android:summaryOn="Visible"
+                android:summaryOff="Oculto" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Botones tactiles">
+        <SwitchPreference
+            android:title="Mantener pulsado recientes"
+            android:key="multi_window_enabled"
+            android:defaultValue="true"
+            android:summaryOn="Función Multiwindow activada"
+            android:summaryOff="Función Multiwindow desactivada" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="enable_back_kill"
+            android:summaryOff="Función de menú activada"
+            android:summaryOn="Función Back to kill activada"
+            android:title="Mantener pulsado atrás"/>
+    </PreferenceCategory>
+</PreferenceScreen>

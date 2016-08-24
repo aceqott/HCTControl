@@ -51,4 +51,13 @@
         <attr name="click_remove_id" format="integer" />
         <attr name="use_default_controller" format="boolean" />
     </declare-styleable>
+    <!-- HexConverter -->
+    <declare-styleable name="CircleView">
+        <attr name="fillColor" format="color"/>
+    </declare-styleable>
+
+    <!-- Uripreference -->
+    <declare-styleable name="OpenAppPreference">
+        <attr name="componentName" format="string"/>
+    </declare-styleable>
 </resources>

@@ -2,132 +2,719 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceScreen
-        android:icon="@drawable/ic_orden"
-        android:title="Ajustes Rápidos"
-        android:key="com.android.settings.NotificationPanelSettings"
-        android:summary="Personalizar los botones de Ajustes rápidos y menú de Aplicaciones recomendadas"
-        android:widgetLayout="@layout/round_more_icon"/>
-    <PreferenceScreen
-        android:icon="@drawable/ic_fondot"
-        android:title="Ajustes Toggles"
-        android:summary="Color, Nºtoggles, Texto, etc.."
+        android:icon="@drawable/ic_header"
+        android:title="Preferencias de la Cabecera"
+        android:summary="Reloj, Fecha, Bóton Ajustes, etc.."
         android:widgetLayout="@layout/round_more_icon">
-        <PreferenceCategory  android:layout="@layout/preferences_category" android:title="Quicksettings">
-            <com.hctrom.romcontrol.prefs.MyListPreference
-                android:entries="@array/kuaijieanniushuliang_entries"
-                android:title="Nº Botones Quick Settings"
-                android:key="personalization_notificational_panel_single_quick_setting_button_number"
-                android:summary="Elegir número de bótones de los Ajustes rápidos"
-                android:widgetLayout="@layout/round_more_icon"
-                android:defaultValue="5"
-                android:entryValues="@array/kuaijieanniushuliang_values" />
-            <com.hctrom.romcontrol.prefs.MyListPreference
-                android:entries="@array/toggle_scroll_entries"
-                android:title="Nº Toggles Scroll"
-                android:key="notification_panel_active_number_of_apps"
-                android:summary="Selecciona el número de toggles que desea tener en la cortina principal"
-                android:widgetLayout="@layout/round_more_icon"
-                android:defaultValue="10"
-                android:entryValues="@array/toggle_scroll_values" />
-        </PreferenceCategory>
-    </PreferenceScreen>
-    <PreferenceScreen
-        android:icon="@drawable/ic_cpu"
-        android:title="CPU Usage View"
-        android:summary="Carga de la CPU que se muestra en la Cabecera del Panel de notificación"
-        android:widgetLayout="@layout/round_more_icon">
-        <PreferenceCategory android:layout="@layout/preferences_category" android:title="CPU Usage View">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Preferencias de Reloj y Fecha Stock">
             <SwitchPreference
-                android:title="CPU Usage View"
-                android:key="cpu_view"
+                android:title="Reloj Stock"
                 android:defaultValue="true"
-                android:summaryOn="Carga de la CPU se muestra"
-                android:summaryOff="Carga de la CPU está oculta" />
-            <com.hctrom.romcontrol.prefs.ColorPickerPreference
-                android:title="Color"
-                android:key="cpu_color"
-                android:summary="Elegir el color del texto de CPU Usage View"
-                android:defaultValue="#ffffff"
-                android:dependency="cpu_view"
-                hexValue="true"
-                alphaSlider="true" />
-        </PreferenceCategory>
-    </PreferenceScreen>
-    <PreferenceScreen
-        android:icon="@drawable/ic_cleaner"
-        android:title="Memory Cleaner"
-        android:summary="Limpiar memoria RAM y personalizar el color del icono que se muestra en la Barra de Brillo"
-        android:widgetLayout="@layout/round_more_icon">
-        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Memory Cleaner">
+                android:key="hide_header_stock_clock"
+                android:summaryOn="Visible \n*Recuerda desactivar reloj personalizado, si está activo."
+                android:summaryOff="Oculto" />
             <SwitchPreference
-                android:title="Memory Cleaner"
-                android:key="pekaka_memCleanView"
+                android:dependency="hide_header_stock_clock"
+                android:title="Activar colores personalizados"
+                android:key="link_pulldown_clock_date_color"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="link_pulldown_clock_date_color"
+                android:title="Color Reloj"
+                android:key="pulldown_clock_color"
+                android:defaultValue="#325D84"
+                hexValue="true"
+                alphaSlider="true"
+                android:summary="Elegir el color del Reloj" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:entries="@array/custom_date"
+                android:title="Formato de fecha"
+                android:key="custom_date"
+                android:summary="Seleccionar el formato de fecha"
+                android:defaultValue="0"
+                android:entryValues="@array/custom_date_values" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="link_pulldown_clock_date_color"
+                android:title="Color Fecha"
+                android:key="pulldown_date_color"
+                android:defaultValue="#325D84"
+                hexValue="true"
+                alphaSlider="true"
+                android:summary="Elegir el color de la Fecha" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Mod Reloj y Fecha">
+            <SwitchPreference
+                android:title="Reloj Personalizado"
+                android:key="hide_header_mod_clock"
+                android:defaultValue="false"
+                android:summaryOn="Visible \n*Recuerda desactivar reloj stock, si está activo."
+                android:summaryOff="Oculto" />
+            <SwitchPreference
+                android:title="Activar segundos"
+                android:defaultValue="false"
+                android:key="hide_header_mod_clock_second"
+                android:dependency="hide_header_mod_clock"
+                android:summaryOn="Visible"
+                android:summaryOff="Oculto" />
+            <SwitchPreference
+                android:dependency="hide_header_mod_clock"
+                android:title="Activar colores personalizados"
+                android:key="link_colors_clockdate"
                 android:defaultValue="false"
                 android:summaryOn="Activado"
                 android:summaryOff="Desactivado" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
-                android:title="Color"
-                android:key="db_inkeffect_pekaka_memkiller_picker"
-                android:dependency="pekaka_memCleanView"
-                android:summary="Elegir el color del icono"
-                android:defaultValue="#ff000000"
+                android:title="Color de la hora"
+                android:summary="Elegir el color de la hora en el Reloj personalizado"
+                android:key="header_mod_clock_hours_color"
+                android:dependency="link_colors_clockdate"
+                android:defaultValue="#325D84"
+                hexValue="true"
+                alphaSlider="false" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color de los minutos"
+                android:summary="Elegir el color de los minutos en el Reloj personalizado"
+                android:key="header_mod_clock_minutes_color"
+                android:dependency="link_colors_clockdate"
+                android:defaultValue="#325D84"
+                hexValue="true"
+                alphaSlider="false" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color de los segundos"
+                android:summary="Elegir el color de los segundos en el Reloj personalizado"
+                android:key="header_mod_clock_seconds_color"
+                android:dependency="link_colors_clockdate"
+                android:defaultValue="#325D84"
+                hexValue="true"
+                alphaSlider="false" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color Fecha"
+                android:summary="Elegir el color de la fecha en el Reloj personalizado"
+                android:key="date_header_color"
+                android:dependency="link_colors_clockdate"
+                android:defaultValue="#325D84"
+                hexValue="true"
+                alphaSlider="false" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Preferencias de Ajustes">
+            <SwitchPreference
+                android:title="Activar colores personalizados"
+                android:key="link_header_settings_button"
+                android:defaultValue="false"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color Botón Ajustes/Editar"
+                android:dependency="link_header_settings_button"
+                android:key="pulldown_button_color"
+                android:defaultValue="#326D84"
+                hexValue="true"
                 alphaSlider="true"
-                hexValue="true" />
+                android:summary="Elegir el color del botón de Ajustes y Editar" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color de la línea divisoria"
+                android:dependency="link_header_settings_button"
+                android:key="header_divider_color"
+                android:defaultValue="#326D84"
+                hexValue="true"
+                alphaSlider="true"
+                android:summary="Elegir el color de la línea divisoria de la cabecera" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/sysbar_recent"
+                android:title="Tercer botón"
+                android:key="third_button"
+                android:summary="%s"
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="0"
+                android:entryValues="@array/sysbar_recent_values" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color Tercer Botón"
+                android:dependency="link_header_settings_button"
+                android:key="third_button_color"
+                android:summary="Elegir el color del tercer botón"
+                android:defaultValue="#326D84"
+                hexValue="true"
+                alphaSlider="true" />
         </PreferenceCategory>
     </PreferenceScreen>
     <PreferenceScreen
-        android:icon="@drawable/ic_setting"
+        android:icon="@drawable/ic_toggle"
+        android:title="Toggles - Configuración"
+        android:summary="Nºtoggles, Color, Botones fondo, Texto, etc.."
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="NºToggles visibles">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:entries="@array/toggle_entries"
+                android:widgetLayout="@layout/round_more_icon"
+                android:title="Nº Botones Quick Settings"
+                android:key="QSPanel_NumberCount"
+                android:defaultValue="5"
+                android:summary="Elegir número de bótones de los Ajustes rápidos"
+                android:entryValues="@array/toggle_values" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:entries="@array/toggle_scroll_entries"
+                android:title="Nº Toggles scroll"
+                android:key="sysui_qs_active_tiles"
+                android:summary="Selecciona el número de toggles que desea tener en el panel de notificación principal"
+                android:defaultValue="10"
+                android:entryValues="@array/toggle_scroll_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Toggles ON/OFF">
+            <com.hctrom.romcontrol.prefs.FilePreference
+                android:title="Activar colores nativos (Stock)"
+                android:key="modcfg_nativeTG_colors"
+                android:defaultValue="false"
+                android:summaryOn="Activado \n*Toggles ON/OFF con colores nativos (Stock) - Compatible con TEMAS Samsung"
+                android:summaryOff="Desactivado \n*Usando colores personalizados en Toggles ON/OFF" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color Toggle ON"
+                android:key="toggle_icon_on_color"
+                android:defaultValue="#326D84"
+                hexValue="true"
+                alphaSlider="true"
+                android:summary="Elegir el color del Toggle ON" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color Toggle OFF"
+                android:key="toggle_icon_off_color"
+                android:defaultValue="1293831800"
+                hexValue="true"
+                alphaSlider="true"
+                android:summary="Elegir el color del Toggle OFF" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Estilo Toggles">
+            <com.hctrom.romcontrol.prefs.ThumbnailListPreference
+                android:defaultValue="0"
+                android:key="toggle_buttons_background"
+                android:title="Estilo Toggles"
+                app:drawableArray="@array/toggle_drawables"
+                app:entryList="@array/toggle_buttons_background_entries"
+                app:entryValuesList="@array/toggle_buttons_background_values" />
+            <SwitchPreference
+                android:title="Activar colores personalizados"
+                android:key="link_toggle_icon_background_colors"
+                android:defaultValue="false"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="link_toggle_icon_background_colors"
+                android:title="Color Fondo Estilo Toggle"
+                android:key="toggle_buttons_background_color"
+                android:summary="Elegir el color de fondo del Estilo Toggles. \n*Establecer estilo de Toggles en blanco para una mejor visualización del color aplicado."
+                android:defaultValue="#ffffff"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Informacion Toggle">
+            <SwitchPreference
+                android:title="Texto Toggle"
+                android:key="toggle_text"
+                android:defaultValue="true"
+                android:summaryOn="Visible"
+                android:summaryOff="Oculto" />
+            <SwitchPreference
+                android:title="Texto Toggle secundario"
+                android:key="toggle_sec_text"
+                android:defaultValue="true"
+                android:summaryOn="Visible"
+                android:summaryOff="Oculto" />
+            <SwitchPreference
+                android:title="Activar colores personalizados"
+                android:key="link_toggle_text_colors"
+                android:defaultValue="false"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color del texto"
+                android:dependency="link_toggle_text_colors"
+                android:summary="Elegir el color del texto del Toggle"
+                android:key="toggle_text_color"
+                android:defaultValue="#326D84"
+                hexValue="true"
+                alphaSlider="false" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Color del texto secundario"
+                android:dependency="link_toggle_text_colors"
+                android:key="toggle_sec_text_color"
+                android:summary="Elegir el color del texto del Toggle (Información Wifi, Bluetooth, etc...) \n*También se cambiará el color de texto de ayuda al expandir panel"
+                android:defaultValue="#326D84"
+                hexValue="true"
+                alphaSlider="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_panelnoti"
         android:title="Panel de Notificación"
         android:summary="Cabecera, Toggles, Brillo, SFinder, etc.."
         android:widgetLayout="@layout/round_more_icon">
-        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo de Cabecera">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Colores del fondo">
+            <SwitchPreference
+                android:title="Activar colores personalizados"
+                android:key="link_colors"
+                android:defaultValue="false"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
                 android:title="Fondo de Cabecera"
-                android:key="header_bg_color"
-                android:summary="Elegir el color del fondo de la cabecera."
-                android:defaultValue="#00A5C5"
-                hexValue="true"
-                alphaSlider="true" />
-        </PreferenceCategory>
-        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo de Toggles">
+                android:summary="Elegir el color del fondo de la cabecera"
+                android:key="expanded_header_bg_color"
+                android:dependency="link_colors"
+                android:defaultValue="#E6EAED"
+                alphaSlider="true"
+                hexValue="true" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
                 android:title="Fondo de Toggles"
-                android:key="toggle_bg_color"
-                android:summary="Elegir el color del fondo de toggles."
-                android:defaultValue="#00A5C5"
-                hexValue="true"
-                alphaSlider="true" />
+                android:summary="Elegir el color del fondo de toggles"
+                android:key="quick_settings_panel_bg_color"
+                android:dependency="link_colors"
+                android:defaultValue="#E6EAED"
+                alphaSlider="true"
+                hexValue="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Fondo Uso de datos"
+                android:summary="Elegir el color del fondo de Uso de datos"
+                android:key="data_usage_view_bg_color"
+                android:dependency="link_colors"
+                android:defaultValue="#E6EAED"
+                alphaSlider="true"
+                hexValue="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Fondo panel SFinder y Quickconnect"
+                android:summary="Elegir el color del fondo panel SFinder y Quickconnect"
+                android:key="quick_connect_bg_color"
+                android:dependency="link_colors"
+                android:defaultValue="#E6EAED"
+                alphaSlider="true"
+                hexValue="true" />
         </PreferenceCategory>
-        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Barra Brillo">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Barra brillo" />
             <SwitchPreference
                 android:title="Barra de Brillo"
                 android:key="notification_panel_brightness_adjustment"
                 android:defaultValue="true"
                 android:summaryOn="Barra de brillo es visible"
                 android:summaryOff="Barra de brillo está oculta" />
+            <PreferenceCategory android:title="Colores Barra Brillo">
+                <SwitchPreference
+                    android:dependency="notification_panel_brightness_adjustment"
+                    android:title="Activar colores personalizados"
+                    android:key="custom_slider_colors"
+                    android:summaryOff="Desactivado"
+                    android:summaryOn="Activado"
+                    android:defaultValue="false"/>
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Color círculo (thumb)"
+                    android:summary="Elegir el color del círculo (thumb) de la barra de brillo progresiva"
+                    android:defaultValue="#326D84"
+                    android:key="brightness_slider_thumb_color"
+                    android:dependency="custom_slider_colors"
+                    alphaSlider="true"
+                    hexValue="true" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Color barra de brillo"
+                    android:summary="Elegir el color de la barra de brillo progresiva"
+                    android:defaultValue="#326D84"
+                    android:key="brightness_slider_foreground_color"
+                    android:dependency="custom_slider_colors"
+                    alphaSlider="true"
+                    hexValue="true" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Color fondo barra de brillo"
+                    android:summary="Elegir el color de fondo de la barra de brillo"
+                    android:defaultValue="#E6EAED"
+                    android:key="brightness_bg_color"
+                    android:dependency="custom_slider_colors"
+                    alphaSlider="true"
+                    hexValue="true" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Color cuadro activación (checkbox)"
+                    android:summary="Elegir el color del cuadro de activación (checkbox) de la barra de brillo"
+                    android:key="brightness_checkbox_color"
+                    android:defaultValue="#326D84"
+                    android:dependency="custom_slider_colors"
+                    alphaSlider="true"
+                    hexValue="true" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Color texto"
+                    android:summary="Elegir el color del texto del cuadro de activación (checkbox) de la barra de brillo"
+                    android:key="brightness_label_color"
+                    android:defaultValue="#326D84"
+                    android:dependency="custom_slider_colors"
+                    alphaSlider="true"
+                    hexValue="true" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:title="Color icono"
+                    android:summary="Elegir el color del icono de la barra de brillo"
+                    android:key="brightness_icon_color"
+                    android:defaultValue="#326D84"
+                    android:dependency="custom_slider_colors"
+                    alphaSlider="true"
+                    hexValue="true" />
+            </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Uso de datos">
+            <SwitchPreference
+                android:title="Activar Uso de datos"
+                android:summaryOff="Oculto"
+                android:summaryOn="Visible"
+                android:key="data_usage_visibility"
+                android:defaultValue="true"/>
+            <SwitchPreference
+                android:dependency="data_usage_visibility"
+                android:title="Activar color personalizado"
+                android:key="link_data_usage_text_color"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
-                android:title="Fondo barra Brillo"
-                android:key="brightness_background_color"
-                android:summary="Elegir el color del fondo de la barra de brillo."
-                android:defaultValue="#00A5C5"
+                android:title="Color del texto"
+                android:summary="Elegir el color del texto de Uso de datos"
+                android:key="data_usage_text_color"
+                android:dependency="link_data_usage_text_color"
+                android:defaultValue="#326D84"
+                alphaSlider="true"
+                hexValue="true" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:title="Posición"
+                android:key="data_usage_text_gravity"
+                android:dependency="data_usage_visibility"
+                android:entries="@array/data_usage_gravity_entries"
+                android:entryValues="@array/data_usage_gravity_values"
+                android:defaultValue="0"/>
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:title="Estilo fuente"
+                android:key="data_usage_view_text_style"
+                android:dependency="data_usage_visibility"
+                android:entries="@array/data_usage_text_style_entries"
+                android:entryValues="@array/data_usage_text_style_values"
+                android:defaultValue="0"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Panel QuickConnect">
+            <SwitchPreference
+                android:title="Activar colores personalizados"
+                android:key="switch_quickconnect_color"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="switch_quickconnect_color"
+                android:title="Color Texto Quickconnect"
+                android:key="quickconnect_color"
+                android:summary="Elegir el color del texto del título para panel Quickconnect"
+                android:defaultValue="#326D84"
+                alphaSlider="true"
+                hexValue="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:defaultValue="#20587E"
+                android:key="quickconnect_summary_color"
+                android:title="Color Texto Info"
+                android:dependency="switch_quickconnect_color"
+                android:summary="Elegir el color del texto de la información para panel Quickconnect"
+                alphaSlider="true"
+                hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Panel Soundpath">
+            <SwitchPreference
+                android:title="Activar colores personalizados"
+                android:key="link_qconnect_soundpatch_color"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="link_qconnect_soundpatch_color"
+                android:title="Fondo Soundpath"
+                android:key="qconnect_soundpatch_bg_color"
+                android:summary="Elegir el color del texto para panel Soundpath"
+                android:defaultValue="#E6EAED"
+                alphaSlider="true"
+                hexValue="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="link_qconnect_soundpatch_color"
+                android:title="Texto Soundpath"
+                android:key="qconnect_soundpatch_text_color"
+                android:summary="Elegir el color del texto para panel Soundpath"
+                android:defaultValue="#326D84"
+                alphaSlider="true"
+                hexValue="true" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Botones Borrar y Notificaciones">
+            <SwitchPreference
+                android:title="Activar colores personalizados"
+                android:key="link_clear_colors"
+                android:defaultValue="false"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="link_clear_colors"
+                android:title="Color texto Botón Borrar"
+                android:key="clear_button_color"
+                android:summary="Elegir el color del texto del botón de borrar situado en la derecha"
+                android:defaultValue="#ffffff"
+                hexValue="true"
+                alphaSlider="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="link_clear_colors"
+                android:title="Color texto Botón Notificaciones"
+                android:key="noti_button_color"
+                android:summary="Elegir el color del texto del botón de notificaciones situado a la izquirda"
+                android:defaultValue="#ffffff"
                 hexValue="true"
                 alphaSlider="true" />
         </PreferenceCategory>
-        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Panel SFinder y QuickConnect">
-            <SwitchPreference
-                android:title="SFinder y QuickConnect"
-                android:key="quick_connect_toggle"
-                android:defaultValue="false"
-                android:summaryOn="Panel está oculto en la cortina"
-                android:summaryOff="Panel está visible en la cortina" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Panel de Notificaciones" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
-                android:title="Fondo panel SFinder y Quickconnect"
-                android:dependency="notification_panel_brightness_adjustment"
-                android:key="sfinder_bg_color"
-                android:summary="Elegir el color del fondo panel SFinder y Quickconnect."
-                android:defaultValue="#1B6E91"
+                hexValue="true"
+                alphaSlider="true"
+                android:summary="Elegir el color de fondo del icono de la notificación."
+                android:defaultValue="#ff7792a9"
+                android:key="notif_icon_bg_color"
+                android:title="Fondo Icono notificación"/>
+        <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:defaultValue="0"
+                android:entries="@array/shape_entries"
+                android:widgetLayout="@layout/round_more_icon"
+                android:entryValues="@array/shape_values"
+                android:key="notification_background_form"
+                android:title="Formato de la notificación"/>
+            <com.hctrom.romcontrol.prefs.SeekBarPreference
+                android:title="Transparencia de la notificación"
+                android:key="notification_bg_alpha"
+                android:defaultValue="255"
+                android:max="255"/>
+            <SwitchPreference
+                android:title="Activar color personalizado"
+                android:key="custom_notification_color"
+                android:defaultValue="0"
+                android:summaryOff="Desactivado"
+                android:summaryOn="Activado"/>
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Fondo de Notificación"
+                android:key="notification_bg_color"
+                android:dependency="custom_notification_color"
+                android:summary="Elegir el color del fondo de la notificación."
+                android:defaultValue="#FFFFFF"
                 hexValue="true"
                 alphaSlider="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:title="Texto de Notificación"
+                android:key="pulldown_text"
+                android:summary="Elegir el color del texto de la notificación."
+                android:defaultValue="#000000"
+                hexValue="true"
+                alphaSlider="true" />
+        <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
+        <PreferenceCategory android:title="Notificación Multimedia" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                hexValue="true"
+                alphaSlider="true"
+                android:defaultValue="#ffffffff"
+                android:key="notif_media_primary_color"
+                android:summary="Elegir el color del título de la notificación multimedia."
+                android:title="Color título notificación"/>
+        <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                hexValue="true"
+                alphaSlider="true"
+                android:defaultValue="#fff5f5f5"
+                android:key="notif_media_secondary_color"
+                android:summary="Elegir el color secundario de la notificación multimedia."
+                android:title="Color secundario notificación"/>
+        <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo del Panel">
+            <SwitchPreference
+                android:title="Blur Effect"
+                android:summary="Efecto de desenfoque en la Cortina"
+                android:key="panel_blur_view"
+                android:defaultValue="false"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="enable_panel_custom_bg"
+                android:summaryOff="Desactivado"
+                android:summaryOn="Activado"
+                android:title="Activar fondo personalizado"/>
+        </PreferenceCategory>
+            <PreferenceCategory android:title="Peferencias generales">
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:dependency="enable_panel_custom_bg"
+                    android:defaultValue="0"
+                    android:entries="@array/custom_bg_type_entries"
+                    android:entryValues="@array/custom_bg_type_values"
+                    android:key="panel_custom_bg_type"
+                    android:title="Tipo de fondo" />
+                <com.hctrom.romcontrol.prefs.SeekBarPreference
+                    android:dependency="enable_panel_custom_bg"
+                    android:defaultValue="255"
+                    android:key="panel_bg_opacity"
+                    android:title="Opacidad del fondo"
+                    android:max="255"
+                    min="0"/>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="Preferencias de imagen">
+                <com.hctrom.romcontrol.prefs.UriSelectionPreference
+                    android:dependency="enable_panel_custom_bg"
+                    android:key="panel_bg_image_uri"
+                    android:title="Seleccionar imagen"/>
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:dependency="enable_panel_custom_bg"
+                    android:defaultValue="0"
+                    android:entries="@array/crop_entries"
+                    android:entryValues="@array/crop_values"
+                    android:key="panel_bg_crop_type"
+                    android:title="Tipo de escala"/>
+            </PreferenceCategory>
+            <PreferenceCategory android:title="Preferencias de color y gradiente">
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:dependency="enable_panel_custom_bg"
+                    android:key="panel_bg_primary_color"
+                    android:title="Seleccionar color primario"
+                    alphaSlider="true"
+                    hexValue="true" />
+                <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                    android:defaultValue="#00000000"
+                    android:summary="(Para gradiente)"
+                    android:dependency="enable_panel_custom_bg"
+                    android:key="panel_second_gradient_color"
+                    android:title="Seleccionar color secundario"
+                    alphaSlider="true"
+                    hexValue="true" />
+                <com.hctrom.romcontrol.prefs.MyListPreference
+                    android:defaultValue="0"
+                    android:dependency="enable_panel_custom_bg"
+                    android:entries="@array/gradient_entries"
+                    android:entryValues="@array/gradient_values"
+                    android:key="panel_bg_gradient_orientation"
+                    android:widgetLayout="@layout/round_more_icon"
+                    android:title="Orientación del gradiente"/>
+            </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_info"
+        android:title="Información del dispositivo"
+        android:summary="Muestra la información del dispositivo en panel y bloqueo de pantalla."
+        android:widgetLayout="@layout/round_more_icon">
+                <SwitchPreference
+                    android:defaultValue="false"
+                    android:key="device_info_visibility"
+                    android:summaryOff="Desactivado"
+                    android:summaryOn="Activado"
+                    android:title="Activar información del dispositivo"/>
+                <PreferenceCategory android:layout="@layout/preferences_category" android:title="Ajustes de Color">
+                    <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                        android:defaultValue="#ffffff"
+                        android:dependency="device_info_visibility"
+                        android:key="gear_info_names_color"
+                        android:title="Color del título"
+                        android:summary="Elegir el color del título"
+                        hexValue="true"
+                        alphaSlider="true" />
+                    <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                        android:defaultValue="#ffffff"
+                        android:dependency="device_info_visibility"
+                        android:key="gear_info_values_color"
+                        android:title="Color de la información"
+                        android:summary="Elegir el color de la información"
+                        hexValue="true"
+                        alphaSlider="true" />
+                </PreferenceCategory>
+                <PreferenceCategory android:layout="@layout/preferences_category" android:title="Categorías">
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_model"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Modelo del dispositivo"/>
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_android_version"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Versión Android"/>
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_build_version"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Versión ROM"/>
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_battery_level"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Nivel de batería"/>
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_network_name"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Red"/>
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_wifi_info"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Información de Wifi"/>
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_next_alarm"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Siguiente alarma"/>
+                    <CheckBoxPreference
+                        android:dependency="device_info_visibility"
+                        android:defaultValue="true"
+                        android:key="device_up_time"
+                        android:summaryOff="Oculto"
+                        android:summaryOn="Visible"
+                        android:title="Tiempo de encendido"/>
+                </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_carrier1"
+        android:title="Texto operadora personalizado"
+        android:summary="Opciones de texto y ajustes de color"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Texto operadora personalizado">
+            <SwitchPreference
+                android:title="Activar texto operadora"
+                android:defaultValue="true"
+                android:summaryOff="Oculto"
+                android:summaryOn="Visible"
+                android:key="carrier_label_visibility"/>
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:dependency="carrier_label_visibility"
+                android:defaultValue="#ffffff"
+                android:summary="Elegir el color del texto"
+                android:key="carrier_label_text_color"
+                android:title="Color"
+                hexValue="true"
+                alphaSlider="true" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:title="Texto operadora personalizado"
+                android:entries="@array/carrier_entries"
+                android:entryValues="@array/carrier_entry_values"
+                android:defaultValue="0"
+                android:key="is_custom_carrier_label"
+                android:dependency="carrier_label_visibility"/>
+            <com.hctrom.romcontrol.prefs.MyEditTextPreference
+                android:title="Editar texto personalizado"
+                android:defaultValue="Texto personalizado"
+                android:dependency="is_custom_carrier_label"
+                android:key="custom_carrier_label"
+                android:dialogTitle="Establecer texto personalizado de la operadora en el panel"/>
         </PreferenceCategory>
     </PreferenceScreen>
 </PreferenceScreen>

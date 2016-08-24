@@ -2,7 +2,6 @@ package com.hctrom.romcontrol.alertas;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -44,7 +43,7 @@ public class DialogoAlertaNivelSonido extends DialogFragment implements View.OnC
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ThemeSelectorUtility theme = new ThemeSelectorUtility(getActivity());
         theme.onActivityCreateSetTheme(getActivity());
-        final View v = inflater.inflate(R.layout.nivel_sonido_sistema, container, false);
+        final View v = inflater.inflate(R.layout.sonido_nivel_sistema, container, false);
         SharedPreferences prefs = getActivity().getSharedPreferences("DatosSonidos", Context.MODE_PRIVATE);
         stock = (RadioButton) v.findViewById(R.id.stock);
         medio = (RadioButton) v.findViewById(R.id.medio);
@@ -54,7 +53,7 @@ public class DialogoAlertaNivelSonido extends DialogFragment implements View.OnC
         ok = (Button) v.findViewById(R.id.ok);
 
         getDialog().setCanceledOnTouchOutside(false);
-        String str = "" + prefs.getString("nivel_sonido_sistema", "1");
+        String str = "" + prefs.getString("sonido_nivel_sistema", "1");
         if (str.contentEquals("1")) {
             stock.setChecked(true);
         } else {
@@ -93,25 +92,25 @@ public class DialogoAlertaNivelSonido extends DialogFragment implements View.OnC
         if (v == ok){
             if(stock.isChecked()){
                 Shell.getRebootAction("" + sh.getNivelSonidoStock());
-                editor.putString("nivel_sonido_sistema", "1");
+                editor.putString("sonido_nivel_sistema", "1");
                 editor.commit();
                 Toast.makeText(getActivity(), "Sonido Stock seleccionado", Toast.LENGTH_LONG).show();
             }
             if(medio.isChecked()){
                 Shell.getRebootAction("" + sh.getNivelSonidoMedio());
-                editor.putString("nivel_sonido_sistema", "2");
+                editor.putString("sonido_nivel_sistema", "2");
                 editor.commit();
                 Toast.makeText(getActivity(), "Sonido Medio seleccionado", Toast.LENGTH_LONG).show();
             }
             if(alto.isChecked()){
                 Shell.getRebootAction("" + sh.getNivelSonidoAlto());
-                editor.putString("nivel_sonido_sistema", "3");
+                editor.putString("sonido_nivel_sistema", "3");
                 editor.commit();
                 Toast.makeText(getActivity(), "Sonido Alto seleccionado", Toast.LENGTH_LONG).show();
             }
             if(extremo.isChecked()){
                 Shell.getRebootAction("" + sh.getNivelSonidoExtremo());
-                editor.putString("nivel_sonido_sistema", "4");
+                editor.putString("sonido_nivel_sistema", "4");
                 editor.commit();
                 Toast.makeText(getActivity(), "Sonido Extremo seleccionado", Toast.LENGTH_LONG).show();
             }

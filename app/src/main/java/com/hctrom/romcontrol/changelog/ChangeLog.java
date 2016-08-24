@@ -330,6 +330,10 @@ public class ChangeLog {
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
             positive_button.setTextColor(mContext.getResources().getColor(R.color.color_iconos_samsung_light));
             negative_button.setTextColor(mContext.getResources().getColor(R.color.color_iconos_samsung_light));
+        }else if (PreferenceManager.getDefaultSharedPreferences(mContext).getInt("theme_prefs", 0) == 4){
+            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+            positive_button.setTextColor(mContext.getResources().getColor(R.color.myAccentColorMaterialDark));
+            negative_button.setTextColor(mContext.getResources().getColor(R.color.myAccentColorMaterialDark));
         }else if (PreferenceManager.getDefaultSharedPreferences(mContext).getInt("theme_prefs", 0) == 0){
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
             positive_button.setTextColor(mContext.getResources().getColor(R.color.myAccentColorHCT));

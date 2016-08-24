@@ -1,26 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Grabacion de Llamadas">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:icon="@drawable/ic_call_history"
+        android:title="IncallUI"
+        android:summary="Opciones de llamadas entrantes/salientes y personalización del estilo"
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Tono ascendente">
+            <SwitchPreference
+                android:defaultValue="true"
+                android:title="Tono ascendente"
+                android:key="db_inc_volume_disable"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Ajustar retraso al finalizar llamada">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:entries="@array/call_delay_entries"
+                android:title="Retraso al finalizar llamada"
+                android:key="db_call_delay"
+                android:summary="%s"
+                android:defaultValue="5000"
+                android:dialogTitle="Retraso al finalizar llamada (ms)"
+                android:positiveButtonText="Guardar"
+                android:negativeButtonText="Cancelar"
+                android:entryValues="@array/call_delay_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo personalizado en llamada" />
         <SwitchPreference
-            android:title="Grabación autom. Llam. Entrante"
-            android:key="killprocess_call_record_in"
             android:defaultValue="false"
+            android:key="enable_gear_custom_bg"
+            android:summaryOff="Desactivado"
             android:summaryOn="Activado"
-            android:summaryOff="Desctivado" />
+            android:title="Activar fondo personalizado"/>
+        <PreferenceCategory android:title="Peferencias generales">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:dependency="enable_gear_custom_bg"
+                android:defaultValue="0"
+                android:entries="@array/custom_bg_type_entries"
+                android:entryValues="@array/custom_bg_type_values"
+                android:key="gear_custom_bg_type"
+                android:title="Tipo de fondo" />
+            <com.hctrom.romcontrol.prefs.SeekBarPreference
+                android:dependency="enable_gear_custom_bg"
+                min="0"
+                android:max="255"
+                android:defaultValue="255"
+                android:key="gear_bg_opacity"
+                android:title="Opacidad del fondo" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Preferencias de imagen">
+            <com.hctrom.romcontrol.prefs.UriSelectionPreference
+                android:dependency="enable_gear_custom_bg"
+                android:key="gear_bg_image_uri"
+                android:title="Seleccionar imagen"/>
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:dependency="enable_gear_custom_bg"
+                android:defaultValue="0"
+                android:entries="@array/crop_entries"
+                android:entryValues="@array/crop_values"
+                android:key="gear_bg_crop_type"
+                android:title="Tipo de escala"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Preferencias de color y gradiente">
+        <com.hctrom.romcontrol.prefs.ColorPickerPreference
+            android:defaultValue="#00000000"
+            android:dependency="enable_gear_custom_bg"
+            android:key="gear_bg_primary_color"
+            android:title="Seleccionar color primario"
+            hexValue="true"
+            alphaSlider="true" />
+        <com.hctrom.romcontrol.prefs.ColorPickerPreference
+            android:defaultValue="#00000000"
+            android:dependency="enable_gear_custom_bg"
+            android:key="gear_second_gradient_color"
+            android:title="Seleccionar color secundario"
+            android:summary="(Para gradiente)"
+            hexValue="true"
+            alphaSlider="true" />
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:defaultValue="0"
+            android:dependency="enable_gear_custom_bg"
+            android:entries="@array/gradient_entries"
+            android:entryValues="@array/gradient_values"
+            android:key="gear_bg_gradient_orientation"
+            android:title="Orientación del gradiente"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen
+        android:icon="@drawable/ic_contacts"
+        android:title="Contactos"
+        android:summary="Personalizar fondo del dialer, letras, dígitos, divisor, etc..."
+        android:widgetLayout="@layout/round_more_icon">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo personalizado de Contactos" />
         <SwitchPreference
-            android:title="Grabación autom. Llam. Saliente"
-            android:key="killprocess_call_record_out"
             android:defaultValue="false"
-            android:summaryOn="Activado"
-            android:summaryOff="Desctivado" />
-    </PreferenceCategory>
-    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Tono ascendente Llamada">
+            android:key="enable_dialer_custom_bg"
+            android:summaryOff="Desactivado"
+            android:summaryOn="Activado \n* Si eliges fondo oscuro deberá personalizar los colores de dígitos y letras para que el teclado de marcación sea visible."
+            android:title="Activar fondo personalizado"/>
+        <PreferenceCategory android:title="Peferencias generales">
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="0"
+                android:dependency="enable_dialer_custom_bg"
+                android:entries="@array/custom_bg_type_entries"
+                android:entryValues="@array/custom_bg_type_values"
+                android:key="dialer_custom_bg_type"
+                android:title="Tipo de fondo"/>
+            <com.hctrom.romcontrol.prefs.SeekBarPreference
+                min="0"
+                android:defaultValue="255"
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_opacity"
+                android:max="255"
+                android:title="Opacidad del fondo"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Preferencias de imagen">
+            <com.hctrom.romcontrol.prefs.UriSelectionPreference
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_bg"
+                android:title="Seleccionar imagen"/>
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="0"
+                android:dependency="enable_dialer_custom_bg"
+                android:entries="@array/crop_entries"
+                android:entryValues="@array/crop_values"
+                android:key="dialer_crop_type"
+                android:title="Tipo de escala"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Preferencias de color y gradiente">
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_bg_primary_color"
+                android:title="Seleccionar color primario"
+                hexValue="true"
+                alphaSlider="true" />
+            <com.hctrom.romcontrol.prefs.ColorPickerPreference
+                android:defaultValue="#00000000"
+                android:dependency="enable_dialer_custom_bg"
+                android:key="dialer_second_gradient_color"
+                android:title="Seleccionar color secundario"
+                android:summary="(Para gradiente)"
+                hexValue="true"
+                alphaSlider="true" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:defaultValue="0"
+                android:dependency="enable_dialer_custom_bg"
+                android:entries="@array/gradient_entries"
+                android:entryValues="@array/gradient_values"
+                android:key="dialer_bg_gradient_orientation"
+                android:title="Orientación del gradiente"/>
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Colores personalizados para el Dialer" />
         <SwitchPreference
-            android:defaultValue="true"
-            android:title="Tono ascendente"
-            android:key="db_inc_volume_disable"
-            android:summaryOn="Activado"
-            android:summaryOff="Desactivado" />
-    </PreferenceCategory>
+            android:title="Activar colores personalizados"
+            android:key="dialer_theme_override"
+            android:defaultValue="false"
+            android:summaryOn="Colores activados. \n*Si tienes problemas con los temas, desactívelo."
+            android:summaryOff="Colores desactivados" />
+        <com.hctrom.romcontrol.prefs.ColorPickerPreference
+            android:title="Dígitos del dialer"
+            android:key="main_digit_color"
+            android:summary="Elegir el color de los dígitos"
+            android:dependency="dialer_theme_override"
+            android:defaultValue="#000000"
+            hexValue="true"
+            alphaSlider="true" />
+        <com.hctrom.romcontrol.prefs.ColorPickerPreference
+            android:title="Letras del dialer"
+            android:key="main_letter_color"
+            android:summary="Elegir el color de las letras"
+            android:dependency="dialer_theme_override"
+            android:defaultValue="#000000"
+            hexValue="true"
+            alphaSlider="true" />
+        <com.hctrom.romcontrol.prefs.ColorPickerPreference
+            android:title="Línea divisora del Dialer"
+            android:key="main_divider_color"
+            android:summary="Elegir el color de la línea divisora"
+            android:dependency="dialer_theme_override"
+            android:defaultValue="#000000"
+            hexValue="true"
+            alphaSlider="true"/>
+        <com.hctrom.romcontrol.prefs.ColorPickerPreference
+            android:title="Números marcados"
+            android:key="main_digit_color_pressed"
+            android:summary="Elegir el color del número marcado"
+            android:dependency="dialer_theme_override"
+            android:defaultValue="#000000"
+            hexValue="true"
+            alphaSlider="true" />
+    </PreferenceScreen>
 </PreferenceScreen>

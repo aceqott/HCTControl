@@ -1,45 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Opciones TouchWiz">
+    <CheckBoxPreference
+        android:title="Fondo de pantalla estático"
+        android:key="toggle_scrolling_wallpaper"
+        android:defaultValue="false"
+        android:summaryOn="Activado *\nFondo de pantalla estático"
+        android:summaryOff="Desactivado *\nFondo de pantalla en movimiento" />
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Colores Launcher">
         <CheckBoxPreference
+            android:title="Texto en Negro"
+            android:key="need_dark_font"
             android:defaultValue="false"
-            android:title="Rotación Launcher"
-            android:key="rotacion_launcher"
-            android:summary="Permitir rotación del Launcher" />
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:title="Fondo de pantalla en movimiento"
-            android:key="mov_fondo_twlauncher"
-            android:summary="Desplazar el fondo de pantalla del escritorio del Launcher" />
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" />
+        <com.hctrom.romcontrol.prefs.ColorPickerPreference
+            android:title="Color del texto Widget"
+            android:key="launcher_widgets_text_color"
+            android:summary="Elegir el color del texto del Launcher en el apartado Widgets"
+            android:defaultValue="#ffffff"
+            alphaSlider="true"
+            hexValue="true" />
         <SwitchPreference
-            android:title="Desplazamiento infinito"
-            android:key="launcher_looping"
-            android:defaultValue="false"
-            android:summaryOn="Las páginas se repetirán de forma continua en el cajón de Aplicaciones"
-            android:summaryOff="Las páginas no se repetirán de forma continua en el cajón de Aplicaciones" />
+            android:title="Activar color personalizado"
+            android:key="link_launcher_icons_text_color"
+            android:summaryOn="Activado"
+            android:summaryOff="Desactivado" />
         <com.hctrom.romcontrol.prefs.ColorPickerPreference
             android:title="Color del texto"
-            android:key="launcher_text_color"
+            android:dependency="link_launcher_icons_text_color"
+            android:key="launcher_icons_text_color"
             android:summary="Elegir el color del texto del Launcher"
             android:defaultValue="#ffffff"
-            hexValue="true"
-            alphaSlider="false" />
+            alphaSlider="true"
+            hexValue="true" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Utilidades TW">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Gestos de escritorio">
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:entries="@array/launcher_gesture_entries"
+            android:title="Doble toque"
+            android:key="doubletap"
+            android:summary="%s"
+            android:entryValues="@array/launcher_gesture_values" />
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:entries="@array/launcher_gesture_entries"
+            android:title="Deslizar hacia arriba"
+            android:key="swipe_up"
+            android:summary="%s"
+            android:entryValues="@array/launcher_gesture_values" />
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:entries="@array/launcher_gesture_entries"
+            android:title="Deslizar hacia abajo"
+            android:key="swipe_down"
+            android:summary="%s"
+            android:entryValues="@array/launcher_gesture_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Efectos de transicion de escritorio">
+        <com.hctrom.romcontrol.prefs.MyListPreference
+            android:widgetLayout="@layout/round_more_icon"
+            android:entries="@array/tw_effect_entries"
+            android:title="Efectos de transición en escritorio"
+            android:key="tw_page_effect"
+            android:defaultValue="1"
+            android:entryValues="@array/tw_effect_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Utilidades TW">
         <PreferenceScreen
             android:icon="@drawable/ic_6thgear"
-            android:key="com.wubydax.geartwswipe.ResetDialogActivity"
             android:summary="Restablecer preferencias y establecer acción deslizante en 6thGear TWSwipe"
-            android:title="6thGear TWSwipe" />
+            android:title="6thGear TWSwipe">
+            <intent
+                android:icon="@drawable/ic_6thgear"
+                android:targetClass="com.wubydax.geartwswipe.ResetDialogActivity"
+                android:targetPackage="com.wubydax.geartwswipe" />
+        </PreferenceScreen>
         <PreferenceScreen
-            android:icon="@drawable/ic_icon"
-            android:key="mobi.xperiacle.touchwiz.themer.IconThemer"
+            android:icon="@drawable/ic_wiziconizer"
+            android:key="com.wiziconizer.HomeActivity"
             android:summary="Selecciona tu paquete de iconos para TW Launcher"
-            android:title="Galaxy Icon Themer" />
-        <PreferenceScreen
-            android:icon="@drawable/ic_touchwiz"
-            android:title="Theme Manager"
-            android:key="com.sec.android.app.themechooser.MainTabActivity"
-            android:summary="Elegir un tema para el TW Launcher" />
+            android:title="WizIconizer" />
     </PreferenceCategory>
 </PreferenceScreen>

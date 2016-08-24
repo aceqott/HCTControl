@@ -24,7 +24,7 @@ public class DialogoAlertaReiniciar extends DialogFragment {
         AlertDialog.Builder builder =
                 new AlertDialog.Builder(getActivity());
 
-        builder.setMessage("Es necesario reiniciar el teléfono para terminar de aplicar los cambios.\n\nDesea reiniciar ahora?")
+        builder.setMessage("Es necesario reiniciar el teléfono para terminar de aplicar los cambios.\n\n¿Desea reiniciar ahora?")
                 .setTitle("REINICIAR SISTEMA")
                 .setOnKeyListener(new Dialog.OnKeyListener() {
                     @Override
@@ -60,6 +60,10 @@ public class DialogoAlertaReiniciar extends DialogFragment {
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
             positive_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
             negative_button.setTextColor(getResources().getColor(R.color.color_iconos_samsung_light));
+        }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 4){
+            dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+            positive_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
+            negative_button.setTextColor(getResources().getColor(R.color.myAccentColorMaterialDark));
         }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 0){
             dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
             positive_button.setTextColor(getResources().getColor(R.color.myAccentColorHCT));

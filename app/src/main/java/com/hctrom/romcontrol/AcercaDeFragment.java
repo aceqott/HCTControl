@@ -13,37 +13,45 @@ import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
 import com.hctrom.romcontrol.licenseadapter.LicenseDialogoAlerta;
+import com.hctrom.romcontrol.prefs.ThemeSwitch;
 import com.hctrom.romcontrol.videotutorial.VideoTutorial;
 
 
 public class AcercaDeFragment extends PreferenceFragment {
-    //HandlePreferenceFragments hpf;
+    HandlePreferenceFragments hpf;
+    private PreferenceScreen preferenceScreen;
+    private PreferenceScreen logo;
     private static FragmentActivity myContext;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.acerca_de_prefs);
-        //hpf = new HandlePreferenceFragments(getActivity(), this, "acerca_de_prefs");
+        ThemeSwitch.getIconsColor(getActivity());
+        //addPreferencesFromResource(R.xml.acerca_de_prefs);
+        hpf = new HandlePreferenceFragments(getActivity(), this, "acerca_de_prefs");
+        logo = (PreferenceScreen) findPreference("logo_hct");
+        preferenceScreen = (PreferenceScreen) findPreference("videotutorial_hct");
 
-        PreferenceScreen preferenceScreen = (PreferenceScreen) findPreference("videotutorial_hct");
-        preferenceScreen.setIcon(R.drawable.ic_videotutorial);
-        PreferenceScreen preferenceScreen1 = (PreferenceScreen) findPreference("paypal_me");
-        preferenceScreen1.setIcon(R.drawable.ic_paypal);
-        if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 1) {
-            preferenceScreen.getIcon().setTint(getResources().getColor(R.color.color_iconos_dark));
-            preferenceScreen1.getIcon().setTint(getResources().getColor(R.color.color_iconos_dark));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 2){
-            preferenceScreen.getIcon().setTint(getResources().getColor(R.color.color_iconos_light));
-            preferenceScreen1.getIcon().setTint(getResources().getColor(R.color.color_iconos_light));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 3){
-            preferenceScreen.getIcon().setTint(getResources().getColor(R.color.color_iconos_samsung_light));
-            preferenceScreen1.getIcon().setTint(getResources().getColor(R.color.color_iconos_samsung_light));
-        }else{
-            preferenceScreen.getIcon().setTint(getResources().getColor(R.color.color_iconos_hct));
-            preferenceScreen1.getIcon().setTint(getResources().getColor(R.color.color_iconos_hct));
+    }
+
+    /**
+     * Comprueba si hay conexión a internet.
+     * @return boolean
+     */
+    private boolean exiteConexionInternet() {
+        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            return true;
         }
-        PreferenceScreen logo = (PreferenceScreen) findPreference("logo_hct");
+        return false;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        hpf.onResumeFragment();
+
         logo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
@@ -65,26 +73,6 @@ public class AcercaDeFragment extends PreferenceFragment {
                 return false;
             }
         });
-
-    }
-
-    /**
-     * Comprueba si hay conexión a internet.
-     * @return boolean
-     */
-    private boolean exiteConexionInternet() {
-        ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            return true;
-        }
-        return false;
-    }
-/*
-    @Override
-    public void onResume() {
-        super.onResume();
-        hpf.onResumeFragment();
     }
 
     @Override
@@ -92,6 +80,5 @@ public class AcercaDeFragment extends PreferenceFragment {
         super.onPause();
         hpf.onPauseFragment();
     }
-*/
 
 }

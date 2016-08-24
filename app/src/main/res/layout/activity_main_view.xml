@@ -7,6 +7,7 @@
     android:fitsSystemWindows="true">
 
     <RelativeLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/android:windowBackground">
@@ -41,7 +42,7 @@
                 android:layout_marginRight="16dp"
                 android:elevation="6dp"
                 android:onClick="onClick"
-                app:button_color="?attr/colorPrimary"
+                app:button_color="?attr/colorAccent"
                 app:button_colorRipple="?attr/colorAccent"
                 app:image="@android:drawable/ic_menu_sort_by_size"
                 app:image_size="27dp"
@@ -57,7 +58,6 @@
             android:id="@+id/overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#bbffffff"
             android:onClick="onClick"
             android:visibility="gone" />
 

@@ -15,11 +15,12 @@ import com.hctrom.romcontrol.alertas.DialogoAlertaReiniciar;
 import com.hctrom.romcontrol.alertas.DialogoAlertaReiniciarSystemUI;
 import com.hctrom.romcontrol.alertas.DialogoAlertaSonidoInicio;
 import com.hctrom.romcontrol.prefs.Shell;
+import com.hctrom.romcontrol.prefs.ThemeSwitch;
 import com.hctrom.romcontrol.sh.Scripts;
 
 
 public class SonidosNotificacionesFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener {
-    //HandlePreferenceFragments hpf;
+    HandlePreferenceFragments hpf;
     SwitchPreference switchfreference_volume_warning_toggle;
     SwitchPreference switchfreference_bateria_baja;
     SwitchPreference switchfreference_teclas_volumen;
@@ -33,8 +34,9 @@ public class SonidosNotificacionesFragment extends PreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.sonidos_notificaciones_prefs);
-        //hpf = new HandlePreferenceFragments(getActivity(), this, "sonidos_notificaciones_prefs");
+        ThemeSwitch.getIconsColor(getActivity());
+        //addPreferencesFromResource(R.xml.sonidos_notificaciones_prefs);
+        hpf = new HandlePreferenceFragments(getActivity(), this, "sonidos_notificaciones_prefs");
         switchfreference_volume_warning_toggle = (SwitchPreference) findPreference("volume_warning_toggle");
         switchfreference_bateria_baja = (SwitchPreference) findPreference("switch_bateria_baja");
         switchfreference_teclas_volumen = (SwitchPreference) findPreference("switch_teclas_volumen");
@@ -42,17 +44,7 @@ public class SonidosNotificacionesFragment extends PreferenceFragment implements
         switchfreference_sonido_captura = (SwitchPreference) findPreference("switch_sonido_captura");
         preferencescreen_nivel_sonido = (PreferenceScreen) findPreference("nivel_sonido");
         preferencescreen_sonido_inicio = (PreferenceScreen) findPreference("sonido_inicio");
-        switchfreference_volume_warning_toggle.setIcon(R.drawable.ic_volume_high_white_24dp);
 
-        if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 1) {
-            switchfreference_volume_warning_toggle.getIcon().setTint(getResources().getColor(R.color.color_iconos_dark));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 2){
-            switchfreference_volume_warning_toggle.getIcon().setTint(getResources().getColor(R.color.color_iconos_light));
-        }else if (PreferenceManager.getDefaultSharedPreferences(getActivity()).getInt("theme_prefs", 0) == 3){
-            switchfreference_volume_warning_toggle.getIcon().setTint(getResources().getColor(R.color.color_iconos_samsung_light));
-        }else{
-            switchfreference_volume_warning_toggle.getIcon().setTint(getResources().getColor(R.color.color_iconos_hct));
-        }
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         if (prefs.getBoolean("switch_bateria_baja", true)) {
@@ -79,6 +71,13 @@ public class SonidosNotificacionesFragment extends PreferenceFragment implements
             switchfreference_sonido_captura.setChecked(true);
         }
 
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        hpf.onResumeFragment();
         switchfreference_volume_warning_toggle.setOnPreferenceClickListener(this);
         switchfreference_bateria_baja.setOnPreferenceClickListener(this);
         switchfreference_teclas_volumen.setOnPreferenceClickListener(this);
@@ -86,6 +85,12 @@ public class SonidosNotificacionesFragment extends PreferenceFragment implements
         switchfreference_sonido_captura.setOnPreferenceClickListener(this);
         preferencescreen_nivel_sonido.setOnPreferenceClickListener(this);
         preferencescreen_sonido_inicio.setOnPreferenceClickListener(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        hpf.onPauseFragment();
     }
 
     @Override

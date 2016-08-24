@@ -1,6 +1,5 @@
 package com.hctrom.romcontrol;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
@@ -25,6 +24,4 @@ public class TWLauncherFragment extends PreferenceFragment {
         super.onPause();
         hpf.onPauseFragment();
     }
-
-
 }

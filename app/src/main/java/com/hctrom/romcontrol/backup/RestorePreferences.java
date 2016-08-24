@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
@@ -16,9 +15,9 @@ import android.widget.Toast;
 
 import com.hctrom.romcontrol.R;
 import com.hctrom.romcontrol.ThemeSelectorUtility;
+import com.hctrom.romcontrol.alertas.DialogoAlertaBackup;
 import com.hctrom.romcontrol.alertas.DialogoAlertaReiniciar;
 import com.hctrom.romcontrol.prefs.Shell;
-import com.hctrom.romcontrol.sh.Scripts;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -33,6 +32,10 @@ import java.io.OutputStream;
  * Created by Ivan on 24/05/2016.
  */
 public class RestorePreferences {
+    File prefdir = new File("/data/data/com.hctrom.romcontrol/shared_prefs");
+    File prefdir2 = new File("/data/data/com.hctrom.romcontrol/files");
+    File filesdir = new File(Environment.getExternalStorageDirectory().getPath()+"/HCTControl/backup/data/shared_prefs");
+    File filesdir2 = new File(Environment.getExternalStorageDirectory().getPath()+"/HCTControl/backup/data/files");
     private static FragmentActivity myContext;
     ContentResolver cr;
     Context c;
@@ -53,30 +56,20 @@ public class RestorePreferences {
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        File prefdir = new File("/data/data/com.hctrom.romcontrol/shared_prefs");
-                        File prefdir2 = new File("/data/data/com.hctrom.romcontrol/files");
-                        File filesdir = new File(Environment.getExternalStorageDirectory().getPath()+"/HCTControl/backup/data/shared_prefs");
-                        File filesdir2 = new File(Environment.getExternalStorageDirectory().getPath()+"/HCTControl/backup/data/files");
-                        directoryDelete(prefdir);
-                        directoryDelete(prefdir2);
-                        try {
-                            directoryBackupRestore(filesdir, prefdir);
-                            if (filesdir2.exists()) {
-                                directoryBackupRestore(filesdir2, prefdir2);
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        //checkRestaurar();
-                        Toast.makeText(c.getApplicationContext(), "Datos restaurados en: " + prefdir.getAbsolutePath(), Toast.LENGTH_SHORT).show();
-
-                        //here we call the method that is going to restore
-                        restoreSettings();
-                        soundStock();
-                        dialog.dismiss();
                         myContext = (FragmentActivity) c;
-                        final DialogoAlertaReiniciar dialogo = new DialogoAlertaReiniciar();
-                        dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
+                        if (filesdir.exists()) {
+                            restoreSettings();
+                            getFiles();
+                            //here we call the method that is going to restore
+                            dialog.dismiss();
+                            Toast.makeText(c.getApplicationContext(), "Datos restaurados en: " + prefdir.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+                            final DialogoAlertaReiniciar dialogo = new DialogoAlertaReiniciar();
+                            dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
+                            Shell.getRebootAction("su -c 'chmod 660 /data/data/com.hctrom.romcontrol/shared_prefs/com.hctrom.romcontrol_preferences.xml'");
+                        }else {
+                            final DialogoAlertaBackup dialogo = new DialogoAlertaBackup();
+                            dialogo.show(myContext.getSupportFragmentManager(), "tagAlerta");
+                        }
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -95,6 +88,10 @@ public class RestorePreferences {
             dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_samsung_light);
             positive_button.setTextColor(act.getResources().getColor(R.color.color_iconos_samsung_light));
             negative_button.setTextColor(act.getResources().getColor(R.color.color_iconos_samsung_light));
+        }else if (PreferenceManager.getDefaultSharedPreferences(act).getInt("theme_prefs", 0) == 4){
+            dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
+            positive_button.setTextColor(act.getResources().getColor(R.color.myAccentColorMaterialDark));
+            negative_button.setTextColor(act.getResources().getColor(R.color.myAccentColorMaterialDark));
         }else if (PreferenceManager.getDefaultSharedPreferences(act).getInt("theme_prefs", 0) == 0){
             dialogConfirm.getWindow().setBackgroundDrawableResource(R.drawable.dialog_bg_hct);
             positive_button.setTextColor(act.getResources().getColor(R.color.myAccentColorHCT));
@@ -106,25 +103,25 @@ public class RestorePreferences {
         }
     }
 
-    private void soundStock(){
-        final SharedPreferences prefs = c.getSharedPreferences("DatosSonidos", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("emojis", "1");
-        editor.commit();
-        editor.putString("sonido_inicio", "1");
-        editor.commit();
-        editor.putString("nivel_sonido_sistema", "1");
-        editor.commit();
-        SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(c);
-        SharedPreferences.Editor editor1 = prefs1.edit();
-        editor1.putBoolean("switch_bateria_baja", true);
-        editor1.commit();
-        editor1.putBoolean("switch_teclas_volumen", true);
-        editor1.commit();
-        editor1.putBoolean("switch_sonido_carga", true);
-        editor1.commit();
-        editor1.putBoolean("switch_sonido_captura", true);
-        editor1.commit();
+    public void getFiles(){
+        if (prefdir.exists()) {
+            directoryDelete(prefdir);
+            prefdir.mkdir();
+        }
+        if (prefdir2.exists()) {
+            directoryDelete(prefdir2);
+            prefdir2.mkdir();
+        }
+        try {
+            directoryBackupRestore(filesdir, prefdir);
+            //Shell.getRebootAction("su -c 'chmod 660 /data/data/com.hctrom.romcontrol/shared_prefs/com.hctrom.romcontrol_preferences.xml'");
+            if (filesdir2.exists()) {
+                directoryBackupRestore(filesdir2, prefdir2);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Shell.getRebootAction("su -c 'chmod 660 /data/data/com.hctrom.romcontrol/shared_prefs/com.hctrom.romcontrol_preferences.xml'");
     }
 
     public static void directoryBackupRestore(File sourceLocation, File targetLocation)
@@ -141,6 +138,7 @@ public class RestorePreferences {
                 directoryBackupRestore(new File(sourceLocation, children[i]),
                         new File(targetLocation, children[i]));
             }
+            Shell.getRebootAction("su -c 'chmod 660 /data/data/com.hctrom.romcontrol/shared_prefs/com.hctrom.romcontrol_preferences.xml'");
         } else {
 
             InputStream in = new FileInputStream(sourceLocation);
@@ -155,6 +153,7 @@ public class RestorePreferences {
             }
             in.close();
             out.close();
+            Shell.getRebootAction("su -c 'chmod 660 /data/data/com.hctrom.romcontrol/shared_prefs/com.hctrom.romcontrol_preferences.xml'");
         }
 
     }
@@ -239,86 +238,4 @@ public class RestorePreferences {
         }
         */
     }
-
-    public void checkRestaurar(){
-        Scripts sh = new Scripts();
-        final SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(c);
-        SharedPreferences.Editor editor1 = prefs1.edit();
-
-        if (prefs1.getString("switch_bateria_baja", "ON") == "ON"){
-            //Toast.makeText(this, "Sonido Batería baja ON", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getBateriaBaja("ON"));
-        }else{
-            //Toast.makeText(this, "Sonido Batería baja OFF", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getBateriaBaja("OFF"));
-            editor1.putString("switch_bateria_baja", "OFF");
-            editor1.commit();
-        }
-
-        if (prefs1.getString("switch_teclas_volumen", "ON") == "ON"){
-            //Toast.makeText(this, "Sonido teclas volumen ON", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoTeclaVolumen("ON"));
-        }else{
-            //Toast.makeText(this, "Sonido teclas volumen OFF", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoTeclaVolumen("OFF"));
-            editor1.putString("switch_teclas_volumen", "OFF");
-            editor1.commit();
-        }
-
-        if (prefs1.getString("switch_sonido_carga", "ON") == "ON"){
-            //Toast.makeText(this, "Sonido Cargador ON", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoCarga("ON"));
-        }else{
-            //Toast.makeText(this, "Sonido Cargador OFF", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoCarga("OFF"));
-            editor1.putString("switch_sonido_carga", "OFF");
-            editor1.commit();
-        }
-
-        if (prefs1.getString("switch_sonido_captura", "ON") == "ON"){
-            //Toast.makeText(this, "Sonido Captura pantalla ON", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoCapturaPantalla("ON"));
-        }else{
-            //Toast.makeText(this, "Sonido Captura pantalla OFF", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoCapturaPantalla("OFF"));
-            editor1.putString("switch_sonido_captura", "OFF");
-            editor1.commit();
-        }
-
-        final SharedPreferences prefs = c.getSharedPreferences("ui_prefs", Context.MODE_PRIVATE);
-        String str_nivel_sonido = "" + prefs.getString("nivel_sonido_sistema", "1");
-        if (str_nivel_sonido.contentEquals("2")) {
-            //Toast.makeText(this, "Nivel Sonido Medio", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getNivelSonidoMedio());
-        }
-        if (str_nivel_sonido.contentEquals("3")) {
-            //Toast.makeText(this, "Nivel Sonido Alto", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getNivelSonidoAlto());
-        }
-        if (str_nivel_sonido.contentEquals("4")) {
-            //Toast.makeText(this, "Nivel Sonido Extremo", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getNivelSonidoExtremo());
-        }
-
-        String str_sonido_inicio = "" + prefs.getString("sonido_inicio", "1");
-        if (str_sonido_inicio.contentEquals("2")) {
-            //Toast.makeText(this, "Sonido Inicio HCT", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoInicioHCT());
-        }
-        if (str_sonido_inicio.contentEquals("3")) {
-            //Toast.makeText(this, "Sin Sonido de Inicio", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getSonidoInicioOff());
-        }
-
-        String str_emojis = "" + prefs.getString("emojis", "1");
-        if (str_emojis.contentEquals("2")) {
-            //Toast.makeText(this, "Emojis Google", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getEmojisGoogle());
-        }
-        if (str_emojis.contentEquals("3")) {
-            //Toast.makeText(this, "Emojis iOS", Toast.LENGTH_LONG).show();
-            Shell.getRebootAction("" + sh.getEmojisiOS());
-        }
-    }
-
 }

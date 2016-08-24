@@ -96,6 +96,29 @@
         <item name="item_color_selector">@color/color_selector_light</item>
         <item name="text_mail">@color/back_text_mail_samsung</item>
     </style>
+    <style name="AppThemeMaterialDark" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColorMaterialDark</item>
+        <item name="colorPrimaryDark">@color/myPrimaryDarkColorMaterialDark</item>
+        <item name="colorAccent">@color/myAccentColorMaterialDark</item>
+        <item name="android:textColorPrimary">@color/myTextPrimaryColor</item>
+        <item name="android:navigationBarColor">@color/myNavigationColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="nav_item_color_selector">@color/text_color_selector_hct</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="nav_drawer_header">@drawable/header_image_material</item>
+        <item name="android:windowBackground">@color/myInverseColorMaterialDark</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="nav_drawer_bg_color">@color/myInverseColorMaterialDark</item>
+        <item name="myAccentColor">@color/myAccentColorMaterialDark</item>
+        <item name="my_logo">@drawable/logo_hct_material</item>
+        <item name="mynewColor">@color/myPrimaryColorMaterialDark</item>
+        <item name="navitextcolor">#ffffff</item>
+        <item name="circle_anim_color">#ff000000</item>
+        <item name="item_color_selector">@color/color_selector</item>
+        <item name="text_mail">@color/back_text_mail_hct</item>
+    </style>
     <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@color/windowBgTransparent</item>
