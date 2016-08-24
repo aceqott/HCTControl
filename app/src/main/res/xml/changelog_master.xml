@@ -93,6 +93,11 @@
         <change>Añadido Color del texto de los iconos en TWLauncher</change>
         <change>Añadido Color del texto de sección Widgets en TWLauncher</change>
         <change>Añadido Activar/Desactivar Fondo de pantalla en movimiento en TWLauncher</change>
+        <change>Añadido Activar/Desactivar colores nativos Iconos Statusbar</change>
+        <change>Añadido Color notificación multimedia (Título y descripción)</change>
+        <change>Añadido Color fondo icono notificación</change>
+        <change>Añadido Activar/Desactivar icono Modo Privado Statusbar</change>
+        <change>Añadido Activar/Desactivar colores nativos Toggles ON/OFF</change>
         <change>Añadido HCT OTA</change>
         <change>Añadido Toolbox Controller</change>
         <change>Añadido HexConverter</change>
