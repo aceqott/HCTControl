@@ -1,3 +1,5 @@
+![HCT](http://fotos.subefotos.com/919a09a499ec6f205114f1cd482c2c7co.png)
+
 # HCTControl by HCTeam™
 
 [![Platform](http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat)](http://developer.android.com/index.html) [![Language](http://img.shields.io/badge/language-java-orange.svg?style=flat)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
