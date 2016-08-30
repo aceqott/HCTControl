@@ -4,14 +4,14 @@
         android:title="Fondo de pantalla estático"
         android:key="toggle_scrolling_wallpaper"
         android:defaultValue="false"
-        android:summaryOn="Activado *\nFondo de pantalla estático"
-        android:summaryOff="Desactivado *\nFondo de pantalla en movimiento" />
+        android:summaryOn="Activado \n*Fondo de pantalla estático"
+        android:summaryOff="Desactivado \n*Fondo de pantalla en movimiento" />
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Colores Launcher">
         <CheckBoxPreference
             android:title="Texto en Negro"
             android:key="need_dark_font"
             android:defaultValue="false"
-            android:summaryOn="Activado"
+            android:summaryOn="Activado \n*Color de texto en negro en Escritorio"
             android:summaryOff="Desactivado" />
         <com.hctrom.romcontrol.prefs.ColorPickerPreference
             android:title="Color del texto Widget"

@@ -229,7 +229,7 @@
         android:summary="Personalizar y posicionar los iconos de Notificaciones, Wifi, Datos y Batería en la Statusbar"
         android:widgetLayout="@layout/round_more_icon">
         <com.hctrom.romcontrol.prefs.FilePreference
-            android:title="Activar colores nativos Iconos Statusbar"
+            android:title="Activar colores nativos Statusbar"
             android:key="modcfg_nativeST_colors"
             android:defaultValue="false"
             android:summaryOn="Activado \n*Iconos Statusbar con colores nativos (Stock)"

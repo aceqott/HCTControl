@@ -175,14 +175,14 @@
                 android:defaultValue="#326D84"
                 hexValue="true"
                 alphaSlider="true"
-                android:summary="Elegir el color del Toggle ON" />
+                android:summary="Elegir el color del Toggle ON (Encendido)" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
                 android:title="Color Toggle OFF"
                 android:key="toggle_icon_off_color"
                 android:defaultValue="1293831800"
                 hexValue="true"
                 alphaSlider="true"
-                android:summary="Elegir el color del Toggle OFF" />
+                android:summary="Elegir el color del Toggle OFF (Apagado)" />
         </PreferenceCategory>
         <PreferenceCategory android:layout="@layout/preferences_category" android:title="Estilo Toggles">
             <com.hctrom.romcontrol.prefs.ThumbnailListPreference
@@ -193,14 +193,14 @@
                 app:entryList="@array/toggle_buttons_background_entries"
                 app:entryValuesList="@array/toggle_buttons_background_values" />
             <SwitchPreference
-                android:title="Activar colores personalizados"
+                android:title="Activar color personalizado"
                 android:key="link_toggle_icon_background_colors"
                 android:defaultValue="false"
                 android:summaryOn="Activado"
                 android:summaryOff="Desactivado" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
                 android:dependency="link_toggle_icon_background_colors"
-                android:title="Color Fondo Estilo Toggle"
+                android:title="Color fondo Estilo Toggle"
                 android:key="toggle_buttons_background_color"
                 android:summary="Elegir el color de fondo del Estilo Toggles. \n*Establecer estilo de Toggles en blanco para una mejor visualización del color aplicado."
                 android:defaultValue="#ffffff"
@@ -496,6 +496,7 @@
                 android:defaultValue="#FFFFFF"
                 hexValue="true"
                 alphaSlider="true" />
+        <PreferenceCategory android:title="Texto Notificación" />
             <com.hctrom.romcontrol.prefs.ColorPickerPreference
                 android:title="Texto de Notificación"
                 android:key="pulldown_text"
@@ -518,10 +519,10 @@
                 alphaSlider="true"
                 android:defaultValue="#fff5f5f5"
                 android:key="notif_media_secondary_color"
-                android:summary="Elegir el color secundario de la notificación multimedia."
+                android:summary="Elegir el color secundario (descripción) de la notificación multimedia."
                 android:title="Color secundario notificación"/>
         <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
-        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo del Panel">
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Fondo del Panel" />
             <SwitchPreference
                 android:title="Blur Effect"
                 android:summary="Efecto de desenfoque en la Cortina"
@@ -529,13 +530,14 @@
                 android:defaultValue="false"
                 android:summaryOn="Activado"
                 android:summaryOff="Desactivado" />
-            <SwitchPreference
-                android:defaultValue="false"
-                android:key="enable_panel_custom_bg"
-                android:summaryOff="Desactivado"
-                android:summaryOn="Activado"
-                android:title="Activar fondo personalizado"/>
-        </PreferenceCategory>
+            <PreferenceCategory android:title="Fondo personalizado" >
+                <SwitchPreference
+                    android:defaultValue="false"
+                    android:key="enable_panel_custom_bg"
+                    android:summaryOff="Desactivado"
+                    android:summaryOn="Activado"
+                    android:title="Activar fondo personalizado"/>
+            </PreferenceCategory>
             <PreferenceCategory android:title="Peferencias generales">
                 <com.hctrom.romcontrol.prefs.MyListPreference
                     android:widgetLayout="@layout/round_more_icon"

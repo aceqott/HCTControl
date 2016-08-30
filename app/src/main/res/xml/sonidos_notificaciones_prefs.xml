@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Notificaciones">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Notificaciones" />
         <SwitchPreference
             android:title="Remover Notificación persistente"
             android:key="ongoing_notifications"
@@ -14,32 +14,33 @@
             android:defaultValue="true"
             android:summaryOn="Notificación en curso habilitado"
             android:summaryOff="Notificación en curso deshabilitado" />
-        <SwitchPreference
-            android:icon="@drawable/ic_sms_failed_white_48dp"
-            android:title="Notificaciones Heads Up"
-            android:key="heads_up_notifications_enabled"
-            android:defaultValue="true"
-            android:summaryOn="Activado"
-            android:summaryOff="Desactivado" />
-        <com.hctrom.romcontrol.prefs.MyListPreference
-            android:widgetLayout="@layout/round_more_icon"
-            android:entries="@array/pref_heads_up_timeout_titles"
-            android:title="Tiempo notificación Heads Up"
-            android:key="heads_up_timeout"
-            android:dependency="heads_up_notifications_enabled"
-            android:defaultValue="3000"
-            android:positiveButtonText="@null"
-            android:negativeButtonText="@null"
-            android:entryValues="@array/pref_heads_up_timeout_values" />
-        <SwitchPreference
-            android:icon="@drawable/ic_usb_white_48dp"
-            android:title="Conectado a disp. de medios"
-            android:key="media_connect_notif"
-            android:defaultValue="true"
-            android:summaryOn="Activado"
-            android:summaryOff="Desactivado" />
-    </PreferenceCategory>
-    <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
+        <PreferenceCategory android:title="Heads Up" />
+            <SwitchPreference
+                android:icon="@drawable/ic_sms_failed_white_48dp"
+                android:title="Notificaciones Heads Up"
+                android:key="heads_up_notifications_enabled"
+                android:defaultValue="true"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+            <com.hctrom.romcontrol.prefs.MyListPreference
+                android:widgetLayout="@layout/round_more_icon"
+                android:entries="@array/pref_heads_up_timeout_titles"
+                android:title="Tiempo notificación Heads Up"
+                android:key="heads_up_timeout"
+                android:dependency="heads_up_notifications_enabled"
+                android:defaultValue="3000"
+                android:positiveButtonText="@null"
+                android:negativeButtonText="@null"
+                android:entryValues="@array/pref_heads_up_timeout_values" />
+        <PreferenceCategory android:title="Disp. de medios" />
+            <SwitchPreference
+                android:icon="@drawable/ic_usb_white_48dp"
+                android:title="Conectado a disp. de medios"
+                android:key="media_connect_notif"
+                android:defaultValue="true"
+                android:summaryOn="Activado"
+                android:summaryOff="Desactivado" />
+        <PreferenceCategory android:layout="@layout/restart_category" android:title="⇡⇡ ¡Reiniciar para aplicar el cambio realizado! ⇡⇡" />
     <PreferenceCategory android:layout="@layout/preferences_category" android:title="Dialogos">
         <SwitchPreference
             android:icon="@drawable/ic_volume_up_white_48dp"

@@ -19,7 +19,7 @@
                     android:title="Tamaño texto Principal"
                     android:key="dash_title_text"
                     android:summary="Ajustar el tamaño del texto en sección Principal"
-                    android:defaultValue="12"
+                    android:defaultValue="14"
                     min="5"
                     unitsRight=" dp" />
                 <com.hctrom.romcontrol.prefs.ColorPickerPreference
@@ -197,7 +197,7 @@
                 android:icon="@drawable/ic_screenrecord"
                 android:title="Grabadora de pantalla"
                 android:key="screencast"
-                android:defaultValue="true"
+                android:defaultValue="false"
                 android:summaryOn="Visible"
                 android:summaryOff="Oculto" />
             <SwitchPreference
