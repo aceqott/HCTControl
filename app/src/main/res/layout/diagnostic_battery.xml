@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    style="@style/AppTheme"
+    android:background="?attr/nav_drawer_bg_color">
+    <RelativeLayout
+        android:id="@+id/rel_tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg3_txt" >
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewCharging"
+            android:layout_toRightOf="@+id/tv_info"
+            android:layout_alignTop="@+id/tv_info"
+            android:layout_alignBottom="@+id/tv_info"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/battery_progressbar_states"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rel_tv_info"
+        android:layout_marginTop="30dp" />
+    <TextView
+        android:id="@+id/tv_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="#000"
+        android:textStyle="bold|italic"
+        android:layout_alignTop="@+id/pb"
+        android:layout_alignBottom="@+id/pb"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_temp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/pb"
+        android:layout_marginBottom="100dp"
+        android:layout_toRightOf="@+id/pb"
+        android:src="?attr/colorAccent"
+        app:border_width="2dp"
+        app:border_color="#ffa4a4a4" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_temp"
+        android:textColor="#fff"
+        android:textStyle="bold|italic"
+        android:layout_alignTop="@+id/circle_temp"
+        android:layout_alignBottom="@+id/circle_temp"
+        android:layout_alignRight="@+id/circle_temp"
+        android:layout_alignLeft="@+id/circle_temp"
+        android:text="°C"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="16dp" />
+</RelativeLayout>

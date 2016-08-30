@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".packagehunter.PackageHunterMain"
+    style="@style/AppTheme"
+    android:background="?attr/nav_drawer_bg_color">
+
+  <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar_default" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="?attr/actionBarSize"
+      android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative"
+        android:elevation="4dp"
+        android:translationZ="3dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:background="?attr/colorAccent">
+        <ImageView
+            android:id="@+id/imgvw_icn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="14dp">
+          <TextView
+              android:id="@+id/txtvw_pkgname"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:background="@drawable/bg1_txt"
+              tools:text="Package Name"
+              android:layout_marginLeft="16dp"
+              android:paddingLeft="3dp"
+              android:paddingRight="3dp" />
+          <TextView
+              android:id="@+id/txtvw_vname"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:background="@drawable/bg2_txt"
+              tools:text="0.0"
+              android:layout_marginLeft="16dp"
+              android:paddingRight="3dp"
+              android:paddingLeft="3dp" />
+          <TextView
+              android:id="@+id/txtvw_vc"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:background="@drawable/bg3_txt"
+              tools:text="10"
+              android:layout_marginLeft="16dp"
+              android:paddingLeft="3dp"
+              android:paddingRight="3dp" />
+
+          <TextView
+              android:id="@+id/txtvw_firsttime"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:background="@drawable/bg3_txt"
+              tools:text="10"
+              android:layout_marginLeft="16dp"
+              android:paddingLeft="3dp"
+              android:paddingRight="3dp" />
+
+          <TextView
+              android:id="@+id/txtvw_lastupdated"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:background="@drawable/bg3_txt"
+              tools:text="10"
+              android:layout_marginLeft="16dp"
+              android:paddingLeft="3dp"
+              android:paddingRight="3dp" />
+        </LinearLayout>
+      </LinearLayout>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_detaillist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp" />
+
+  </LinearLayout>
+</RelativeLayout>

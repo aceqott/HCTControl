@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fila0"
+        android:layout_marginTop="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_acequott">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/aceqott"
+                android:id="@+id/imageViewAce"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textAce"
+                android:text="Aceqott"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_toEndOf="@+id/imageViewAce"
+                android:layout_marginLeft="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desarrollador"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/imageViewAce"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/textAce" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/divisor0"
+            android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_jiterron"
+            android:layout_toRightOf="@+id/divisor0">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/garrapatero"
+                android:id="@+id/imageViewGarrapatero123"
+                android:layout_marginLeft="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textGarrapatero123"
+                android:text="Garrapatero123"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_toEndOf="@+id/imageViewGarrapatero123"
+                android:layout_marginLeft="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Betatester"
+                android:textSize="12dp"
+                android:layout_toEndOf="@+id/imageViewGarrapatero123"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/textGarrapatero123" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fila1"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/benjitawx"
+            android:id="@+id/imageViewBenji"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textBenji"
+            android:text="Benjitawx"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewBenji"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betatester"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewBenji"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textBenji" />
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/divisor1"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/mikele"
+            android:id="@+id/imageViewMikele"
+            android:baselineAlignBottom="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_toRightOf="@+id/divisor1"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textMikele"
+            android:text="Mikele"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewMikele"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betatester"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewMikele"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textMikele" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fila2"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/gamberrete75"
+            android:id="@+id/imageViewGamberrete75"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textGamberrete75"
+            android:text="Gamberrete75"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewGamberrete75"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betatester"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewGamberrete75"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textGamberrete75" />
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/divisor2"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/koko"
+            android:id="@+id/imageViewkoko"
+            android:baselineAlignBottom="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:layout_toRightOf="@+id/divisor2"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textkoko"
+            android:text="Koko"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewkoko"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betatester"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewkoko"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textkoko" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fila3"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/sumejorpista"
+            android:id="@+id/imageViewSumejorpista"
+            android:layout_marginLeft="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSumejorpista"
+            android:text="Sumejorpista"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewSumejorpista"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betatester"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewSumejorpista"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textSumejorpista" />
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/divisor3"
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/escaliboor"
+            android:id="@+id/imageViewEscaliboor"
+            android:layout_toRightOf="@+id/divisor3"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textEscaliboor"
+            android:text="Escaliboor"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_toEndOf="@+id/imageViewEscaliboor"
+            android:layout_marginLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betatester"
+            android:textSize="12dp"
+            android:layout_toEndOf="@+id/imageViewEscaliboor"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textEscaliboor" />
+    </RelativeLayout>
+</LinearLayout>
